@@ -1,0 +1,134 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/*.wrap>div,footer,header {
+    max-width: 1280px;
+    margin: 0 auto;
+}*/
+
+.flex_container_row {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.flex_container_column {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.flex_item_sb {
+    justify-content: space-between;
+}
+
+.flex_item_fs {
+    justify-content: flex-start;
+}
+
+.easy_div {
+    align-items: center;
+}
+
+.title_goes_here > figcaption {
+    margin: 0 auto 5px; /* Отступы вокруг абзаца */
+}
+
+.stats>div {
+    width: 25%;
+}
+
+.ul_list {
+    list-style-type: none;
+}
+
+h1,h2 {
+    margin: 0;
+}
+
+.button_option {
+    padding: 16px 16px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 55px;
+    /*background:transparent;*/
+}
+
+.sign_up_but {
+    border-radius: 2px;
+    background:transparent;
+    border:1px solid #ffffff;
+    color: #ffffff;
+    width: 60px;
+    height: 25px;
+    font-size: 8px;
+    padding: 8px 6px;
+}
+
+.image_option {
+    background:transparent;
+    height: auto;
+    width:auto;
+}
+
+.buy_now_but {
+    background-color: #061e37;
+    color: #ffffff;
+}
+
+.try_for_free_but {
+    background-color: #ffffff;
+    width: 160px;
+    height: 55px;
+    color: #061e37;
+}
+
+.get_started_but {
+    background-color: #1de9b6;
+    color: #ffffff;
+}
+
+.foot_color {
+    background-color: #061e37;
+}
+
+.bg_color_1 {
+    background-color: #e3d6d6;
+}
+
+.bg_color_2 {
+    background-color: #ddc5c5;
+}
+
+.stat1 {
+    background-color: #80d8ff;
+}
+
+.stat2 {
+    background-color: #82b1ff;
+}
+
+.stat3 {
+    background-color: #b388ff;
+}
+
+.stat4 {
+    background-color: #ea80fc;
+}
+
+.bg_img { /*съехал задник*/
+    background-image:linear-gradient(to right bottom, rgba(28,234,190,0.6) 0%,rgba(26,192,215,0.6) 100%),url('images/bg_img_top.png');
+    background-size:100%;
+}

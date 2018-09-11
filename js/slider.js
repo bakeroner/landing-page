@@ -1,9 +1,9 @@
 var slider = tns({
     container: ".slider",
-    prevButton: "#arrow_top",
-    nextButton: "#arrow_bot",
+    prevButton: true,
+    nextButton: true,
     mode: "carousel",
-    items: 2,
+    items: 1,
     axis: "vertical",
     speed: 400,
     slideBy: 1,

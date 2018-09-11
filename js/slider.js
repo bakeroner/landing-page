@@ -1,10 +1,13 @@
 var slider = tns({
     container: ".slider",
     mode: "carousel",
-    items: 1,
+    items: 2,
     axis: "vertical",
     speed: 400,
     slideBy: 1,
-    controls: false,
-    loop: true
+    controls: true,
+    loop: true,
+    nav: false,
+    prevButton: "#butTop",
+    nextButton: "#butBot",
   });

@@ -105,6 +105,13 @@ h1, h2 {
     background-color: #1de9b6;
     color: #ffffff;
 }
+.send_form_but {
+    padding: 4px 6px;
+   background-color: #1de9b6;
+   color: #ffffff;
+   width: 130px;
+   height: 35px;
+}
 
 .foot_color {
     background-color: #061e37;
@@ -144,3 +151,9 @@ h1, h2 {
     border-radius: 5px;
     padding: 10px 10px;
 }
+input {
+    background-color: transparent;
+    border: 1px solid #061e37;
+    border-radius: 5px;
+}
+

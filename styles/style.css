@@ -65,6 +65,11 @@ h1,h2 {
     height: 55px;
     /*background:transparent;*/
 }
+.arrow {
+outline: none;
+  border: 0;
+  background: transparent;
+}
 
 .sign_up_but {
     border-radius: 2px;
@@ -128,7 +133,7 @@ h1,h2 {
     background-color: #ea80fc;
 }
 
-.bg_img { /*съехал задник*/
-    background-image:linear-gradient(to right bottom, rgba(28,234,190,0.6) 0%,rgba(26,192,215,0.6) 100%),url('images/bg_img_top.png');
+.bg_img {
+    background-image:linear-gradient(to right bottom, rgba(28,234,190,0.6) 0%,rgba(26,192,215,0.6) 100%),url("../images/bg_img_top.png");
     background-size:100%;
 }

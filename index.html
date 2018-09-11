@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Landing Page</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/tiny-slider.css">
 </head>
 <body>
 <div class="wrap">
@@ -122,7 +123,13 @@
                     <button class="button_option buy_now_but">GET STARTED</button>
                 </div>
                 <div class="flex_container_column">
-                    <p>Должен быть слайдер</p>
+                    <div class="my-slider">
+                        <button class="arrow" id="arrow_top"><img src="images/up_but.png"></button>
+                        <div><img src="f:/comment_test1.png"></div>
+                        <div><img src="f:/comment_test2.png"></div>
+                        <div><img src="f:/376.jpg"></div>
+                        <button class="arrow" id="arrow_bot"><img src="images/down_but.png"></button> 
+                    </div>
                 </div>
             </div>
         </div>
@@ -201,5 +208,17 @@
         </footer>
     </div>
 </div>
+<script type="module">
+  import {tns} from './src/tiny-slider.js';
+ 
+  var slider = tns({
+    container: '.my-slider',
+    items: 2,
+    slideBy: 'page',
+    autoplay: false
+  });
+  </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/min/tiny-slider.js"></script> 
+<script type="text/javascript" src="script/script.js"></script>
 </body>
 </html>

@@ -1,7 +1,5 @@
 var slider = tns({
     container: ".slider",
-    prevButton: true,
-    nextButton: true,
     mode: "carousel",
     items: 1,
     axis: "vertical",

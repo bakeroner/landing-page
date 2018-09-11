@@ -39,10 +39,10 @@ body {
 }
 
 .title_goes_here > figcaption {
-    margin: 0 auto 5px; /* Отступы вокруг абзаца */
+    margin: 0 auto 5px;
 }
 
-.stats>div {
+.stats > div {
     width: 25%;
 }
 
@@ -50,7 +50,7 @@ body {
     list-style-type: none;
 }
 
-h1,h2 {
+h1, h2 {
     margin: 0;
 }
 
@@ -65,16 +65,17 @@ h1,h2 {
     height: 55px;
     /*background:transparent;*/
 }
+
 .arrow {
-outline: none;
-  border: 0;
-  background: transparent;
+    outline: none;
+    border: 0;
+    background: transparent;
 }
 
 .sign_up_but {
     border-radius: 2px;
-    background:transparent;
-    border:1px solid #ffffff;
+    background: transparent;
+    border: 1px solid #ffffff;
     color: #ffffff;
     width: 60px;
     height: 25px;

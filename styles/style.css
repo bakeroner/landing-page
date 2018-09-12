@@ -8,6 +8,14 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
+.container2 {
+    max-width: 1280px;
+    margin: 0 auto;
+    min-width: 100%;
+    width: auto;
+    
+
+}
 .flex_container_row {
     display: flex;
     flex-direction: row;
@@ -44,11 +52,12 @@ body {
 
 .stats > div {
     width: 25%;
+    min-width: 320px;
 }
 .ul_list {
     list-style-type: none;
 }
-.ul_list:nth-child(1) { /*поправить селекторы*/
+/*.ul_list:nth-child(1) { поправить селекторы
     list-style-image: url("../images/list_ico/statistics_ico.png");
 }
 .ul_list:nth-child(2) {
@@ -61,6 +70,21 @@ body {
     list-style-image: url("../images/list_ico/settings_ico.png");
 }
 .ul_list:nth-child(5) {
+    list-style-image: url("../images/list_ico/feed_ico.png");
+}*/
+#li1 { /*поправить селекторы*/
+    list-style-image: url("../images/list_ico/statistics_ico.png");
+}
+#li2 {
+    list-style-image: url("../images/list_ico/inbox_ico.png");
+}
+#li3 {
+    list-style-image: url("../images/list_ico/team_ico.png");
+}
+#li4 {
+    list-style-image: url("../images/list_ico/settings_ico.png");
+}
+#li5 {
     list-style-image: url("../images/list_ico/feed_ico.png");
 }
 .button_option {
@@ -80,7 +104,6 @@ body {
     border: 0;
     background: transparent;
 }
-
 .sign_up_but {
     border-radius: 2px;
     background: transparent;
@@ -134,20 +157,35 @@ body {
 .bg_color_2 {
     background-color: #f0e0dd;
 }
-
-.stat1 {
+.bg_left {
+    width: 33%;
     background-color: #80d8ff;
+
+}
+.bg_right {
+    background-color: #ea80fc;
+    width: 33%;
+ 
+}
+.stat1 {
+
+    background-color: #80d8ff;
+  
 }
 
 .stat2 {
     background-color: #82b1ff;
+    
 }
 
 .stat3 {
+ 
     background-color: #b388ff;
+    
 }
 
 .stat4 {
+
     background-color: #ea80fc;
 }
 
@@ -179,10 +217,12 @@ p {
     font-family: "RalewayRegular";
     color: #061e37;
 }
-a:link {
+a {
+    color: #ffffff;
     font-family: "RalewaySemiBold";
     text-decoration: none;
-    color: #ffffff;
+}
+a:link { 
 }
 a:visited {
 }

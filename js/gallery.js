@@ -5,6 +5,7 @@ var slider = tns({
     axis: "horizontal",
     speed: 400,
     slideBy: 1,
-    controls: false,
-    loop: false
+    controls: true,
+    loop: true,
+    nav: false,
   });

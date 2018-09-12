@@ -8,18 +8,17 @@ body {
     max-width: 1280px;
     margin: 0 auto;
 }
-
-/*.wrap>div,footer,header {
-    max-width: 1280px;
-    margin: 0 auto;
-}*/
-
 .flex_container_row {
     display: flex;
     flex-direction: row;
     position: relative;
 }
+.borderlist {
+    list-style-position: inside;
+    border: 1px solid #061e37;
+    border-radius: 5px;
 
+}
 .flex_container_column {
     display: flex;
     flex-direction: column;
@@ -37,7 +36,6 @@ body {
 .easy_div {
     align-items: center;
 }
-
 .title_goes_here > figcaption {
     margin: 0 auto 5px;
 }
@@ -45,11 +43,24 @@ body {
 .stats > div {
     width: 25%;
 }
-
 .ul_list {
     list-style-type: none;
 }
-
+#stat_li {
+    list-style-image: url("../images/list_ico/statistics_ico.png");
+}
+#inbox_li {
+    list-style-image: url("../images/list_ico/inbox_ico.png");
+}
+#team_li {
+    list-style-image: url("../images/list_ico/team_ico.png");
+}
+#sett_li {
+    list-style-image: url("../images/list_ico/settings_ico.png");
+}
+#feed_li {
+    list-style-image: url("../images/list_ico/feed_ico.png");
+}
 h1, h2 {
     margin: 0;
 }
@@ -118,11 +129,11 @@ h1, h2 {
 }
 
 .bg_color_1 {
-    background-color: #e3d6d6;
+    background-color: #f0e9dd;
 }
 
 .bg_color_2 {
-    background-color: #ddc5c5;
+    background-color: #f0e0dd;
 }
 
 .stat1 {
@@ -146,7 +157,7 @@ h1, h2 {
     background-size:100%;
 }
 .comment_block {
-    background-color: #e3d6d6;
+    background-color: #f0e9dd;
     border: 2px solid transparent;
     border-radius: 5px;
     padding: 10px 10px;

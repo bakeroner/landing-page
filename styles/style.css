@@ -17,6 +17,8 @@ body {
     list-style-position: inside;
     border: 1px solid #061e37;
     border-radius: 5px;
+    font-family: "RalewayBold";
+    color: #061e37;
 
 }
 .flex_container_column {
@@ -46,19 +48,19 @@ body {
 .ul_list {
     list-style-type: none;
 }
-#stat_li {
+.ul_list:nth-child(1) { /*поправить селекторы*/
     list-style-image: url("../images/list_ico/statistics_ico.png");
 }
-#inbox_li {
+.ul_list:nth-child(2) {
     list-style-image: url("../images/list_ico/inbox_ico.png");
 }
-#team_li {
+.ul_list:nth-child(3) {
     list-style-image: url("../images/list_ico/team_ico.png");
 }
-#sett_li {
+.ul_list:nth-child(4) {
     list-style-image: url("../images/list_ico/settings_ico.png");
 }
-#feed_li {
+.ul_list:nth-child(5) {
     list-style-image: url("../images/list_ico/feed_ico.png");
 }
 .button_option {
@@ -183,19 +185,12 @@ a:link {
     color: #ffffff;
 }
 a:visited {
-    font-family: "RalewaySemiBold";
-    text-decoration: none;
-    color: #ffffff;
 }
 a:active {
-    font-family: "RalewaySemiBold";
-    text-decoration: none;
-    color: #061e37;
+    /*color: #061e37;*/
 }
 a:hover {
-    font-family: "RalewaySemiBold";
     text-decoration: underline;
-    color: #ffffff;
 }
 button:not(.sign_up_but) {
     font-family: "RalewayMedium";
@@ -219,4 +214,10 @@ button:hover {
 [type = "checkbox"] {
     font-family: "RalewayMedium";
     color: #061e37;
+}
+.hideElement {
+    display: none;
+}
+li>div {
+    display: none;
 }

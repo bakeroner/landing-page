@@ -12,6 +12,7 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     width: 100%;
+    
 }
 .flex_container_row {
     display: flex;
@@ -155,14 +156,12 @@ body {
 }
 .bg_left {
     background-color: #80d8ff;
-    max-width: 100%;
     margin-right: 0;
     width: 100%;
     flex:1;
 }
 .bg_right {
     background-color: #ea80fc;
-    max-width: 100%;
     margin-left: 0;
     width: 100%;
     flex:1;

@@ -11,10 +11,7 @@ body {
 .container2 {
     max-width: 1280px;
     margin: 0 auto;
-    min-width: 100%;
-    width: auto;
-    
-
+    width: 100%;
 }
 .flex_container_row {
     display: flex;
@@ -52,7 +49,6 @@ body {
 
 .stats > div {
     width: 25%;
-    min-width: 320px;
 }
 .ul_list {
     list-style-type: none;
@@ -158,34 +154,32 @@ body {
     background-color: #f0e0dd;
 }
 .bg_left {
-    width: 33%;
     background-color: #80d8ff;
-
+    max-width: 100%;
+    margin-right: 0;
+    width: 100%;
+    flex:1;
 }
 .bg_right {
     background-color: #ea80fc;
-    width: 33%;
- 
+    max-width: 100%;
+    margin-left: 0;
+    width: 100%;
+    flex:1;
 }
 .stat1 {
-
-    background-color: #80d8ff;
-  
+    background-color: #80d8ff;  
 }
 
 .stat2 {
-    background-color: #82b1ff;
-    
+    background-color: #82b1ff;    
 }
 
 .stat3 {
- 
-    background-color: #b388ff;
-    
+    background-color: #b388ff; 
 }
 
 .stat4 {
-
     background-color: #ea80fc;
 }
 

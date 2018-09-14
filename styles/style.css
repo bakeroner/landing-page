@@ -51,6 +51,12 @@ body {
 .stats > div {
     width: 25%;
 }
+.stats > img {
+    background: #ffffff no-repeat -70px 0;
+    border-radius: 50%;
+    /*background-size: auto;*/
+
+}
 .ul_list {
     list-style-type: none;
 }
@@ -251,4 +257,19 @@ button:hover {
 .hideElement {
     display: none;
 }
+.image_div {
+    width: 100%;
+}
+.gallery>div>img {
 
+  border-radius: 50%;
+    /*border: 20px;*/
+}
+/*.round_image {
+    width: 200px; 
+    height: 200px;
+    border-radius: 50%;
+    background: url() no-repeat -70px 0;
+    background-size: auto 200px;
+}
+*/

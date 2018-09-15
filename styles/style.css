@@ -3,7 +3,8 @@ body {
   height: 100%;
   margin: 0;
 }
-
+nav {
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -40,26 +41,44 @@ body {
 .flex_item_fs {
     justify-content: flex-start;
 }
-
 .easy_div {
     align-items: center;
 }
 .title_goes_here > figcaption {
     margin: 0 auto 5px;
+    font-family: "RalewaySemiBold";
 }
-
+.gallery  div {
+    justify-content: center;
+}
 .stats > div {
     width: 25%;
 }
-.stats > img {
-    background: #ffffff no-repeat -70px 0;
+.stats > div > div {
+    width: 50%;
+}
+.stats > div > .image_div {
+    margin-top: auto;
+    margin-bottom: auto;
+  /*  display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;*/
+}
+.stats > div > .image_div > img {
+    background: #ffffff no-repeat;
     border-radius: 50%;
-    /*background-size: auto;*/
-
+    padding: 10px;
+}
+.stats p {
+    color: #ffffff;
+    font-family: "RalewayExtraBold";
 }
 .ul_list {
     list-style-type: none;
+    width: 55%;
 }
+.ul_list 
 /*.ul_list:nth-child(1) { поправить селекторы
     list-style-image: url("../images/list_ico/statistics_ico.png");
 }
@@ -118,13 +137,6 @@ body {
     padding: 8px 6px;
     font-family: "RalewayRegular"; 
 }
-
-.image_option {
-    background:transparent;
-    height: auto;
-    width:auto;
-}
-
 .buy_now_but {
     background-color: #061e37;
     color: #ffffff;
@@ -257,13 +269,32 @@ button:hover {
 .hideElement {
     display: none;
 }
+.smokeElement {
+    opacity: 0.25;
+}
+.clearElement {
+    opacity: 1;
+    width:150%;
+}
 .image_div {
     width: 100%;
+    padding: 0 0;
+/*    margin-left: auto;
+    margin-right: auto;*/
 }
-.gallery>div>img {
+.image_div>img {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+/*.gallery > div > img {
 
-  border-radius: 50%;
+  border-radius: 50%;*/
     /*border: 20px;*/
+}
+.slider > div > .image_div {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 /*.round_image {
     width: 200px; 

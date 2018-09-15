@@ -41,6 +41,9 @@ nav {
 .flex_item_fs {
     justify-content: flex-start;
 }
+.flex_item_center {
+    justify-content: center;
+}
 .easy_div {
     align-items: center;
 }
@@ -78,8 +81,11 @@ nav {
     font-family: "RalewayExtraBold";
 }
 .ul_list {
+    display:block;
     list-style-type: none;
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .ul_list 
 /*.ul_list:nth-child(1) { поправить селекторы
@@ -119,8 +125,10 @@ nav {
     border: none;
     outline: none;
     border-radius: 5px;
-    width: 150px;
-    height: 55px;
+    max-width: 150px;
+    width: auto;
+    max-height: 55px;
+    height: auto;
     /*background:transparent;*/
 }
 
@@ -134,8 +142,10 @@ nav {
     background: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    width: 60px;
-    height: 25px;
+    max-width: 60px;
+    width: auto;
+    max-height: 25px;
+    height: auto;
     font-size: 8px;
     padding: 8px 6px;
     font-family: "RalewayRegular"; 
@@ -147,8 +157,10 @@ nav {
 
 .try_for_free_but {
     background-color: #ffffff;
-    width: 160px;
-    height: 55px;
+    max-width: 160px;
+    width: auto;
+    max-height: 55px;
+    height: auto;
     color: #061e37;
 }
 
@@ -160,8 +172,10 @@ nav {
     padding: 4px 6px;
    background-color: #1de9b6;
    color: #ffffff;
-   width: 130px;
-   height: 35px;
+   max-width: 130px;
+   width: auto;
+   max-height: 35px;
+   height: auto;
 }
 
 .foot_color {
@@ -296,6 +310,9 @@ button:hover {
 .slider > div > .image_div {
     margin-top: auto;
     margin-bottom: auto;
+}
+#subs_label {
+    font-family: "RalewayMedium";
 }
 /*.round_image {
     width: 200px; 

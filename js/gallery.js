@@ -11,13 +11,14 @@
   });*/
   const container = document.getElementById("gallery");
 const img_coll = container.getElementsByClassName("easy_div");
+//toHideAll();
 for (let i = 0; i<img_coll.length; i++) {
   Array.from(img_coll[i].children).forEach((face) => {
       if (face.tagName == "IMG") {
-      face.classList.toggle("smokeElement");
+      face.classList.add("smokeElement");
     }
     else {
-        face.classList.toggle("hideElement");
+        face.classList.add("hideElement");
     }
     })
   }
@@ -25,14 +26,39 @@ for (let i = 0; i<img_coll.length; i++) {
     container.addEventListener("click", (event) => {
     let target = event.target;
     if (target.tagName == "IMG") {
-        console.log(target.parentNode.children);
+        toHideAll();
+        //console.log(target.parentNode.children);
         Array.from(target.parentNode.children).forEach((dom_element) => {
             if (dom_element.tagName == "IMG") {
-                dom_element.classList.toggle("clearElement");
+                toHighlight(dom_element);
             }
             else {
-                dom_element.classList.toggle("hideElement");
+                showElemFunc(dom_element);
             }
         })
     }
     })
+    let toHideAll = () => {
+        for (let i = 0; i<img_coll.length; i++) {
+  Array.from(img_coll[i].children).forEach((face1) => {
+      if (face1.tagName == "IMG") {
+        smokeElemFunc(face1);
+    }
+    else {
+        hideElemFunc(face1);
+    }
+    })
+  }
+    }
+    let hideElemFunc = (elementHide) => {
+    elementHide.classList.add("hideElement");
+  };
+    let showElemFunc = (elementHide) => {
+    elementHide.classList.toggle("hideElement");
+  };
+    let toHighlight = (elementShow) => {
+    elementShow.classList.toggle("clearElement");
+  };
+    let smokeElemFunc = (elementShow) => {
+    elementShow.classList.add("smokeElement");
+  };

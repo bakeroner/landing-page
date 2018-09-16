@@ -12,8 +12,19 @@ nav {
 .container2 {
     max-width: 1280px;
     margin: 0 auto;
+    width: 100%;   
+}
+.move_5p {
+    padding: 5% 0;
+}
+.move_item {
     width: 100%;
-    
+}
+.move_item > button {
+    margin-right: 3%;
+}
+.move_item > a {
+    margin: 5% 3%;
 }
 .flex_container_row {
     display: flex;
@@ -50,6 +61,9 @@ nav {
 .title_goes_here > p {
     text-align: center;
 }
+.title_goes_here {
+    width: 25%;
+}
 .title_goes_here > figcaption {
     margin: 0 auto 5px;
     font-family: "RalewaySemiBold";
@@ -59,22 +73,31 @@ nav {
 }
 .stats > div {
     width: 25%;
+    justify-content: center; 
+    align-items: center;
 }
 .stats > div > div {
     width: 50%;
 }
 .stats > div > .image_div {
-    margin-top: auto;
-    margin-bottom: auto;
-  /*  display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;*/
-}
-.stats > div > .image_div > img {
+/*    margin-top: auto;
+    margin-bottom: auto;*/
     background: #ffffff no-repeat;
     border-radius: 50%;
-    padding: 10px;
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+    margin-right: 3%;
+}
+.stats > div > .image_div > img {
+    margin: auto auto;
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    /*background: #ffffff no-repeat;
+    border-radius: 50%;
+    padding: 10px;*/
 }
 .stats p {
     color: #ffffff;
@@ -86,6 +109,16 @@ nav {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+}
+.ul_list > li {
+    margin-bottom: 3%;
+}
+.ul_list > li > div {
+    margin: 5% 3%;
+    text-align: justify;
+}
+.ul_list > li > .image_div > img {
+    margin-right: 3%;
 }
 .ul_list 
 /*.ul_list:nth-child(1) { поправить селекторы
@@ -125,10 +158,12 @@ nav {
     border: none;
     outline: none;
     border-radius: 5px;
-    max-width: 150px;
+    width: 150px;
+    height: 55px;
+    /*max-width: 150px;
     width: auto;
     max-height: 55px;
-    height: auto;
+    height: auto;*/
     /*background:transparent;*/
 }
 
@@ -142,10 +177,12 @@ nav {
     background: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    max-width: 60px;
+    width: 80px;
+    height: 25px;
+    /*max-width: 80px;
     width: auto;
     max-height: 25px;
-    height: auto;
+    height: auto;*/
     font-size: 8px;
     padding: 8px 6px;
     font-family: "RalewayRegular"; 
@@ -157,10 +194,12 @@ nav {
 
 .try_for_free_but {
     background-color: #ffffff;
-    max-width: 160px;
+    width: 160px;
+    height: 55px;
+    /*max-width: 160px;
     width: auto;
     max-height: 55px;
-    height: auto;
+    height: auto;*/
     color: #061e37;
 }
 
@@ -172,10 +211,12 @@ nav {
     padding: 4px 6px;
    background-color: #1de9b6;
    color: #ffffff;
-   max-width: 130px;
+   width: 130px;
+   height: 35px;
+   /*max-width: 130px;
    width: auto;
    max-height: 35px;
-   height: auto;
+   height: auto;*/
 }
 
 .foot_color {
@@ -219,7 +260,10 @@ nav {
 
 .bg_img {
     background-image:linear-gradient(to right bottom, rgba(28,234,190,0.6) 0%,rgba(26,192,215,0.6) 100%),url("../images/bg_img_top.png");
-    background-size:100%;
+    background-repeat: no-repeat;
+    /*background-width:auto;
+    background-height:100%;*/
+    background-size:cover;
 }
 .comment_block {
     background-color: #f0e9dd;
@@ -275,13 +319,18 @@ button:hover {
 [type = "button"] {
     font-family: "RalewayMedium";
 }
+[type = "submit"] {
+    margin: 5% 3%;
+}
 [type = "text"] {
     font-family: "RalewayMedium";
     color: #061e37;
+    margin: 5% 3%;
 }
 [type = "checkbox"] {
     font-family: "RalewayMedium";
     color: #061e37;
+    margin: 5% 3%;
 }
 .hideElement {
     display: none;
@@ -299,10 +348,12 @@ button:hover {
 /*    margin-left: auto;
     margin-right: auto;*/
 }
-.image_div>img {
+.image_div>img:not(.logo) {
     display: block; 
     margin-left: auto; 
     margin-right: auto;
+}.gallery {
+
 }
 .gallery > div > p {
     text-align: center;
@@ -313,6 +364,22 @@ button:hover {
 }
 #subs_label {
     font-family: "RalewayMedium";
+}
+.button_top_block {
+    margin-top: auto;
+
+}
+.button_top_block > button {
+    align-self: flex-end;
+}
+.link_container {
+    text-align: center; 
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+.logo {
+     margin-left: 0; 
+    margin-right: auto;
 }
 /*.round_image {
     width: 200px; 

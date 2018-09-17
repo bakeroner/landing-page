@@ -38,8 +38,10 @@ header p {
     position: relative;
 }
 .borderlist {
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    padding: 3%;
     list-style-position: inside;
-    border: 1px solid #061e37;
+    border: 1px solid #fafafa;
     border-radius: 5px;
     font-family: "RalewayBold";
     color: #061e37;
@@ -74,11 +76,18 @@ header p {
     margin: 5% auto 5%;
     font-family: "RalewaySemiBold";
 }
-.title_goes_here > div > .image_div {
-
+.title_goes_here > .image_div {
+    width: 80px;
+    height: 80px;   
 }
-.title_goes_here > div > .image_div > img {
-    
+.title_goes_here > .image_div > img {
+    margin-top: auto;
+    margin-bottom: auto;
+    /*margin: auto auto;*/
+   /* width: auto;
+    max-height: 100%;
+    height: 100%;
+    max-width: 100%;*/
 }
 .gallery  div {
     justify-content: center;
@@ -92,21 +101,23 @@ header p {
     width: 50%;
 }
 .stats > div > .image_div {
-/*    margin-top: auto;
+    /*margin-top: auto;
     margin-bottom: auto;*/
     background: #ffffff no-repeat;
     border-radius: 50%;
-    padding: 15px;
+    padding: 10px;
     width: 25px;
     height: 25px;
     margin-right: 3%;
 }
 .stats > div > .image_div > img {
-    margin: auto auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    /*margin: auto auto;
     width: 100%;
     max-height: 100%;
     height: auto;
-    max-width: 100%;
+    max-width: 100%;*/
     /*background: #ffffff no-repeat;
     border-radius: 50%;
     padding: 10px;*/
@@ -185,6 +196,8 @@ header p {
 }
 
 .arrow {
+    margin-left: 50%;
+    margin-right: auto;
     outline: none;
     border: 0;
     background: transparent;
@@ -229,7 +242,10 @@ header p {
    background-color: #1de9b6;
    color: #ffffff;
    width: 130px;
-   height: 35px;
+   height: 50px;
+   align-self: flex-end;
+   margin-right: 0;
+   margin-left: auto;
    /*max-width: 130px;
    width: auto;
    max-height: 35px;
@@ -241,11 +257,11 @@ header p {
 }
 
 .bg_color_1 {
-    background-color: #f0e9dd;
+    background-color: #ffffff;
 }
 
 .bg_color_2 {
-    background-color: #f0e0dd;
+    background-color: #fafafa;
 }
 .bg_left {
     background-color: #80d8ff;
@@ -275,11 +291,16 @@ header p {
     background-color: #ea80fc;
 }
 
-.bg_img {
-    background-image:linear-gradient(to right bottom, rgba(28,234,190,0.6) 0%,rgba(26,192,215,0.6) 100%),url("../images/bg_img_top.png");
+.bg_img1 {
+    background-image:linear-gradient(to right bottom, rgba(37,227,177,0.9) 0%,rgba(26,192,215,0.9) 100%),url("../images/bg_img_top.png");
     background-repeat: no-repeat;
     /*background-width:auto;
     background-height:100%;*/
+    background-size:cover;
+}
+.bg_img2 {
+    background-image:linear-gradient(to right bottom, rgba(37,227,177,0.9) 0%,rgba(26,192,215,0.9) 100%),url("../images/bg_img_middle.png");
+    background-repeat: no-repeat;
     background-size:cover;
 }
 .text_comment_block > h2 {
@@ -287,14 +308,19 @@ header p {
 }
 .text_comment_block > p {
     width: 100%;
+    color: #ffffff;
 }
 .comment_block {
-    background-color: #f0e9dd;
+    background-color: #ffffff;
     border: 2px solid transparent;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 3% 3%;
     margin-top: 3%;
     margin-bottom: 3%;
+    width: 85%;
+}
+.comment_block > span {
+    font-family: "RalewayBold";
 }
 input {
     background-color: transparent;
@@ -324,7 +350,7 @@ a:link {
 a:visited {
 }
 a:active {
-    /*color: #061e37;*/
+    color: #061e37;
 }
 a:hover {
     text-decoration: underline;
@@ -341,21 +367,35 @@ button:focus {
 button:hover {
 
 }
+
+#user_mess {
+    width: 100%;
+}
 [type = "button"] {
     font-family: "RalewayMedium";
 }
 [type = "submit"] {
-    margin: 5% 3%;
 }
 [type = "text"] {
     font-family: "RalewayMedium";
     color: #061e37;
-    margin: 5% 3%;
+    margin: 2% 3%;
+    width: 50%;
+    padding: 3% 3%;
 }
 [type = "checkbox"] {
     font-family: "RalewayMedium";
     color: #061e37;
-    margin: 5% 3%;
+    margin: auto 0;
+     align-self: flex-start;
+     margin-right: 3%;
+}
+.form_bottom {
+    /*padding-top: 0;
+    padding-bottom: auto;*/  
+    /*justify-content: flex-end; */
+    align-items: center;
+    margin: 0 3%;
 }
 .hideElement {
     display: none;
@@ -380,15 +420,35 @@ button:hover {
 }.gallery {
     margin-top: 5%;
 }
+.gallery >div {
+    /*padding: auto 0;*/
+}
 .gallery > div > p {
     text-align: center;
+}
+.slider {
+    width: 100%;
+}
+.slider > div {
+    width: 100%;
 }
 .slider > div > .image_div {
     margin-top: auto;
     margin-bottom: auto;
+    border-radius: 50%;
+    width: 20%;
+    height: 20% ;
+    padding: 0;
+
+}
+.slider > div > .image_div > img {
+    margin-right: 5%;
+    margin-left: 0;
 }
 #subs_label {
     font-family: "RalewayMedium";
+     align-self: flex-start;
+     margin: auto 0;
 }
 .button_top_block {
 }
@@ -402,11 +462,12 @@ button:hover {
     width: 100%;
 }
 .text_contact_block > p {
-    width: 40%;
+    width: 50%;
     text-align: center;
 }
 .text_contact_block > form {
-    width: 40%;
+    width: 60%;
+    align-self: center;
 }
 .button_top_block > button {
     align-self: flex-end;
@@ -423,6 +484,20 @@ button:hover {
 #footer_link_container {
     justify-content: flex-end;
 }
+.social {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.social > a {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.social > a > img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 /*.round_image {
     width: 200px; 
     height: 200px;

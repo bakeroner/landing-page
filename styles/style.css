@@ -485,8 +485,19 @@ button:hover {
      margin-left: 0; 
     margin-right: auto;
 }
-#footer_link_container {
+.footer_link_container {
     justify-content: flex-end;
+}
+#footer_social {
+    justify-content: flex-end;
+}
+/*ul.footer_link > li {
+    display: inline;
+    padding: 4px;
+    margin: 0;
+}*/
+footer > div > .flex_container_column {
+    width: 50%;
 }
 .social {
     align-items: center;

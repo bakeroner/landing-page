@@ -9,7 +9,7 @@
     loop: true,
     nav: false,
   });*/
-  const container = document.getElementById("gallery");
+const container = document.getElementById("gallery");
 const img_coll = container.getElementsByClassName("easy_div");
 //toHideAll();
 for (let i = 0; i<img_coll.length; i++) {

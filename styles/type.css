@@ -4,13 +4,15 @@
 .services__text,
 .comment__text,
 .team__text,
-.member__text {
+.member__text,
+.contact__text {
 	font-family: "RalewayRegular";
 }
 .title__header,
 .figure__label,
 .team__header,
-.services__title {
+.services__title,
+.contact__header {
 	font-family: "RalewaySemiBold";
 }
 .article__title,

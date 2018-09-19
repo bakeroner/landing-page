@@ -1,5 +1,5 @@
 var slider = tns({
-    container: ".slider",
+    container: ".slider-block",
     mode: "carousel",
     items: 2,
     axis: "vertical",

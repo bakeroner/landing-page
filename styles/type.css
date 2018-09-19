@@ -9,7 +9,8 @@
 }
 .title__header,
 .figure__label,
-.team__header {
+.team__header,
+.services__title {
 	font-family: "RalewaySemiBold";
 }
 .article__title,

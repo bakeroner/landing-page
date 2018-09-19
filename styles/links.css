@@ -1,0 +1,14 @@
+.link,
+.social__link {
+	color: #fff;
+	font-family: "RalewaySemiBold";
+	text-decoration: none;
+}
+.link {
+	margin: 5% 3%;
+}
+.social__link {
+	padding-top: 0;
+    padding-bottom: 0;
+    margin: 5% 3%;
+}

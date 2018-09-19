@@ -1,0 +1,56 @@
+.button {
+    padding: 16px 16px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 55px;
+}
+.button-sign-up {
+	border-radius: 2px;
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    width: 80px;
+    height: 25px;
+    font-size: 8px;
+    padding: 6px 6px;
+    font-family: "RalewayRegular";
+}
+.button--buy-now {
+    background-color: #061e37;
+    color: #ffffff;
+    font-family: "RalewayMedium";
+    margin-right: 3%;
+    align-self: flex-end;
+}
+.button--try-for-free {
+    background-color: #ffffff;
+    width: 160px;
+    height: 55px;
+    color: #061e37;
+    align-self: flex-end;
+    font-family: "RalewayMedium";
+    margin-right: 3%;
+}
+.button--get-started-description {
+	font-family: "RalewayMedium";
+    background-color: #1de9b6;
+    color: #ffffff;
+}
+.button--get-started-comment {
+	background-color: #061e37;
+    color: #fff;
+}
+.slider-block__arrow {
+	margin-left: 50%;
+    margin-right: auto;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+
+/*-----*/
+

@@ -1,0 +1,70 @@
+.page {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.header,
+.insides__description,
+.insides-color-line__statistics,
+.insides__services,
+.insides__comments,
+.insides__team,
+.insides__contact,
+.insides__footer {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+.header__navigation,
+.header__article,
+.article__button,
+.description__content,
+.page__insides,
+.page__insides-color-line,
+.insides-color-line__statistics,
+.statistics,
+.statistics__value,
+.list__items,
+.comments,
+.slider-block__slide,
+.team__gallery,
+.member__social,
+.form__row,
+.footer,
+.left-part__list-bottom,
+.right-part__list-bottom,
+.right-part__social {
+	display: flex;
+    flex-direction: row;
+    position: relative;  
+}
+.article,
+.description__title,
+.content__figure,
+.description__button,
+.services,
+.comments__title,
+.comments__slider-block,
+.slide__comment,
+.team,
+.gallery__member,
+.contact,
+.form,
+.footer__left-part,
+.footer__right-part {
+	display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.navigation__logo,
+.video,
+.figure__icon,
+.statistics__icon,
+.items__picture,
+.slide__user,
+.left-part__logo {
+	width: 100%;
+	padding: 0 0;
+}
+.hideElement {
+	display: none;
+}

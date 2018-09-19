@@ -1,0 +1,17 @@
+.team {
+	align-items: center;
+	padding: 5% 0;
+}
+.team__gallery {
+	margin-top: 5%;
+}
+.gallery__member {
+    justify-content: center;
+    align-items: center;
+}
+.member__social {
+	width: 100%;
+	align-items: center;
+    justify-content: center;
+    align-content: center;	
+}

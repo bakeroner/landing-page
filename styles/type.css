@@ -1,0 +1,82 @@
+.article__text,
+.figure__text,
+.title__text,
+.services__text,
+.comment__text,
+.team__text,
+.member__text {
+	font-family: "RalewayRegular";
+}
+.title__header,
+.figure__label,
+.team__header {
+	font-family: "RalewaySemiBold";
+}
+.article__title,
+.value__text {
+	font-family: "RalewayExtraBold";
+}
+.row__checkbox-label {
+	font-family: "RalewayMedium";
+}
+.comment__user-name {
+	font-family: "RalewayBold";
+}
+.article__title {
+	margin: 0;
+	color: #fff;
+}
+.article__text { 
+    width: 80%; 
+    margin-top: auto; 
+    margin-bottom: auto;
+    color: #fff;
+}
+.header--description {
+	margin: 0;
+}
+.title__text {
+	color: #061e37;
+}
+.figure__label {
+	 margin: 5% auto 5%;
+}
+.figure__text {
+	color: #061e37;
+	text-align: center;
+}
+.value__text {
+	color: #fff;
+}
+.services__title {
+	
+}
+.services__text {
+	color: #b0bec5;
+}
+.items__properties {
+	margin-right: 3%;
+}
+.header--comments {
+	color: #fff;
+}
+.title__text {
+	color: #fff;
+	padding-bottom: 10%;
+	width: 100%;
+}
+.comment__text {
+	color: #061e37;
+}
+.member__text {
+	text-align: center;
+	color: #061e37;
+}
+.contact__text {
+	width: 50%;
+    text-align: center;
+}
+.row__checkbox-label {
+     align-self: flex-start;
+     margin: auto 0;
+}

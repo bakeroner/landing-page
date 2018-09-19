@@ -3,157 +3,190 @@
 <head>
     <meta charset="utf-8">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles/font.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/button.css">
+    <link rel="stylesheet" href="styles/background.css">
+    <link rel="stylesheet" href="styles/images.css">
+    <link rel="stylesheet" href="styles/type.css">
+    <link rel="stylesheet" href="styles/links.css">
+    <link rel="stylesheet" href="styles/blocks/common.css">
+    <link rel="stylesheet" href="styles/blocks/header.css">
+    <link rel="stylesheet" href="styles/blocks/description.css">
+    <link rel="stylesheet" href="styles/blocks/stats.css">
+    <link rel="stylesheet" href="styles/blocks/services.css">
+    <link rel="stylesheet" href="styles/blocks/comments.css">
+    <link rel="stylesheet" href="styles/blocks/team.css">
+    <link rel="stylesheet" href="styles/blocks/contact.css">
+    <link rel="stylesheet" href="styles/blocks/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/tiny-slider.css">
 </head>
-<body>
-    <div class="wrap">
-    <div class="bg_img1">
-        <header class="container">
-            <nav class="flex_container_row flex_item_sb move_5p">
-                <div>
-                    <div class = "image_div">
-                        <img src="images/logo_with_name.png" class = "logo">
+<body class="page">
+	<!-- ############################################### -->
+    <div class="page__header header--background">
+        <header class="header">
+            <nav class="header__navigation">
+                    <div class="navigation__logo"> <!-- running out -->
+                        <img src="images/logo_with_name.png" alt="top-logo-image" class="logo__image">
                     </div>
-                </div>
-                <div class="link_container move_item">
-                    <a href="">Home</a>
-                    <a href="index.html">Service</a>
-                    <a href="">Extension</a>
-                    <a href="">Pricing</a>
-                    <a href="">Help</a>
-                </div>
-                <div>
-                    <button class="button_option sign_up_but" type="button">Sign up</button>
-                </div>
+                	<div class="navigation__link-panel">
+                    	<a href="" class="link">Home</a>
+                    	<a href="index.html" class="link">Service</a>
+                    	<a href="" class="link">Extension</a>
+                    	<a href="" class="link">Pricing</a>
+                    	<a href="" class="link">Help</a>
+                	</div>
+                	<div class="navigation__button">
+                    	<button class="button button-sign-up" type="button">Sign up</button><!-- running out -->
+                    </div>
             </nav>
-            <div class="flex_container_row flex_item_sb move_5p"> <!-- выровнять видео с текстом -->
-                <div class="flex_container_column">
-                    <h1>LOREM IPSUM<br>DOLOR SIT AMET</h1>
-                    <p class = "text_top_block">
+            <div class="header__article">
+                <div class="article">
+                    <h1 class="article__title">LOREM IPSUM<br>DOLOR SIT AMET</h1>
+                    <p class="article__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                         quis nostrud exercitation ullamco
                     </p>
-                    <div class = "flex_container_row button_top_block move_5p move_item">
-                        <button class="button_option buy_now_but" type="button">BUY NOW</button>
-                        <button class="button_option try_for_free_but" type="button">TRY FOR FREE</button>
+                    <div class="article__button">
+                        <button class="button button--buy-now" type="button">BUY NOW</button>
+                        <button class="button button--try-for-free" type="button">TRY FOR FREE</button>
                     </div>
                 </div>
-                <div class = "image_div">
-                    <img src="images/video_ico.png">
+                <div class="header__video">
+                <div class = "video">
+                    <img src="images/video_ico.png" alt="video-top" class="video__player">
+                </div>
                 </div>
             </div>
         </header>
     </div>
-    <div class="bg_color_1">
-        <div class="container">
-            <div class="flex_container_column easy_div move_5p">
-                <h2>Easy & Useful</h2>
-                <h3>Project Management Tool</h3>
-                <p>
+    <!-- ############################################### -->
+    <div class="page__insides insides--description-background">
+    	<div class="insides__description">
+            <div class="description__title">
+                <h2 class="title__header header--description">Easy & Useful</h2>
+                <h3 class="title__header header--description">Project Management Tool</h3>
+                <p class="title__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud
                 </p>
             </div>
-            <div class="flex_container_row flex_item_sb">
-                <div class="flex_container_column title_goes_here easy_div">
-                    <div class = "image_div">
-                        <img src="images/title_goes_here.png">
+            <div class="description__content">
+                <div class="content__figure">
+                    <div class = "figure__icon">
+                        <img src="images/title_goes_here.png" alt="title-goes-here" class="icon__image">
                     </div>
-                    <figcaption>Title goes here</figcaption>
-                    <p>
+                    <figcaption class="figure__label">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div class="flex_container_column title_goes_here easy_div">
-                    <div class = "image_div">
-                        <img src="images/title_goes_here1.png">
+                <div class="content__figure">
+                    <div class = "figure__icon">
+                        <img src="images/title_goes_here1.png" alt="title-goes-here" class="icon__image">
                     </div>
-                    <figcaption>Title goes here</figcaption>
-                    <p>
+                    <figcaption class="figure__label">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
-                <div class="flex_container_column title_goes_here easy_div">
-                    <div class = "image_div">
-                        <img src="images/title_goes_here2.png">
+                <div class="content__figure">
+                    <div class = "figure__icon">
+                        <img src="images/title_goes_here2.png" alt="title-goes-here" class="icon__image">
                     </div>
-                    <figcaption>Title goes here</figcaption>
-                    <p>
+                    <figcaption class="figure__label">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
                     </p>
                 </div>
             </div>
-            <div class="flex_container_column easy_div move_5p">
-                <button class="button_option get_started_but" type="button">GET STARTED</button>
+            <div class="description__button">
+                <button class="button button--get-started-description" type="button">GET STARTED</button>
             </div>
         </div>
     </div>
-    <div class = "flex_container_row">
-    <div class = "bg_left move_5p"></div>
-        <div class="flex_container_row stats container2">
-            <div class="flex_container_row stat1">
-                <div class = "image_div">
-                    <img src="images/stats_ico/business_ico.png">
+    <!-- ############################################### -->
+    <div class="page__insides-color-line">
+    <div class="insides-color-line__additional-background background--left"></div>
+        <div class="insides-color-line__statistics">
+            <div class="statistics statistics--business">
+                <div class="statistics__icon">
+                    <img src="images/stats_ico/business_ico.png" alt="business-icon" class="icon__image">
                 </div>
-                <div class = "flex_container_row">
-                    <p>
+                <div class="statistics__value">
+                    <p class="value__text">
                         12000+<br>Business
                     </p>
                 </div>
             </div>
-            <div class="flex_container_row stat2">
-                <div class = "image_div">
-                    <img src="images/stats_ico/downloads_ico.png">
+            <div class="statistics statistics--downloads">
+                <div class="statistics__icon">
+                    <img src="images/stats_ico/downloads_ico.png" alt="downloads-icon" class="icon__image">
                 </div>
-                <div class = "flex_container_row">
-                    <p>
+                <div class="statistics__value">
+                    <p class="value__text">
                         60000+<br>Downloads
                     </p>
                 </div>
             </div>
-            <div class="flex_container_row stat3">
-                <div class = "image_div">
-                    <img src="images/stats_ico/freeinstalls_ico.png">
+            <div class="statistics statistics--free-installs">
+                <div class="statistics__icon">
+                    <img src="images/stats_ico/freeinstalls_ico.png" alt="free-installs-icon" class="icon__image">
                 </div>
-            <div class = "flex_container_row">
-                <p>
+            <div class="statistics__value">
+                <p class="value__text">
                     30000+<br>Free Installs
                 </p>
             </div>
             </div>
-            <div class="flex_container_row stat4">
-                <div class = "image_div">
-                    <img src="images/stats_ico/pro-users_ico.png">
+            <div class="statistics statistics--pro-users">
+                <div class="statistics__icon">
+                    <img src="images/stats_ico/pro-users_ico.png" alt="pro-users-icon" class="icon__image">
                 </div>
-            <div class = "flex_container_row">
-                <p>
+            <div class="statistics__value">
+                <p class="value__text">
                     40000+<br>Pro Users
                 </p>
             </div>
+        	</div>
         </div>
-        </div>
-    <div class = "bg_right move_5p"></div>
+    <div class="insides-color-line__additional-background background--right"></div>
 </div>
-    <div class="bg_color_1">
-        <div class="container">
-            <div class="flex_container_column easy_div move_5p">
-                <h2>Services</h2>
-                <p id = "gray_text">
+	<!-- ############################################### -->
+    <div class="page__insides insides--services-background">
+        <div class="insides__services"> 
+        	<div class="services">
+                <h2 class="services__title">Services</h2>
+                <p class="services__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et
                 </p>
-                <ul class="ul_list" id = "ulTree">
-                    <li class="borderlist" id = "li1">STATISTICS<img src="images/cut_ico.png">
-                        <div class="flex_container_row">
-                            <div class = "image_div"><img src="images/img_ul.png"></div>
-                            <p>
+                <ul class="services__list" id = "ulTree">
+                    <li class="list list--services list--statistics">STATISTICS<img src="images/cut_ico.png" alt="list-cut" class="list__cut">
+                        <div class="list__items">
+                            <div class="items__picture">
+                            	<img src="images/img_ul.png" alt="list-picture" class="picture__image">
+                            </div>
+                            <p class="items__properties">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                               	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                               	consequat. Duis aute irure dolor in reprehenderit in
+                            </p>
+                        </div>
+                    </li>
+                    <li class="list list--services list--inbox">INBOX<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                        <div class="list__items">
+                            <div class="items__picture">
+                                <img src="images/img_ul.png" alt="list-picture" class="picture__image">
+                            </div>
+                            <p class="items__properties">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -161,12 +194,12 @@
                             </p>
                         </div>
                     </li>
-                    <li class="borderlist" id = "li2">INBOX<img src="images/cut_ico.png">
-                        <div class="flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/img_ul.png">
+                    <li class="list list--services list--team">TEAM<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                        <div class="list__items">
+                            <div class="items__picture">
+                                <img src="images/img_ul.png" alt="list-picture" class="picture__image">
                             </div>
-                            <p>
+                            <p class="items__properties">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -174,12 +207,12 @@
                             </p>
                         </div>
                     </li>
-                    <li class="borderlist" id = "li3">TEAM<img src="images/cut_ico.png">
-                        <div class="flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/img_ul.png">
+                    <li class="list list--services list--settings">SETTINGS<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                        <div class="list__items">
+                            <div class="items__picture">
+                                <img src="images/img_ul.png" alt="list-picture" class="picture__image">
                             </div>
-                            <p>
+                            <p class="items__properties">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -187,25 +220,12 @@
                             </p>
                         </div>
                     </li>
-                    <li class="borderlist" id = "li4">SETTINGS<img src="images/cut_ico.png">
-                        <div class="flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/img_ul.png">
+                    <li class="list list--services list--feed">FEED<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                        <div class="list__items">
+                            <div class="items__picture">
+                                <img src="images/img_ul.png" alt="list-picture" class="picture__image">
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in
-                            </p>
-                        </div>
-                    </li>
-                    <li class="borderlist" id = "li5">FEED<img src="images/cut_ico.png">
-                        <div class="flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/img_ul.png">
-                            </div>
-                            <p>
+                            <p class="items__properties">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -217,163 +237,167 @@
             </div>
         </div>
     </div>
-    <div class="bg_img2">
-        <div class="container"> <!-- компоновка+слайдер -->
-            <div class="flex_container_row">
-                <div class="flex_container_column flex_item_center move_5p text_comment_block" style = "width: 40%;">
-                    <h2>What our customers <br>have to say about us.</h2>
-                    <p style="padding-bottom:10%;">
+    <!-- ############################################### -->
+    <div class="page__insides insides--comments-background">
+        <div class="insides__comments">
+        	<div class="comments">
+                <div class="comments__title">
+                    <h2 class="title__header header--comments">What our customers <br>have to say about us.</h2>
+                    <p class="title__text">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna
                     </p>
-                    <button class="button_option buy_now_but" type="button">GET STARTED</button>
+                <div class="title_button">
+                    <button class="button button--get-started-comment" type="button">GET STARTED</button>
                 </div>
-                <div class="flex_container_column easy_div" style = "width: 60%;">
-                        <button class="arrow button_option" id="butTop" type="button">
-                            <img src="images/up_but.png">
+                </div>
+                <div class="comments__slider-block">
+                        <button class="slider-block__arrow arrow--up" id="butTop" type="button">
+                            <img src="images/up_but.png" alt="up-but-wus-here" class="arrow__image image--arrow-up">
                         </button>
-                    <div class="slider">
-                        <div class = "flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/comment_face1.png">
+                    <div class="slider-block">
+                        <div class = "slider-block__slide">
+                            <div class="slide__user">
+                                <img src="images/comment_face1.png" alt="user-face-comment" class="user__image">
                             </div>
-                            <div class = "flex_container_column comment_block">
-                                <span>John Doe</span>
-                                <p>
+                            <div class="slide__comment">
+                                <span class="comment__user-name">John Doe</span>
+                                <p class="comment__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 </p>
                             </div>
                         </div>
-                        <div class = "flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/comment_face2.png">
+                        <div class = "slider-block__slide">
+                            <div class="slide__user">
+                                <img src="images/comment_face2.png" alt="user-face-comment" class="user__image">
                             </div>
-                            <div class = "flex_container_column comment_block">
-                                <span>Khalessi</span>
-                                <p>
+                            <div class="slide__comment">
+                                <span class="comment__user-name">Khalessi</span>
+                                <p class="comment__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 </p>
                             </div>
                         </div>
-                        <div class = "flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/comment_face1.png">
+                        <div class = "slider-block__slide">
+                            <div class="slide__user">
+                                <img src="images/comment_face1.png" alt="user-face-comment" class="user__image">
                             </div>
-                            <div class = "flex_container_column comment_block">
-                                <span>John Doe</span>
-                                <p>
+                            <div class="slide__comment">
+                                <span class="comment__user-name">John Doe</span>
+                                <p class="comment__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 </p>
                             </div>
                         </div>
-                        <div class = "flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/comment_face2.png">
+                        <div class = "slider-block__slide">
+                            <div class="slide__user">
+                                <img src="images/comment_face2.png" alt="user-face-comment" class="user__image">
                             </div>
-                            <div class = "flex_container_column comment_block">
-                                <span>Khalessi</span>
-                                <p>
+                            <div class="slide__comment">
+                                <span class="comment__user-name">Khalessi</span>
+                                <p class="comment__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 </p>
                             </div>
                         </div>
-                        <div class = "flex_container_row">
-                            <div class = "image_div">
-                                <img src="images/comment_face1.png">
+                        <div class = "slider-block__slide">
+                            <div class="slide__user">
+                                <img src="images/comment_face1.png" alt="user-face-comment" class="user__image">
                             </div>
-                            <div class = "flex_container_column comment_block">
-                                <span>John Doe</span>
-                                <p>
+                            <div class="slide__comment">
+                                <span class="comment__user-name">John Doe</span>
+                                <p class="comment__text">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                                 </p>
                             </div>
                         </div>
                     </div>
-                        <button class="arrow button_option" id="butBot" type="button">
-                            <img src="images/down_but.png">
+                        <button class="slider-block__arrow arrow--down" id="butBot" type="button">
+                            <img src="images/down_but.png" alt="down-but-wus-here" class="arrow__image image--arrow-down">
                         </button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="bg_color_1">
-        <div class="container">
-            <div class="flex_container_column easy_div move_5p">
-                <h2>Our Team</h2>
-                <p>
+    <!-- ############################################### -->
+    <div class="page__insides insides--team-background">
+        <div class="insides__team">
+            <div class="team">
+                <h2 class="team__header">Our Team</h2>
+                <p class="team__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna
                 </p>
-                <div class="flex_container_row gallery" id = "gallery">
-                    <div class = "flex_container_column easy_div">
-                        <img src = "images/comment_face1.png">
-                        <p>
+                <div class="team__gallery" id = "gallery">
+                    <div class="gallery__member">
+                        <img src="images/comment_face1.png" alt="team-member-face" class="member__face">
+                        <p class="member__text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
-                        <div class="flex_container_row move_item social">
-                            <a href="">
-                                <img src="images/social_networks_ico/twit_ico.png">
+                        <div class="member__social">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/twit_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/facebook_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/facebook_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/next_to_in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/next_to_in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/no_idea_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/no_idea_ico.png" class="link__image">
                             </a>
                         </div>
                     </div>
-                    <div class = "flex_container_column easy_div">
-                        <img src="images/comment_face2.png">
-                        <p>
+                    <div class="gallery__member">
+                        <img src="images/comment_face2.png" alt="team-member-face" class="member__face">
+                        <p class="member__text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
-                        <div class="flex_container_row move_item social">
-                            <a href="">
-                                <img src="images/social_networks_ico/twit_ico.png">
+                        <div class="member__social">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/twit_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/facebook_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/facebook_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/next_to_in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/next_to_in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/no_idea_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/no_idea_ico.png" class="link__image">
                             </a>
                         </div>
                     </div>
-                    <div class = "flex_container_column easy_div">
-                        <img src="images/comment_face1.png">
-                        <p>
+                    <div class="gallery__member">
+                        <img src="images/comment_face1.png" alt="team-member-face" class="member__face">
+                        <p class="member__text">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
-                        <div class="flex_container_row move_item social">
-                            <a href="">
-                                <img src="images/social_networks_ico/twit_ico.png">
+                        <div class="member__social">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/twit_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/facebook_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/facebook_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/next_to_in_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/next_to_in_ico.png" class="link__image">
                             </a>
-                            <a href="">
-                                <img src="images/social_networks_ico/no_idea_ico.png">
+                            <a href="" class="social__link">
+                                <img src="images/social_networks_ico/no_idea_ico.png" class="link__image">
                             </a>
                         </div>
                     </div>
@@ -381,107 +405,121 @@
             </div>
         </div>
     </div>
-    <div class="bg_color_2">
-        <div class="container">
-            <div class="flex_container_column easy_div move_5p text_contact_block">
-                <h2>Contact Us</h2>
-                <p>
+    <!-- ############################################### -->
+    <div class="page__insides insides--contact-background">
+        <div class="insides__contact">
+            <div class="contact">
+                <h2 class="contact__header">Contact Us</h2>
+                <p class="contact__text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna
                 </p>
-                <form name = "feedback_form">
-                    <div class="flex_container_column">
-                        <div class="flex_container_row">
-                            <input type="text" name="" placeholder="First Name">
-                            <input type="text" name="" placeholder="Last Name">
+                <form name="contact__form" class="contact__form">
+                    <div class="form">
+                        <div class="form__row">
+                            <input type="text" name="" placeholder="First Name" class="row__input-first-name">
+                            <input type="text" name="" placeholder="Last Name" class="row__input-last-name">
                         </div>
-                        <div class="flex_container_row">
-                            <input type="text" name="" placeholder="Email">
-                            <input type="text" name="" placeholder="Phone">
+                        <div class="form__row">
+                            <input type="text" name="" placeholder="Email" class="row__input-email">
+                            <input type="text" name="" placeholder="Phone" class="row__input-phone">
                         </div>
-                        <div class="flex_container_row">
-                        <input type="text" name="" placeholder="Message" id = "user_mess">
+                        <div class="form__row">
+                        <input type="text" name="" placeholder="Message" class="row__input-message">
                         </div>
-                        <div class="flex_container_row form_bottom">
-                            <input type="checkbox" name="c_box" checked="checked">
-                            <span id = "subs_label">Subscribe to the newsletter</span>
-                            <input type="submit" class = "button_option send_form_but" value = "SEND">
+                        <div class="form__row row--button-part">
+                            <input type="checkbox" name="c_box" checked="" class="row__checkbox">
+                            <span class="row__checkbox-label">Subscribe to the newsletter</span>
+                            <input type="submit" value = "SEND" class = "row__input-submit">
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="foot_color">
-        <footer class="container">
-            <div class="flex_container_row flex_item_sb move_5p">
-                <div class="flex_container_column">
-                    <div class = "image_div">
-                        <img src="images/logo_with_name.png" class = "logo">
+    <!-- ############################################### -->
+    <div class="page__insides insides--footer-background">
+        <footer class="insides__footer">
+            <div class="footer">
+                <div class="footer__left-part">
+                    <div class="left-part__logo">
+                        <img src="images/logo_with_name.png" class="logo__image">
                     </div>
-                    <div class="flex_container_row link_container">
-                        <!-- <ul class = "footer_lik"> -->
-                            
-                                <a href="">
+                    <div class="left-part__list-bottom">
+                        <ul class="list-bottom">
+                            <li class="list_-bottom__link">
+                                <a href="" class="link">
                                     Privacy Policy
                                 </a>
-                            
-                            
-                                <a href="">
+                            </li>
+                            <li class="list-bottom__link">
+                                <a href="" class="link">
                                     About Us
                                 </a>
-                            
-                            
-                                <a href="">
+                            </li>
+                            <li class="list-bottom__link">
+                                <a href="" class="link">
                                     About Us
                                 </a>
-                            
-                         <!--</ul>-->
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="flex_container_column">
-                    <div class="flex_container_row link_container footer_link_container">
-                        <a href="">
-                            Home
-                        </a>
-                        <a href="">
-                            Service
-                        </a>
-                        <a href="">
-                            Extension
-                        </a>
-                        <a href="">
-                            Pricing
-                        </a>
-                        <a href="">
-                            Help
-                        </a>
+                <div class="footer__right-part">
+                    <div class="right-part__list-bottom">
+                        <ul class="list-bottom">
+                        	<li class="list-bottom__link">
+                        		<a href="" class="link">
+                            		Home
+                        		</a>
+                    		</li>
+                        	<li class="list-bottom__link">
+                        		<a href="" class="link">
+                            		Service
+                        		</a>
+                    		</li>
+                        	<li class="list-bottom__link">
+                        		<a href="" class="link">
+                            		Extension
+                        		</a>
+                    		</li>
+                        	<li class="list-bottom__link">
+                        		<a href="" class="link">
+                            		Pricing
+                        		</a>
+                    		</li>
+                        	<li class="list-bottom__link">
+                        		<a href="" class="link">
+                            		Help
+                        		</a>
+                    		</li>
+                    	</ul>
                     </div>
-                    <div class="flex_container_row move_item social" id = "footer_social">
-                        <a href="">
-                            <img src="images/social_networks_ico/facebook_ico_1.png">
+                    <div class="right-part__social">
+                        <a href="" class="social__link">
+                            <img src="images/social_networks_ico/facebook_ico_1.png" class="link__image">
                         </a>
-                        <a href="">
-                            <img src="images/social_networks_ico/twit_ico.png">
+                        <a href="" class="social__link">
+                            <img src="images/social_networks_ico/twit_ico.png" class="link__image">
                         </a>
-                        <a href="">
-                            <img src="images/social_networks_ico/in_ico.png">
+                        <a href="" class="social__link">
+                            <img src="images/social_networks_ico/in_ico.png" class="link__image">
                         </a>
-                        <a href="">
-                            <img src="images/social_networks_ico/next_to_in_ico.png">
+                        <a href="" class="social__link">
+                            <img src="images/social_networks_ico/next_to_in_ico.png" class="link__image">
                         </a>
-                        <a href="">
-                            <img src="images/social_networks_ico/no_idea_ico.png">
+                        <a href="" class="social__link">
+                            <img src="images/social_networks_ico/no_idea_ico.png" class="link__image">
                         </a>
                     </div>
                 </div>
             </div>
         </footer>
     </div>
-</div>
+    <!-- ############################################### -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.8.6/min/tiny-slider.js"></script>
     <script type="text/javascript" src="js/list_hide.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
-    <!-- <script type="text/javascript" src="js/gallery.js"></script> -->
+    <script type="text/javascript" src="js/gallery.js"></script>
 </body>
 </html>

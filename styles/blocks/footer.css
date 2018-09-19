@@ -1,0 +1,30 @@
+.footer {
+	padding: 5% 0;
+	justify-content: space-between;
+	width: 100%;
+}
+.footer__left-part {
+	width: 50%;
+}
+.footer__right-part {
+	width: 50%;
+}
+.left-part__list-bottom {
+	text-align: center; 
+    margin-top: auto; 
+    margin-bottom: auto;
+}
+.list__bottom__link {
+	display: inline;
+	margin: 0;
+}
+.right-part__list-bottom {
+	text-align: center; 
+    margin-top: auto; 
+    margin-bottom: auto;
+    justify-content: flex-end;	
+}
+.right-part__social {
+	width: 100%;
+	justify-content: flex-end;
+}

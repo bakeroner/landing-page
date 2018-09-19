@@ -1,0 +1,21 @@
+.header__navigation {
+	justify-content: space-between;
+    padding: 5% 0; 
+}
+.navigation__logo {
+
+}
+.navigation__link-panel {
+	text-align: center; 
+    margin-top: auto; 
+    margin-bottom: auto;
+    width: 100%;
+}
+.header__article {
+	padding: 5% 0;
+	justify-content: space-between;
+}
+.article__button {
+	width: 100%;
+	padding: 5% 0;
+}

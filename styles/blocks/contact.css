@@ -1,0 +1,24 @@
+.contact {
+	align-items: center;
+	padding: 5% 0;
+	width: 100%;
+}
+.row--button-part {
+	align-items: center;
+    margin: 0 3%;
+}
+.contact__form {
+    width: 55%;
+    align-self: center;	
+}
+.text_contact_block {
+    width: 100%;
+}
+.text_contact_block > p {
+    width: 50%;
+    text-align: center;
+}
+.text_contact_block > form {
+    width: 55%;
+    align-self: center;
+}

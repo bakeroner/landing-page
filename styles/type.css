@@ -1,79 +1,92 @@
-.article__text,
-.figure__text,
-.title__text,
-.services__text,
-.comment__text,
-.team__text,
-.member__text,
-.contact__text {
+.text--regular {
 	font-family: "RalewayRegular";
 }
-.title__header,
-.figure__label,
-.team__header,
-.services__title,
-.contact__header {
+.text--semi-bold {
 	font-family: "RalewaySemiBold";
 }
-.article__title,
-.value__text {
+.text--extra-bold {
 	font-family: "RalewayExtraBold";
 }
-.row__checkbox-label {
+.text--medium {
 	font-family: "RalewayMedium";
 }
-.comment__user-name {
+.text--bold {
 	font-family: "RalewayBold";
+}
+.text--white {
+	color: #fff;
+}
+.text--dark-blue {
+	color:#061e37;
+}
+.text--light-gray {
+	color: #78909c;
+}
+.text--gray {
+	color: #b0bec5;
+}
+.text--semi-gray {
+	color: #90a4ae;
+}
+.text--15pt {
+	font-size: 15pt;
+}
+.text--55pt {
+	font-size: 55pt;
+}
+.text--45pt {
+	font-size: 45pt;
+}
+.text--25pt {
+	font-size: 25pt;
+}
+.text--20pt {
+	font-size: 20pt;	
+}
+.text--18pt {
+	font-size: 18pt;
 }
 .article__title {
 	margin: 0;
-	color: #fff;
 }
 .article__text { 
     width: 80%; 
     margin-top: auto; 
     margin-bottom: auto;
-    color: #fff;
 }
 .header--description {
 	margin: 0;
 }
 .title__text {
-	color: #061e37;
+
 }
 .figure__label {
 	 margin: 5% auto 5%;
 }
 .figure__text {
-	color: #061e37;
 	text-align: center;
 }
 .value__text {
-	color: #fff;
+
 }
 .services__title {
 	
-}
-.services__text {
-	color: #b0bec5;
 }
 .items__properties {
 	margin-right: 3%;
 }
 .header--comments {
-	color: #fff;
+
 }
 .title__text {
-	color: #fff;
 	padding-bottom: 10%;
 	width: 100%;
 }
 .comment__text {
-	color: #061e37;
+
 }
 .member__text {
 	text-align: center;
-	color: #061e37;
 }
 .contact__text {
 	width: 50%;

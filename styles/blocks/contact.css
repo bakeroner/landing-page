@@ -11,14 +11,3 @@
     width: 55%;
     align-self: center;	
 }
-.text_contact_block {
-    width: 100%;
-}
-.text_contact_block > p {
-    width: 50%;
-    text-align: center;
-}
-.text_contact_block > form {
-    width: 55%;
-    align-self: center;
-}

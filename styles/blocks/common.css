@@ -13,6 +13,7 @@
 .insides__footer {
 	max-width: 1280px;
 	margin: 0 auto;
+	width: 100%; /*care!!*/
 }
 .header__navigation,
 .header__article,
@@ -29,10 +30,11 @@
 .team__gallery,
 .member__social,
 .form__row,
-.footer,
 .left-part__list-bottom,
 .right-part__list-bottom,
-.right-part__social {
+.right-part__social,
+.footer__top-part,
+.footer__bottom-part {
 	display: flex;
     flex-direction: row;
     position: relative;  
@@ -48,9 +50,8 @@
 .team,
 .gallery__member,
 .contact,
-.form,
-.footer__left-part,
-.footer__right-part {
+.footer,
+.form {
 	display: flex;
     flex-direction: column;
     position: relative;

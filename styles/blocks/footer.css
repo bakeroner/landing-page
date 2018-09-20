@@ -3,28 +3,38 @@
 	justify-content: space-between;
 	width: 100%;
 }
-.footer__left-part {
-	width: 50%;
+.footer__top-part {
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	margin-bottom: 5%;
 }
-.footer__right-part {
-	width: 50%;
+.footer__bottom-part {
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
 }
-.left-part__list-bottom {
-	text-align: center; 
-    margin-top: auto; 
-    margin-bottom: auto;
+
+.top-part__logo {
 }
-.list__bottom__link {
-	display: inline;
+.list-bottom {
 	margin: 0;
+	padding: 0;
 }
-.right-part__list-bottom {
-	text-align: center; 
-    margin-top: auto; 
-    margin-bottom: auto;
+.list-bottom--white-mark {
+	color: #fff;
+}
+.list-bottom__link {
+	display: inline-block;
+}
+
+.top-part__list-bottom {
     justify-content: flex-end;	
 }
-.right-part__social {
-	width: 100%;
-	justify-content: flex-end;
+.bottom-part__social {
+	margin-right: 0;
+	align-self: flex-end;
+	padding: 0;
 }

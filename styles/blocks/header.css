@@ -6,17 +6,29 @@
 .navigation__logo {
 
 }
+.navigation__button {
+	align-items: center;
+}
 .navigation__link-panel {
 	text-align: center; 
-    margin-top: auto; 
-    margin-bottom: auto;
     width: 100%;
+    justify-content: center;
+}
+.link--margin-auto {
+	margin-top: auto;
+	margin-bottom: auto;
 }
 .header__article {
 	padding: 5% 0;
 	justify-content: space-between;
 }
+.video {
+	width: 600px;
+	height: 320px;
+	background: #fff;
+}
 .article__button {
 	width: 100%;
 	padding: 5% 0;
+	padding-bottom: 0;
 }

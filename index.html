@@ -3,11 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/fonts/icofont/icofont.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/font.css">
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/button.css">
     <link rel="stylesheet" href="styles/background.css">
     <link rel="stylesheet" href="styles/images.css">
+        <link rel="stylesheet" href="styles/font-images.css">
     <link rel="stylesheet" href="styles/type.css">
     <link rel="stylesheet" href="styles/links.css">
     <link rel="stylesheet" href="styles/blocks/common.css">
@@ -26,15 +30,13 @@
     <div class="page__header header--background">
         <header class="header">
             <nav class="header__navigation">
-                    <div class="navigation__logo" style=""> <!-- running out -->
-                        <img src="images/logo_with_name.png" alt="top-logo-image" class="logo__image">
-                    </div>
-                	<div class="navigation__link-panel" style="">
-                    	<a href="" class="link text--15px">Home</a>
-                    	<a href="index.html" class="link text--15px">Service</a>
-                    	<a href="" class="link text--15px">Extension</a>
-                    	<a href="" class="link text--15px">Pricing</a>
-                    	<a href="" class="link text--15px">Help</a>
+                        <img src="images/logo_with_name.png" alt="top-logo-image" class="naviation__logo">
+                	<div class="navigation__link-panel">
+                    	<a href="javascript:void(0);" class="link text--15px link--margin-auto">Home</a>
+                    	<a href="index.html" class="link text--15px link--margin-auto">Service</a>
+                    	<a href="javascript:void(0);" class="link text--15px link--margin-auto">Extension</a>
+                    	<a href="javascript:void(0);" class="link text--15px link--margin-auto">Pricing</a>
+                    	<a href=javascript:void(0);"" class="link text--15px link--margin-auto">Help</a>
                 	</div>
                 	<div class="navigation__button">
                     	<button class="button button-sign-up" type="button">Sign up</button><!-- running out -->
@@ -55,7 +57,7 @@
                 </div>
                 <div class="header__video">
                 <div class="video">
-                    <img src="images/video_ico.png" alt="video-top" class="video__player">
+                  <!-- <img src="images/video_ico.png" alt="video-top" class="video__player"> -->
                 </div>
                 </div>
             </div>
@@ -76,9 +78,9 @@
             <div class="description__content">
                 <div class="content__figure">
                     <div class="figure__icon">
-                        <img src="images/title_goes_here.png" alt="title-goes-here" class="icon__image">
+                        <i class="icon__image icofont-tasks-alt image--purple"></i>
                     </div>
-                    <figcaption class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</p> <!-- delete -->
                     <p class="figure__text text--light-gray text--regular text--15px">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
@@ -86,9 +88,10 @@
                 </div>
                 <div class="content__figure">
                     <div class="figure__icon">
-                        <img src="images/title_goes_here1.png" alt="title-goes-here" class="icon__image">
+                        <i class="icon__image icofont-team image--blue"></i>
+                        <!-- <img src="images/title_goes_here1.png" alt="title-goes-here" class="icon__image"> -->
                     </div>
-                    <figcaption class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</p> <!-- delete -->
                     <p class="figure__text text--light-gray text--regular text--15px">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
@@ -96,9 +99,10 @@
                 </div>
                 <div class="content__figure">
                     <div class="figure__icon">
-                        <img src="images/title_goes_here2.png" alt="title-goes-here" class="icon__image">
+                        <i class="icon__image icofont-worker image--pink"></i>
+                        <!-- <img src="images/title_goes_here2.png" alt="title-goes-here" class="icon__image"> -->
                     </div>
-                    <figcaption class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</figcaption> <!-- delete -->
+                    <p class="figure__label text--dark-blue text--semi-bold text--20px">Title goes here</p> <!-- delete -->
                     <p class="figure__text text--light-gray text--regular text--15px">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.
@@ -116,7 +120,9 @@
         <div class="insides-color-line__statistics">
             <div class="statistics statistics--business">
                 <div class="statistics__icon">
-                    <img src="images/stats_ico/business_ico.png" alt="business-icon" class="icon__image">
+                    <i class="material-icons image--blue icons--size-30px">domain</i>
+                    
+                    <!-- <img src="images/stats_ico/business_ico.png" alt="business-icon" class="icon__image"> -->
                 </div>
                 <div class="statistics__value">
                     <p class="value__text text--white text--extra-bold">
@@ -126,7 +132,8 @@
             </div>
             <div class="statistics statistics--downloads">
                 <div class="statistics__icon">
-                    <img src="images/stats_ico/downloads_ico.png" alt="downloads-icon" class="icon__image">
+                    <i class="material-icons image--dark-blue icons--size-30px">get_app</i>
+                    <!-- <img src="images/stats_ico/downloads_ico.png" alt="downloads-icon" class="icon__image"> -->
                 </div>
                 <div class="statistics__value">
                     <p class="value__text text--white text--extra-bold">
@@ -136,7 +143,8 @@
             </div>
             <div class="statistics statistics--free-installs">
                 <div class="statistics__icon">
-                    <img src="images/stats_ico/freeinstalls_ico.png" alt="free-installs-icon" class="icon__image">
+                    <i class="material-icons image--purple icons--size-30px">person</i>
+                    <!-- <img src="images/stats_ico/freeinstalls_ico.png" alt="free-installs-icon" class="icon__image"> -->
                 </div>
             <div class="statistics__value">
                 <p class="value__text text--white text--extra-bold">
@@ -146,7 +154,8 @@
             </div>
             <div class="statistics statistics--pro-users">
                 <div class="statistics__icon">
-                    <img src="images/stats_ico/pro-users_ico.png" alt="pro-users-icon" class="icon__image">
+                    <i class="material-icons image--pink icons--size-30px">get_app</i>
+                    <!-- <img src="images/stats_ico/pro-users_ico.png" alt="pro-users-icon" class="icon__image"> -->
                 </div>
             <div class="statistics__value">
                 <p class="value__text text--white text--extra-bold">
@@ -167,7 +176,10 @@
                     tempor incididunt ut labore et
                 </p>
                 <ul class="services__list" id="ulTree">
-                    <li class="list list--services list--statistics text--dark-blue text--15px">STATISTICS<img src="images/cut_ico.png" alt="list-cut" class="list__cut">
+                    <li class="list list--services list--statistics text--dark-blue text--15px" >
+                        <i class="list__header material-icons icons--size-20px">trending_up</i>
+                            <span class="list__header">STATISTICS</span>
+                        <i class="list__header material-icons list__cut">arrow_drop_down</i>
                         <div class="list__items">
                             <div class="items__picture">
                             	<img src="images/img_ul.png" alt="list-picture" class="picture__image">
@@ -180,7 +192,10 @@
                             </p>
                         </div>
                     </li>
-                    <li class="list list--services list--inbox text--dark-blue text--15px">INBOX<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                    <li class="list list--services list--inbox text--dark-blue text--15px">
+                        <i class="list__header material-icons icons--size-20px">email</i>
+                            <span class="list__header">INBOX</span>
+                        <i class="list__header material-icons list__cut">arrow_drop_down</i>
                         <div class="list__items">
                             <div class="items__picture">
                                 <img src="images/img_ul.png" alt="list-picture" class="picture__image">
@@ -193,7 +208,10 @@
                             </p>
                         </div>
                     </li>
-                    <li class="list list--services list--team text--dark-blue text--15px">TEAM<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                    <li class="list list--services list--team text--dark-blue text--15px">
+                        <i class="list__header material-icons icons--size-20px">group</i>
+                            <span class="list__header">TEAM</span>
+                        <i class="list__header material-icons list__cut">arrow_drop_down</i>
                         <div class="list__items">
                             <div class="items__picture">
                                 <img src="images/img_ul.png" alt="list-picture" class="picture__image">
@@ -206,7 +224,10 @@
                             </p>
                         </div>
                     </li>
-                    <li class="list list--services list--settings text--dark-blue text--15px">SETTINGS<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                    <li class="list list--services list--settings text--dark-blue text--15px">
+                        <i class="list__header material-icons icons--size-20px">settings</i>
+                            <span class="list__header">SETTINGS</span>
+                        <i class="list__header material-icons list__cut">arrow_drop_down</i>
                         <div class="list__items">
                             <div class="items__picture">
                                 <img src="images/img_ul.png" alt="list-picture" class="picture__image">
@@ -219,7 +240,10 @@
                             </p>
                         </div>
                     </li>
-                    <li class="list list--services list--feed text--dark-blue text--15px">FEED<img src="images/cut_ico.png"  alt="list-cut" class="list__cut">
+                    <li class="list list--services list--feed text--dark-blue text--15px">
+                        <i class="list__header material-icons icons--size-20px">rss_feed</i>
+                            <span class="list__header">FEED</span>
+                        <i class="list__header material-icons list__cut">arrow_drop_down</i>
                         <div class="list__items">
                             <div class="items__picture">
                                 <img src="images/img_ul.png" alt="list-picture" class="picture__image">
@@ -335,20 +359,20 @@
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
                         <div class="member__social">
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/twit_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-twitter link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/facebook_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-facebook link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="fab fa-linkedin-in link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/next_to_in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-dribble link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/no_idea_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-behance link--gray icons--size-20px"></i>
                             </a>
                         </div>
                     </div>
@@ -359,20 +383,20 @@
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
                         <div class="member__social">
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/twit_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-twitter link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/facebook_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-facebook link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="fab fa-linkedin-in link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/next_to_in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-dribble link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/no_idea_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-behance link--gray icons--size-20px"></i>
                             </a>
                         </div>
                     </div>
@@ -383,20 +407,20 @@
                             tempor incididuntLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
                         </p>
                         <div class="member__social">
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/twit_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-twitter link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/facebook_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-facebook link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="fab fa-linkedin-in link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/next_to_in_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-dribble link--gray icons--size-20px"></i>
                             </a>
-                            <a href="" class="social__link">
-                                <img src="images/team_social_networks_ico/no_idea_ico.png" class="link__image">
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-behance link--gray icons--size-20px"></i>
                             </a>
                         </div>
                     </div>
@@ -447,27 +471,27 @@
                      <div class="top-part__list-bottom">
                         <ul class="list-bottom">
                             <li class="list-bottom__link">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Home
                                 </a>
                             </li>
                             <li class="list-bottom__link">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Service
                                 </a>
                             </li>
                             <li class="list-bottom__link">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Extension
                                 </a>
                             </li>
                             <li class="list-bottom__link">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Pricing
                                 </a>
                             </li>
                             <li class="list-bottom__link">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Help
                                 </a>
                             </li>
@@ -478,38 +502,38 @@
                     <div class="bottom-part__list-bottom">
                         <ul class="list-bottom">
                             <li class="list-bottom__link list-bottom--white-mark">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     Privacy Policy
                                 </a>
                             </li>
                             <li class="list-bottom__link list-bottom--white-mark">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     About Us
                                 </a>
                             </li>
                             <li class="list-bottom__link list-bottom--white-mark">
-                                <a href="" class="link text--15px">
+                                <a href="javascript:void(0);" class="link text--15px">
                                     About Us
                                 </a>
                             </li>
                         </ul>
                     </div>                
                     <div class="bottom-part__social">
-                        <a href="" class="social__link">
-                            <img src="images/footer_social_networks_ico/facebook_ico.png" class="link__image">
-                        </a>
-                        <a href="" class="social__link">
-                            <img src="images/footer_social_networks_ico/twit_ico.png" class="link__image">
-                        </a>
-                        <a href="" class="social__link">
-                            <img src="images/footer_social_networks_ico/in_ico.png" class="link__image">
-                        </a>
-                        <a href="" class="social__link">
-                            <img src="images/footer_social_networks_ico/next_to_in_ico.png" class="link__image">
-                        </a>
-                        <a href="" class="social__link">
-                            <img src="images/footer_social_networks_ico/no_idea_ico.png" class="link__image">
-                        </a>
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="fab fa-facebook-square link--dark-gray icons--size-20px"></i>                              
+                            </a>
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-twitter link--dark-gray icons--size-20px"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="fab fa-linkedin-in link--dark-gray icons--size-20px"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-dribble link--dark-gray icons--size-20px"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="social__link">
+                                <i class="icofont-behance link--dark-gray icons--size-20px"></i>
+                            </a>
                     </div>
                 </div>
             </div>

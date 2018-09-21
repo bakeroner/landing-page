@@ -1,0 +1,27 @@
+.icon__image {
+	font-size: 80px; 
+}
+.image--purple {
+	color: #b388ff;
+}
+.image--blue {
+	color: #80d8ff;
+}
+.image--dark-blue {
+	color: #82b1ff;
+}
+.image--pink {
+	color: #ea80fc;
+}
+.icons--size-30px {
+	font-size: 30px; 
+}
+.icons--size-20px {
+	font-size: 20px; 
+}
+.link--gray {
+	color: #90a4ae;
+}
+.link--dark-gray {
+	color: #384b5f;
+}

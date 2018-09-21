@@ -34,7 +34,9 @@
 .right-part__list-bottom,
 .right-part__social,
 .footer__top-part,
-.footer__bottom-part {
+.footer__bottom-part,
+.navigation__button,
+.navigation__link-panel {
 	display: flex;
     flex-direction: row;
     position: relative;  
@@ -56,7 +58,6 @@
     flex-direction: column;
     position: relative;
 }
-.navigation__logo,
 .video,
 .figure__icon,
 .statistics__icon,

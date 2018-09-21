@@ -10,6 +10,9 @@
 	margin-left: 0;
 	padding: 5% 0;
 }
+.page__insides-color-line {
+    max-height: 150px;
+}
 .insides-color-line__statistics {
 	width: 100%;
 }
@@ -25,8 +28,8 @@
     background: #ffffff no-repeat;
     border-radius: 50%;
     padding: 10px;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     margin-right: 3%;
 }
 .statistics__value {

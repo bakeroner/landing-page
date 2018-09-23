@@ -10,9 +10,15 @@
 	display: block;
 	margin: auto auto;
 }
+.picture__image {
+	width: 250px;
+	height: 155px;
+}
 .user__image {
 	margin-right: 5%;
     margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .link__image {
 	margin-top: auto;

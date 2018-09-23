@@ -4,6 +4,10 @@
 	font-family: "RalewaySemiBold";
 	text-decoration: none;
 }
+.link__footer {
+	color: #fff;
+	text-decoration: none;
+}
 .link {
 	margin: 5% 3%;
 }
@@ -11,4 +15,7 @@
 	padding-top: 0;
     padding-bottom: 0;
     margin: 5% 3%;
+}
+.link--footer-social {
+	margin-left: 0.4rem;
 }

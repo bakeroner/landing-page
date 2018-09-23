@@ -51,49 +51,98 @@
 }
 .article__title {
 	margin: 0;
+	text-align:justify;
+	margin-top: -0.5rem;
 }
 .article__text { 
-    width: 85%; 
-    margin-top: auto; 
+    width: 71.5%;
+    padding-top: 0.3rem; 
+    margin-top: 0; 
     margin-bottom: auto;
+    line-height: 2;
 }
 .header--description {
 	margin: 0;
+	padding-top: 0.6rem; 
+	padding-bottom: 0.55rem;
 }
-.title__text {
-
+.header--description-second {
+	margin: 0;
+	padding-top: 0.2rem; 
+	padding-bottom: 0.55rem;
+}
+.title__text--description {
+	width: 39%; 
+	line-height: 1.8; 
+	margin: 0;
 }
 .figure__label {
-	 margin: 5% auto 5%;
+	 margin: 2.30rem auto 0.7rem;
 }
 .figure__text {
 	text-align: center;
+	width: 100%;
+	line-height: 1.35;
 }
 .value__text {
 
 }
 .services__title {
-	
+	margin-bottom: 0;
+}
+.services__text {
+	margin: 0;
+	padding-top: 0.9rem;
+	padding-bottom: 1.8rem;
+	width: 39%;
+	line-height: 1.7;
+}
+.team__header {
+	margin: 0;
+	padding-top: 1.2rem;
+}
+.team__text {
+	padding-top: 1rem;
+	margin: 0;
+	width: 40%;
+	line-height: 1.5;
+}
+.contact__header {
+	margin: 0;
+}
+.contact__text {
+	padding-top: 1rem;
+	margin: 0;
+	line-height: 1.5;
+	width: 39%;
+	text-align: center;
 }
 .items__properties {
-	margin-right: 3%;
+	margin: 0;
 }
 .header--comments {
-
+	margin: 0;
+	padding-top: 7.95rem;
+}
+.title__text--comment-position {
+	padding-top: 0.8rem;
+	padding-bottom: 4.6rem;
+	margin: 0;
+	width: 88%;
+	line-height: 1.6;
 }
 .title__text {
-	padding-bottom: 10%;
-	width: 100%;
+
 }
 .comment__text {
-
+	font-style: italic;
+	line-height: 1.6;
+	width: 94%;
+	margin: 0;
+	padding-top: 0.8rem;
 }
 .member__text {
 	text-align: center;
-}
-.contact__text {
-	width: 50%;
-    text-align: center;
 }
 .row__checkbox-label {
      align-self: flex-start;

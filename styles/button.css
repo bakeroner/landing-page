@@ -1,7 +1,7 @@
 .button {
     padding: 16px 16px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -15,15 +15,15 @@
     color: #ffffff;
     width: 80px;
     height: 25px;
-    font-size: 8px;
+    font-size: 12px;
     padding: 6px 6px;
     font-family: "RalewayRegular";
 }
 .button--buy-now {
     background-color: #061e37;
     color: #ffffff;
-    font-family: "RalewayMedium";
-    margin-right: 3%;
+    font-family: "RobotoRegular";
+    margin-right: 1.875rem;
     align-self: flex-end;
 }
 .button--try-for-free {
@@ -32,7 +32,7 @@
     height: 55px;
     color: #061e37;
     align-self: flex-end;
-    font-family: "RalewayMedium";
+    font-family: "RalewayBold";
     margin-right: 3%;
 }
 .button--get-started-description {
@@ -45,12 +45,17 @@
     color: #fff;
 }
 .slider-block__arrow {
-	margin-left: 50%;
+	margin-left: 60.5%;
     margin-right: auto;
     outline: none;
     border: 0;
     background: transparent;
 }
-
+.arrow--up {
+    padding-top: 2.6rem;
+}
+.arrow--down {
+    padding-bottom: 1.5rem;
+}
 /*-----*/
 

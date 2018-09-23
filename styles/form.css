@@ -1,12 +1,34 @@
+.form {
+    padding-top: 3.0rem;
+}
+.form__row {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.2rem;
+}
 .row__input-first-name,
 .row__input-last-name,
 .row__input-email,
 .row__input-phone {
     font-family: "RalewayMedium";
     color: #061e37;
-    margin: 2% 3%;
-    width: 50%;
-    padding: 3% 3%;
+    width: 80%;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    padding-right: 6.9rem;
+}
+.row__input-first-name {
+    margin-right: 2.2rem;
+}
+.row__input-last-name {
+ /*   margin-right: 0.2rem;*/
+}
+.row__input-email {
+    margin-right: 2.2rem;
+}
+.row__input-phone {
+/*    margin-right: 0.2rem;*/
 }
 .row__input-first-name,
 .row__input-last-name,
@@ -22,15 +44,27 @@
     font-family: "RalewayMedium";
     color: #061e37;
     margin: auto 0;
+    margin-left: 0;
+    margin-right: auto;
      align-self: flex-start;
      margin-right: 3%;
 }
+.row--message {
+}
 .row__input-message {
-    width: 100%;
+    width: 100%; 
+    min-height: 7.4rem;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "RalewayMedium";
     color: #061e37;
-    margin: 2% 3%;
-    padding: 3% 3%;
+    padding: 1rem 0;
+    padding-left: 1rem;
+    padding-right: 26.55rem;
+}
+.row--button-part {
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
 }
 .row__input-submit {
     padding: 4px 6px;

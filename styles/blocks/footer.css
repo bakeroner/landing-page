@@ -1,5 +1,5 @@
 .footer {
-	padding: 5% 0;
+	padding-top: 6.1rem;
 	justify-content: space-between;
 	width: 100%;
 }
@@ -8,7 +8,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 0;
-	margin-bottom: 5%;
+	padding-bottom: 2.8rem;
 }
 .footer__bottom-part {
 	width: 100%;
@@ -29,7 +29,12 @@
 .list-bottom__link {
 	display: inline-block;
 }
-
+.link--footer-top {
+	padding-left: 2.4rem;
+}
+.link__footer-bottom {
+	padding-right: 1.5rem;
+}
 .top-part__list-bottom {
     justify-content: flex-end;	
 }

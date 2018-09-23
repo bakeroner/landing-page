@@ -1,6 +1,8 @@
 .team {
 	align-items: center;
 	padding: 5% 0;
+	padding-bottom: 0;
+	height: 690px;
 }
 .team__gallery {
 	margin-top: 5%;

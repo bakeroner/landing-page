@@ -1,7 +1,8 @@
 .header__navigation {
 	justify-content: space-between;
-    padding: 5% 0;
-
+    padding: 0 0;
+    padding-top: 3.15rem;
+    padding-bottom: 10.3rem;
 }
 .navigation__logo {
 
@@ -10,17 +11,21 @@
 	align-items: center;
 }
 .navigation__link-panel {
-	text-align: center; 
+	margin-left:18.2rem; 
+	margin-right: auto;
+	/*text-align: center; */
     width: 100%;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 .link--margin-auto {
 	margin-top: auto;
 	margin-bottom: auto;
+	margin-right: 1.4rem;
 }
 .header__article {
-	padding: 5% 0;
+	padding: 0 0;
 	justify-content: space-between;
+	padding-bottom: 11.5625rem;
 }
 .video {
 	width: 600px;
@@ -29,6 +34,6 @@
 }
 .article__button {
 	width: 100%;
-	padding: 5% 0;
+	padding: auto 0;
 	padding-bottom: 0;
 }

@@ -7,6 +7,8 @@
     border-radius: 5px;
     width: 150px;
     height: 55px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 .button-sign-up {
 	border-radius: 2px;
@@ -19,12 +21,21 @@
     padding: 6px 6px;
     font-family: "RalewayRegular";
 }
+.button-sign-up:hover {
+    border: 1px solid #061e37;
+    color: #061e37;
+}
 .button--buy-now {
     background-color: #061e37;
     color: #ffffff;
     font-family: "RobotoRegular";
     margin-right: 1.875rem;
     align-self: flex-end;
+}
+.button--buy-now:hover {
+    background-color: #fff;
+    color: #061e37;
+    border: 2px solid #061e37;
 }
 .button--try-for-free {
     background-color: #ffffff;
@@ -35,14 +46,29 @@
     font-family: "RalewayBold";
     margin-right: 3%;
 }
+.button--try-for-free:hover {
+    background-color: #061e37;
+    color: #fff;
+    border: 2px solid #fff;
+}
 .button--get-started-description {
 	font-family: "RalewayMedium";
     background-color: #1de9b6;
     color: #ffffff;
 }
+.button--get-started-description:hover {
+    background-color: #fff;
+    color: #1de9b6;
+    border: 2px solid #1de9b6;
+}
 .button--get-started-comment {
 	background-color: #061e37;
     color: #fff;
+}
+.button--get-started-comment:hover {
+    background-color: #fff;
+    color: #061e37;
+    border: 2px solid #061e37;
 }
 .slider-block__arrow {
 	margin-left: 60.5%;

@@ -31,3 +31,17 @@
 .link--dark-gray {
 	color: #384b5f;
 }
+.social__link--hover-deep-blue {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;	
+}
+.social__link--hover-deep-blue:hover {
+	color: #061e37;
+}
+.link--footer-social {
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;		
+}
+.link--footer-social:hover {
+	color: #000;
+}

@@ -81,4 +81,11 @@
     margin-right: 0;
     margin-left: auto;
     font-family: "RalewayMedium";
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.row__input-submit:hover {
+    background-color: #fff;
+    color: #1de9b6;
+    border: 2px solid #1de9b6;
 }

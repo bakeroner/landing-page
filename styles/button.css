@@ -71,17 +71,29 @@
     border: 2px solid #061e37;
 }
 .slider-block__arrow {
-	margin-left: 60.5%;
+	margin-left: 59%;
     margin-right: auto;
     outline: none;
     border: 0;
     background: transparent;
 }
+.arrow__image {
+    color: #fff;
+}
+.arrow__image:hover {
+    color: #061e37;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
 .arrow--up {
+    padding-top: 1.6rem;
+}
+.arrow--down {
+    padding-bottom: 0.2rem;
+}
+/*--.arrow--up {
     padding-top: 2.6rem;
 }
 .arrow--down {
-    padding-bottom: 1.5rem;
-}
-/*-----*/
+    padding-bottom: 1.5rem;---*/
 

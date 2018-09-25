@@ -16,3 +16,36 @@
 	align-items: center;
     justify-content: center;
 }
+.member__face--face1 {
+	background: url(../../images/face.jpg) no-repeat 0rem 0rem;
+}
+.member__face--face2 {
+	background: url(../../images/face.jpg) no-repeat 0rem 0rem;	
+}
+.member__face--face3 {
+	background: url(../../images/face.jpg) no-repeat 0rem 0rem;	
+}
+.member__face--on-focus {
+	height: 10rem;
+	width: 10rem;
+	background-size: auto 10rem;
+	border: 1.25rem solid #fff;
+    border-radius: 50%;
+	/*padding: 1.25rem;*/
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.member__face--no-focus {
+	border-radius: 50%;
+	height: 6.25rem;
+	width: 6.25rem;
+	background-size: auto 6.25rem;
+	opacity: 0.2;
+}
+.member__face--no-focus ~ div > a {
+	visibility: hidden;
+}
+.member__face--no-focus ~ p {
+	visibility: hidden;
+}

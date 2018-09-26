@@ -11,9 +11,9 @@
     align-items: center;
 }
 .member__social {
-	width: 100%;
 	align-items: center;
     justify-content: center;
+    padding: 0;
 }
 .member__info {
 	text-align: center;
@@ -52,12 +52,4 @@
 	background-size: auto 6.25rem;
 	opacity: 0.2;
 }
-.member__face--NoFocus ~ div > a {
-	visibility: hidden;
-}
-.member__face--NoFocus ~ p {
-	visibility: hidden;
-}
-.member__info--OnFocus {
 
-}

@@ -36,7 +36,8 @@
 .footer__top-part,
 .footer__bottom-part,
 .navigation__button,
-.navigation__link-panel {
+.navigation__link-panel,
+.team__about-member {
 	display: flex;
     flex-direction: row;
     position: relative;  
@@ -54,7 +55,8 @@
 .contact,
 .footer,
 .form,
-.items__text-container {
+.items__text-container,
+.member__info {
 	display: flex;
     flex-direction: column;
     position: relative;

@@ -143,6 +143,9 @@
 }
 .member__text {
 	text-align: center;
+	width: 42%;
+	margin: 0 auto;
+	line-height: 1.6;
 }
 .row__checkbox-label {
      align-self: flex-start;

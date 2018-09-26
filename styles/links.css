@@ -18,12 +18,23 @@
 .social__link {
 	padding-top: 0;
     padding-bottom: 0;
-    margin: 5% 3%;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
+.social__link--footer {
+	margin: 5% 0;
+	margin-left: 0.6rem;
+}
+.social__link--team {
+	margin: 0;
+	margin-right: 0.9rem;
+	margin-left: 0.6rem;
+}
+.link--footer-top {
+	padding-left: 2.4rem;
+}
 .link__footer-bottom {
-
+	padding-right: 2.5rem;
 }
 .link__footer-bottom:hover {
 	color: #000;

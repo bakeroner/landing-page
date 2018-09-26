@@ -13,14 +13,15 @@
 .member__social {
 	align-items: center;
     justify-content: center;
-    padding: 0;
+    padding-top: 1.7rem;
+    padding-bottom: 5.5rem;
 }
 .member__info {
 	text-align: center;
 }
 .member__name {
 	padding-top: 2.3rem;
-	padding-bottom: 0.9rem;
+	padding-bottom: 0.7rem;
 	line-height: 1.5;
 }
 .member__face--face1 {

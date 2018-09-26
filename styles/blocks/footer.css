@@ -29,12 +29,6 @@
 .list-bottom__link {
 	display: inline-block;
 }
-.link--footer-top {
-	padding-left: 2.4rem;
-}
-.link__footer-bottom {
-	padding-right: 1.5rem;
-}
 .top-part__list-bottom {
     justify-content: flex-end;	
 }

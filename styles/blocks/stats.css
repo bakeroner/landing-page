@@ -38,5 +38,6 @@
 .statistics--free-installs {
     width: 28rem;
 }
-.statistics__value {
+.icon--pro-users-margin {
+    margin-left: 2.5rem;
 }

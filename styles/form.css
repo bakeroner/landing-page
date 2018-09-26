@@ -81,6 +81,7 @@
     margin-right: 0;
     margin-left: auto;
     font-family: "RalewayMedium";
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }

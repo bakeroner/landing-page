@@ -31,6 +31,7 @@
     font-family: "RobotoRegular";
     margin-right: 1.875rem;
     align-self: flex-end;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--buy-now:hover {
     background-color: #fff;
@@ -45,6 +46,7 @@
     align-self: flex-end;
     font-family: "RalewayBold";
     margin-right: 3%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--try-for-free:hover {
     background-color: #061e37;
@@ -55,6 +57,7 @@
 	font-family: "RalewayMedium";
     background-color: #1de9b6;
     color: #ffffff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--get-started-description:hover {
     background-color: #fff;
@@ -64,6 +67,7 @@
 .button--get-started-comment {
 	background-color: #061e37;
     color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 .button--get-started-comment:hover {
     background-color: #fff;

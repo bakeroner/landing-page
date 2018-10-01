@@ -1,14 +1,4 @@
 @media screen and (max-width: 860px) {
-	.navigation__link-panel {
-		display: none;
-	}
-	.button--sign-up {
-		display: none;
-	}
-	iframe {
-		display: none;
-		width: 480px;
-	}
 	.header,
 	.insides__description,
 	.insides-color-line__statistics,
@@ -18,6 +8,31 @@
 	.insides__contact,
 	.insides__footer {
 		max-width: 768px;
+	}
+	.navigation__link-panel {
+		display: none;
+	}
+	.button--sign-up {
+		display: none;
+	}
+	.header__article {
+		flex-direction: column;
+	}
+	.article__button {
+		padding-bottom: 1.5rem;
+	}
+	.header__video {
+		/*max-height: 320px;
+		height: 100%;*/
+	}
+	iframe {
+		display: block;
+		max-height: 320px;
+		max-width: 600px;
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.dehaze--hover:hover {
 	color: #061e37;
@@ -78,11 +93,32 @@
 	.figure--center {
 		padding: 1.5rem 0;
 	}
+	.text--business {
+		margin-right: 0.6rem;
+	}
+	.icon--pro-users-margin {
+		margin-left: 0.6rem;
+	}
+	.statistics__icon {
+		margin-right: 0.6rem;
+	}
+	.statistics--free-installs {
+		width: 25%;
+	}
+	.statistics--downloads {
+		width: 25%;
+	}
 	.services__text {
 		width: 100%
 	}
 	.services__list {
 		width: 100%;
+	}
+	.list__items {
+		flex-direction: column;
+	}
+	.items__text-container {
+		padding-left: 0;
 	}
 	.list--services {
 		text-align: center;
@@ -95,6 +131,7 @@
 	}
 	.title__text {
 		width: 100%;
+		text-align: center;
 	}
 	.title_button {
 		margin-right: auto;
@@ -118,6 +155,38 @@
 		width: 100%;
 	}
 	.contact__text {
+		width: 100%;
+	}
+	.footer {
+		padding-top: 0;
+	}
+	.list-bottom__link {
+		display: block;
+		padding-bottom: 0.6rem;
+	}
+	.contact__form {
+		width: 90%;
+	}
+	.form {
+		width: 100%;
+	}
+	.form__row {
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+	}
+	.row--button-part {
+		flex-direction: row;
+	}
+	.row__input-first-name, 
+	.row__input-last-name,
+	.row__input-email,
+	.row__input-phone,
+	.row__input-message {
+		margin: 0;
+		margin-bottom: 0.6rem;
+		padding: 1rem 0;
+		padding-left: 0.2rem;
 		width: 100%;
 	}
 }

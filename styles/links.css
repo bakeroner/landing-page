@@ -50,3 +50,6 @@
 .link--hover-deep-blue:hover {
 	color: #061e37;
 }
+.link--hover-black:hover {
+	color: #000;
+}

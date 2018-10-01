@@ -1,4 +1,4 @@
-@media screen and (max-width: 481px) {
+@media screen and (max-width: 860px) {
 	.navigation__link-panel {
 		display: none;
 	}
@@ -8,7 +8,6 @@
 	iframe {
 		display: none;
 		width: 480px;
-		order: 1;
 	}
 	.header,
 	.insides__description,
@@ -18,7 +17,38 @@
 	.insides__team,
 	.insides__contact,
 	.insides__footer {
-		max-width: 425px;
+		max-width: 768px;
+	}
+	.dehaze--hover:hover {
+	color: #061e37;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+	}
+	.navigation__link-mobile {
+		display: block;
+		margin-right: 1.5rem;
+		margin-left: auto;
+	}
+	.link-menu__list {
+		list-style-type: none;
+		margin-top: 0;
+		padding-left: 0;
+	}
+	.link-menu__list__item {
+		border: 1px solid #fff;
+		border-radius: 5px;
+		padding: 1rem 0;
+		background-color: #061e37;
+		margin-bottom: 2px;
+	}
+	.navigation__link-menu {
+		position: fixed;
+		z-index: 10;
+		width: 80%;
+		height: 100%;
+		right: 1px;
+		margin-top: 3rem;
+		background-color: transparent;
 	}
 	.article__title {
 		text-align: center;

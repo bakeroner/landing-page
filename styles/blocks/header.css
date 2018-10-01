@@ -13,10 +13,14 @@
 .navigation__link-panel {
 	margin-left:18.2rem; 
 	margin-right: auto;
-	/*text-align: center; */
     width: 100%;
-    /*justify-content: center;*/
 }
+.navigation__link-mobile {
+	display: none;
+}
+/*.navigation__link-menu {
+	display: none;
+}*/
 .link--margin-auto {
 	margin-top: auto;
 	margin-bottom: auto;

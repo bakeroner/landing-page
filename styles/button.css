@@ -10,7 +10,7 @@
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }
-.button-sign-up {
+.button--sign-up {
 	border-radius: 2px;
     background: transparent;
     border: 1px solid #ffffff;
@@ -21,7 +21,7 @@
     padding: 6px 6px;
     font-family: "RalewayRegular";
 }
-.button-sign-up:hover {
+.button--sign-up:hover {
     border: 1px solid #061e37;
     color: #061e37;
 }

@@ -1,3 +1,26 @@
+@media screen and (max-width: 1280px) {
+		.header,
+	.insides__description,
+	.insides-color-line__statistics,
+	.insides__services,
+	.insides__comments,
+	.insides__team,
+	.insides__contact,
+	.insides__footer {
+		max-width: 1024px;
+	}
+	.navigation__link-panel {
+		display: none;
+	}
+	.button--sign-up {
+		display: none;
+	}
+	.navigation__link-mobile {
+		display: block;
+		margin-right: 1.5rem;
+		margin-left: auto;
+	}
+}
 @media screen and (max-width: 860px) {
 	.header,
 	.insides__description,
@@ -8,12 +31,6 @@
 	.insides__contact,
 	.insides__footer {
 		max-width: 768px;
-	}
-	.navigation__link-panel {
-		display: none;
-	}
-	.button--sign-up {
-		display: none;
 	}
 	.nav-icons--size {
 		font-size: 30px;
@@ -47,11 +64,6 @@
   		transition: all 0.4s cubic-bezier(.36,-0.64,.34,1.76);   
 		opacity: 0;*/
 		color: #061e37;
-	}
-	.navigation__link-mobile {
-		display: block;
-		margin-right: 1.5rem;
-		margin-left: auto;
 	}
 	.link-menu__list {
 		list-style-type: none;

@@ -3,33 +3,26 @@ const clearMenu = document.getElementById("clearMenu");
 const backgroundArea = document.getElementById("mobileMenuList");
 const header = document.querySelector(".header__navigation");
 
-let counter = 0;
-mobileMenu.addEventListener("click", (event) => {
-	let target=event.target;
-	setTimeout(function() {
-	mobileMenu.classList.toggle("hideElement");		 
-	header.classList.toggle("navigation__link-menu--animation");
-	clearMenu.classList.toggle("hideElement");
-  }, 400);
-})
-clearMenu.addEventListener("click", (event) => {
-	let target=event.target;	
-	setTimeout(function() {
-	clearMenu.classList.toggle("hideElement");
-	header.classList.toggle("navigation__link-menu--animation");
+const toggler = () => {
     mobileMenu.classList.toggle("hideElement");
-	
-  }, 400);	
-})
+    header.classList.toggle("navigation__link-menu--animation");
+    clearMenu.classList.toggle("hideElement");
+};
+
+const hidder = () => {
+    mobileMenuList.classList.toggle("hideElement");
+    mobileMenu.classList.toggle("hideElement");
+    clearMenu.classList.toggle("hideElement");
+};
+
+mobileMenu.addEventListener("click", e => toggler() );
+
+clearMenu.addEventListener("click", e => toggler() );
+
 backgroundArea.addEventListener("click", (event) => {
-	let target=event.target;
-	if (target.tagName != "LI") {
-	mobileMenuList.classList.toggle("hideElement");
-	mobileMenu.classList.toggle("hideElement");
-	clearMenu.classList.toggle("hideElement");
-	}
-})
+ let target = event.target;
 
-
-
-
+ if (target.tagName !== "LI") {
+  hidder();
+ }
+});

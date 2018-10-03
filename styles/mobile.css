@@ -37,23 +37,12 @@
 		height: 100%;
 		border: 0;
 	}
-/*	.dehaze--hover {
-		transform: rotateY(90deg);
-  		transition: all 0.4s cubic-bezier(.36,-0.64,.34,1.76);   
-		opacity: 0;
-	}
-	.dehaze--hover-animation .dehaze--hove {
-		
-  		transition: all 0.4s cubic-bezier(.36,-0.64,.34,1.76);   
-		opacity: 1;
-	}*/
 	.swing {
 		perspective: 100px;
 	}
 	.dehaze--hover:hover {	
     	-webkit-transition-duration: 0.2s;
-    	transition-duration: 0.2s;
-    	
+    	transition-duration: 0.2s;	
      	/*transform: rotateY(90deg);
   		transition: all 0.4s cubic-bezier(.36,-0.64,.34,1.76);   
 		opacity: 0;*/

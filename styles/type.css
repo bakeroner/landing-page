@@ -47,16 +47,25 @@ font-size: 15px;
 .title__header--text-size,
 .services__title--text-size,
 .team__header--text-size,
-.contact__header--text-size {
+.contact__header--text-size,
+.arrow--size {
 	font-size: 45px;
 }
-.text--25px {
+.icons--size {
+	font-size: 30px;
+}
+.header--description-second--text-size {
 	font-size: 25px;
 }
-.text--20px {
-	font-size: 20px;	
+.list__header--icon-size,
+.figure__label--text-size,
+.value__text--text-size,
+.social__link--icon-size {
+	font-size: 20px;
 }
-.text--18px {
+.article__text--text-size,
+.comment__user-name--text-size,
+.member__name--text-size {
 	font-size: 18px;
 }
 .text--center {

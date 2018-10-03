@@ -1,18 +1,19 @@
 .insides-color-line__additional-background {
-	width: 100%;
 	flex: 1;
+    margin: auto;
 }
 .background--left {
 	margin-right: 0;
-	padding: 5% 0;
+	padding: 75px 0;
 }
 .background--right {
 	margin-left: 0;
-	padding: 5% 0;
+	padding: 75px 0;
 }
 .page__insides-color-line {
     max-height: 150px;
 }
+
 .insides-color-line__statistics {
 	width: 100%;
 }

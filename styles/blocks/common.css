@@ -72,4 +72,6 @@
 }
 .hideElement {
 	display: none;
+/*	transform: rotateX(-90deg);
+	transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);*/
 }

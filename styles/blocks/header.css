@@ -18,6 +18,9 @@
 .navigation__link-mobile {
 	display: none;
 }
+.navigation__link-menu {
+	display: none;
+}
 .link--margin-auto {
 	margin-top: auto;
 	margin-bottom: auto;

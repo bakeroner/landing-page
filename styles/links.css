@@ -37,10 +37,10 @@
 	padding-right: 2.5rem;
 }
 .link__footer-bottom:hover {
-	color: #000;
+	color: #f44842;
 }
 .link--footer-top:hover {
-	color: #000;
+	color: #f44842;
 }
 .link--footer-social {
 	margin-left: 0.4rem;
@@ -51,5 +51,5 @@
 	color: #061e37;
 }
 .link--hover-black:hover {
-	color: #000;
+	color: #f44842;
 }

@@ -26,11 +26,8 @@
 		padding-left: 0;
 	}
 	.link-menu__list__item {
-		/*border: 1px solid #fff;
-		border-radius: 5px;*/
 		padding: 1rem 0;
 		background-color: #061e37;
-		/*margin-bottom: 2px;*/
 	}
 	.navigation__link-menu {
 		display: block;
@@ -284,10 +281,13 @@
 	.title__text--comment-position {
 		padding-bottom: 3rem;
 	}
-	.text--55px {
+	.article__title--text-size {
 		font-size: 45px;
 	}
-	.text--45px {
+	.title__header--text-size,
+	.services__title--text-size,
+	.team__header--text-size,
+	.contact__header--text-size {
 		font-size: 35px;
 	}
 	.value__text {
@@ -395,10 +395,13 @@
 	.title__text--comment-position {
 		padding-bottom: 2rem;
 	}
-	.text--55px {
+	.article__title--text-size {
 		font-size: 38px;
 	}
-	.text--45px {
+	.title__header--text-size,
+	.services__title--text-size,
+	.team__header--text-size,
+	.contact__header--text-size {
 		font-size: 30px;
 	}
 	.value__text {
@@ -452,10 +455,13 @@
 	.button--try-for-free {
 		margin-right: 0;
 	}
-	.text--55px {
+	.article__title--text-size {
 		font-size: 30px;
 	}
-	.text--45px {
+	.title__header--text-size,
+	.services__title--text-size,
+	.team__header--text-size,
+	.contact__header--text-size {
 		font-size: 25px;
 	}
 	.text--25px {

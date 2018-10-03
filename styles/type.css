@@ -28,13 +28,26 @@
 .text--semi-gray {
 	color: #90a4ae;
 }
-.text--15px {
-	font-size: 15px;
+.link-panel--text-size,
+.link-menu--text-size,
+.figure__text--text-size,
+.list--services--text-size,
+.title__text--text-size,
+.comment__text--text-size,
+.team__text--text-size,
+.member__text--text-size,
+.contact__text--text-size,
+.checkbox--text-size,
+.list-bottom--text-size {
+font-size: 15px;
 }
-.text--55px {
+.article__title--text-size {
 	font-size: 55px;
 }
-.text--45px {
+.title__header--text-size,
+.services__title--text-size,
+.team__header--text-size,
+.contact__header--text-size {
 	font-size: 45px;
 }
 .text--25px {

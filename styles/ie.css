@@ -29,3 +29,37 @@
     	margin-right: auto;
     }
 }
+	@media screen and (max-width:1280px\0) {
+		.header__video {
+			padding-top: 0;
+			width: 600px;
+			height: 320px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		iframe {
+			max-width: 600px;
+			max-height: 320px;
+		}
+		.article {
+			width: 100%;
+    	}
+    	.article__buttom {
+    		padding-top: 1.5rem;
+    	}
+    	.figure--center {
+    		padding: 0 9.5rem;
+    	}
+    	.picture__image {
+    		width: 250px;
+    		height: auto;
+    	}
+	}
+	@media screen and (max-width:840px\0) {
+		.navigation__button {
+			width: 0;
+		}
+		.figure--center {
+			padding: 1.5rem 0;
+		}
+	}

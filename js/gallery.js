@@ -4,9 +4,6 @@ const about = document.getElementById("about");
 const allLabels = document.getElementsByClassName("member__info");
 const focus = document.querySelector(".member__face--OnFocus");
 let currentFocus = focus;
-/*gallery.addEventListener("click", (event) => {
-  scriptAction(event);
-})*/
 gallery.addEventListener("click", function(event) {
   scriptAction(event);
 })

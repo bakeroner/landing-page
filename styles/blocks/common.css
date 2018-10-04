@@ -44,7 +44,6 @@ html {
 .team__about-member {
 	display: flex;
     flex-direction: row;
-    /*position: relative; */ 
 }
 .article,
 .description__title,
@@ -63,7 +62,6 @@ html {
 .member__info {
 	display: flex;
     flex-direction: column;
-    /*position: relative;*/
 }
 .video,
 .figure__icon,

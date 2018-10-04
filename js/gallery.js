@@ -4,8 +4,14 @@ const about = document.getElementById("about");
 const allLabels = document.getElementsByClassName("member__info");
 const focus = document.querySelector(".member__face--OnFocus");
 let currentFocus = focus;
-gallery.addEventListener("click", (event) => {
-  let target = event.target;
+/*gallery.addEventListener("click", (event) => {
+  scriptAction(event);
+})*/
+gallery.addEventListener("click", function(event) {
+  scriptAction(event);
+})
+const scriptAction = function (eventAttributes) {
+  let target = eventAttributes.target;
   if (target.classList.contains("member__face--NoFocus") == true) {
     if (target != currentFocus) {
       target.classList.remove("member__face--NoFocus");
@@ -23,4 +29,4 @@ gallery.addEventListener("click", (event) => {
       currentFocus = target;
     }
   }
-})
+}

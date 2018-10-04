@@ -1,0 +1,31 @@
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.header__navigation {
+	}
+
+	.navigation__button {
+		width: 10%;
+	}
+	.button--sign-up {
+		margin-right: 0;
+		margin-left: auto;
+	}
+	.link--navigation {
+		line-height: 34.14px; 
+	}
+	.article {
+		width: 60%;
+		height: 320px;
+	}
+    .user__image {
+    	height: 76px;
+    }
+    .slider-block__slide {
+    }
+    .slide__comment {
+    	width: 90%;
+    }
+    .slider-block__arrow {
+    	margin-left: 23.01%;
+    	margin-right: auto;
+    }
+}

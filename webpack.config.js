@@ -80,6 +80,7 @@ module.exports = {
             {
               loader: 'html-loader',
             options: {
+              attrs: [':custom-src'],
               minimize: true,
               removeComments: true
             }},

@@ -1,4 +1,3 @@
-export default function () {
 	const listHeadersCollection = document.querySelectorAll('.list--services');
 
 [].forEach.call(listHeadersCollection, function(elem) {
@@ -6,4 +5,3 @@ export default function () {
         event.currentTarget.querySelector('.list__items').classList.toggle('hideElement');
     })
 });
-}

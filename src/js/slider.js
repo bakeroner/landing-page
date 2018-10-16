@@ -11,4 +11,3 @@ var slider = tns({
     prevButton: "#butTop",
     nextButton: "#butBot",
   });
-export {slider};

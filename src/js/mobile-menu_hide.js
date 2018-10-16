@@ -1,4 +1,3 @@
-export default function () {
 const mobileMenu = document.getElementById("mobileMenu");
 const clearMenu = document.getElementById("clearMenu");
 const backgroundArea = document.getElementById("mobileMenuList");
@@ -21,4 +20,3 @@ backgroundArea.addEventListener("click", function(event) {
   toggler();
  }
 });
-}

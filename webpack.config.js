@@ -73,14 +73,36 @@ module.exports = {
             {loader: 'css-loader'}
           ]
       },
+          {
+          test: /\.html$/,
+          //include: __dirname + './styles',
+          exclude: /(node_modules)/,//do not transform additional modules
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+      },
       {
-          test: /\.(png|jpg|svg|ttf)$/,
+          test: /\.(png|jpg|svg)$/,
           //include: __dirname + './images',
           exclude: /(node_modules)/,//do not transform additional modules
           use: {
             loader: 'file-loader',
             options: {
               name: 'images/[name].[ext]'
+            }
+          }
+      },
+      {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          //include: __dirname + './images',
+          exclude: /(node_modules)/,//do not transform additional modules
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: 'fonts/[name].[ext]'
             }
           }
       }]

@@ -73,14 +73,13 @@ module.exports = {
             {loader: 'css-loader'}
           ]
       },
-          {
+      {
           test: /\.(html)$/,
           exclude: /(node_modules)/,//do not transform additional modules
           use: [
             {
               loader: 'html-loader',
-            options: {
-              attrs: [':custom-src'],
+              options: {
               minimize: true,
               removeComments: true
             }},

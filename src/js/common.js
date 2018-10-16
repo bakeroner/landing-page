@@ -1,5 +1,6 @@
 import 'Styles/import.css';
 import "Styles/fonts/icofont/icofont.min.css";
+require('../index.html');
 /*import {scriptAction} from 'ScriptFolder/gallery.js';
 import default from 'ScriptFolder/list_hide.js';
 import default from 'ScriptFolder/mobile-menu_hide.js';

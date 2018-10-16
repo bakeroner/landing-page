@@ -48,15 +48,15 @@ module.exports = {
         Styles: path.resolve(__dirname, './src/styles/'),
         ScriptFolder: path.resolve(__dirname, './src/js/')
       }
-    },
+    }, 
     plugins: [
       new webpack.NoEmitOnErrorsPlugin(),
     ],
     module: {//babel connect
       rules: [{
-          test: /\.m?js$/,
+          test: /\.js$/,
           include: __dirname + './src/js',
-          exclude: /(node_modules|bower_components)/,//do not transform additional modules
+          exclude: /(node_modules)/,//do not transform additional modules
           use: {
             loader: 'babel-loader',
             options: {

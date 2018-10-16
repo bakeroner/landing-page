@@ -5,11 +5,7 @@ module.exports = {
     mode: NODE_ENV,
     context: __dirname + '/src/js',//files directory
   	entry: {//entry points
-      list_hide: './list_hide',
-      gallery: './gallery',
-      common: './common',
-      mobile_menu: './mobile-menu_hide',
-      slider: './slider'
+      common: './common'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

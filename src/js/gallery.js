@@ -27,3 +27,4 @@ const scriptAction = function (eventAttributes) {
     }
   }
 }
+export {scriptAction};

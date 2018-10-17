@@ -1,6 +1,7 @@
 var path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: NODE_ENV,
     context: __dirname + '/src/js',//files directory
@@ -18,6 +19,10 @@ module.exports = {
   		aggregateTimeout: 100
   	},
   	devtool: NODE_ENV == 'development' ? "source-map" : null,//map show
+    devServer: {
+      contentBase: './build',
+      hot: true
+    },
     resolve: {//directory and extension for modules
         modules: ["node_modules"],
         extensions: ["*", ".js"]
@@ -45,12 +50,15 @@ module.exports = {
   },﻿
     resolve: {
       alias: {
-        Styles: path.resolve(__dirname, './src/styles/'),
-        ScriptFolder: path.resolve(__dirname, './src/js/')
+        Styles: path.resolve(__dirname, './src/styles/')
       }
     }, 
     plugins: [
       new webpack.NoEmitOnErrorsPlugin(),
+      new HtmlWebpackPlugin({
+        template: './../index.html'
+      }),
+      new webpack.HotModuleReplacementPlugin()
     ],
     module: {//babel connect
       rules: [{
@@ -74,21 +82,15 @@ module.exports = {
           ]
       },
       {
-          test: /\.(html)$/,
+          test: /\.html$/,
           exclude: /(node_modules)/,//do not transform additional modules
-          use: [
-            {
+          use: {
               loader: 'html-loader',
               options: {
               minimize: true,
               removeComments: true
-            }},
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].[ext]'
-            }}
-          ]
+              }
+            }
       },
       {
           test: /\.(png|jpg|svg)$/,
@@ -113,3 +115,10 @@ module.exports = {
       }]
     }
 };
+/*,
+            {
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]'
+              }
+            }*/

@@ -22,7 +22,7 @@
     list-style-position: inside;
     border: 1px solid #fafafa;
     border-radius: 5px;
-    color: #061e37;
+    color: $dark-blue;
 }
 .list__items {
     width: 100%;
@@ -68,17 +68,17 @@
     margin-left: 1.2rem;
 }
 .list--statistics { 
-    /*list-style-image: url("../../images/list_ico/statistics_ico.png");*/
+    
 }
 .list--inbox {
-    /*list-style-image: url("../../images/list_ico/inbox_ico.png");*/
+    
 }
 .list--team {
-    /*list-style-image: url("../../images/list_ico/team_ico.png");*/
+    
 }
 .list--settings {
-    /*list-style-image: url("../../images/list_ico/settings_ico.png");*/
+    
 }
 .list--feed {
-    /*list-style-image: url("../../images/list_ico/feed_ico.png");*/
+    
 }

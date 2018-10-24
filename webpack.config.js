@@ -82,6 +82,16 @@ module.exports = {
           ]
       },
       {
+          test: /\.scss$/,
+          //include: __dirname + './styles',
+          exclude: /(node_modules)/,//do not transform additional modules
+          use: [
+            {loader: 'style-loader'},
+            {loader: 'css-loader'},
+            {loader: 'sass-loader'}
+          ]
+      },
+      {
           test: /\.html$/,
           exclude: /(node_modules)/,//do not transform additional modules
           use: {

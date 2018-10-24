@@ -15,7 +15,7 @@
 .row__input-email,
 .row__input-phone {
     font-family: "RalewayMedium";
-    color: #061e37;
+    color: $dark-blue;
     width: 80%;
     padding: 1rem 0;
     padding-left: 1rem;
@@ -38,12 +38,12 @@
 .row__input-message,
 .row__checkbox {
     background-color: transparent;
-    border: 1px solid #061e37;
+    border: 1px solid $dark-blue;
     border-radius: 5px;
 }
 .row__checkbox {
     font-family: "RalewayMedium";
-    color: #061e37;
+    color: $dark-blue;
     margin: auto 0;
     margin-left: 0;
     margin-right: auto;
@@ -58,7 +58,7 @@
     width: 100%;
     min-height: 7.4rem;
     font-family: "RalewayMedium";
-    color: #061e37;
+    color: $dark-blue;
     padding: 1rem 0;
     padding-left: 1rem;
 }
@@ -84,8 +84,7 @@
     margin-left: auto;
     font-family: "RalewayMedium";
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    @include transform(0.4s);
 }
 .row__input-submit:hover {
     background-color: #fff;

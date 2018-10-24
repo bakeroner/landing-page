@@ -14,10 +14,10 @@
 	font-family: "RalewayBold";
 }
 .text--white {
-	color: #fff;
+	color: $white;
 }
 .text--dark-blue {
-	color:#061e37;
+	color: $dark-blue;
 }
 .text--light-gray {
 	color: #78909c;
@@ -73,7 +73,7 @@ font-size: 15px;
 }
 .article__title {
 	margin: 0;
-	text-align:justify;
+	text-align: justify;
 	margin-top: -0.5rem;
 }
 .article__text { 

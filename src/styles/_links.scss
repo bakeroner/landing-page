@@ -1,16 +1,14 @@
 .link,
 .social__link {
-	color: #fff;
+	color: $white;
 	font-family: "RalewaySemiBold";
 	text-decoration: none;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+	@include transform(0.4s);
 }
 .link__footer {
 	color: #fff;
 	text-decoration: none;
-	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+	@include transform(0.4s);
 }
 .link {
 	margin: 5% 3%;
@@ -18,8 +16,7 @@
 .social__link {
 	padding-top: 0;
     padding-bottom: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    @include transform(0.4s);
 }
 .social__link--footer {
 	margin: 5% 0;
@@ -44,11 +41,10 @@
 }
 .link--footer-social {
 	margin-left: 0.4rem;
-	-webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+	@include transform(0.4s);
 }
 .link--hover-deep-blue:hover {
-	color: #061e37;
+	color: $dark-blue;
 }
 .link--hover-black:hover {
 	color: #f44842;

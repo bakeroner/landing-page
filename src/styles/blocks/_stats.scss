@@ -13,7 +13,6 @@
 .page__insides-color-line {
     max-height: 150px;
 }
-
 .insides-color-line__statistics {
 	width: 100%;
 }
@@ -26,7 +25,7 @@
 	width: 50%;
 	margin-top: auto;
     margin-bottom: auto;
-    background: #ffffff no-repeat;
+    background: $white no-repeat;
     border-radius: 50%;
     padding: 15px;
     width: 30px;

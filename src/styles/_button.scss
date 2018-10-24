@@ -13,8 +13,8 @@
 .button--sign-up {
 	border-radius: 2px;
     background: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid $white;
+    color: $white;
     width: 80px;
     height: 25px;
     font-size: 12px;
@@ -22,57 +22,57 @@
     font-family: "RalewayRegular";
 }
 .button--sign-up:hover {
-    border: 1px solid #061e37;
-    color: #061e37;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
 }
 .button--buy-now {
-    background-color: #061e37;
-    color: #ffffff;
+    background-color: $dark-blue;
+    color: $white;
     font-family: "RobotoRegular";
     margin-right: 1.875rem;
     align-self: flex-end;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--buy-now:hover {
-    background-color: #fff;
-    color: #061e37;
-    border: 2px solid #061e37;
+    background-color: $white;
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
 }
 .button--try-for-free {
-    background-color: #ffffff;
+    background-color: $white;
     width: 160px;
     height: 55px;
-    color: #061e37;
+    color: $dark-blue;
     align-self: flex-end;
     font-family: "RalewayBold";
     margin-right: 3%;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--try-for-free:hover {
-    background-color: #061e37;
-    color: #fff;
-    border: 2px solid #fff;
+    background-color: $dark-blue;
+    color: $white;
+    border: 2px solid $white;
 }
 .button--get-started-description {
 	font-family: "RalewayMedium";
     background-color: #1de9b6;
-    color: #ffffff;
+    color: $white;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
 .button--get-started-description:hover {
-    background-color: #fff;
+    background-color: $white;
     color: #1de9b6;
     border: 2px solid #1de9b6;
 }
 .button--get-started-comment {
-	background-color: #061e37;
-    color: #fff;
+	background-color: $dark-blue;
+    color: $white;
     box-shadow: 0 0 10px rgba(0,0,0,0.15);
 }
 .button--get-started-comment:hover {
-    background-color: #fff;
-    color: #061e37;
-    border: 2px solid #061e37;
+    background-color: $white;
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
 }
 .slider-block__arrow {
 	margin-left: 59%;
@@ -82,10 +82,10 @@
     background: transparent;
 }
 .arrow__image {
-    color: #fff;
+    color: $white;
 }
 .arrow__image:hover {
-    color: #061e37;
+    color: $dark-blue;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
 }

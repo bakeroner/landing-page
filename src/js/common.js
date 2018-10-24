@@ -1,5 +1,5 @@
 require('./../index.html');
-import 'Styles/import.css';
+import 'Styles/import.scss';
 import "Styles/fonts/icofont/icofont.min.css";
 
 import './list_hide.js';

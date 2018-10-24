@@ -1,3 +1,9 @@
+@mixin transform($property) {
+     -webkit-transition-duration: $property;
+    transition-duration: $property;
+}
+$white: #fff;
+$dark-blue: #061e37;
 html {
 	overflow-x: hidden;
 }

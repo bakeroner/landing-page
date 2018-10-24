@@ -6,7 +6,7 @@
 .insides--description-background,
 .insides--services-background,
 .insides--team-background {
-	background-color: #fff;
+	background-color: $white;
 }
 .background--left,
 .statistics--business {
@@ -32,5 +32,5 @@
 	background-color: #fafafa;
 }
 .insides--footer-background {
-	background-color: #061e37;
+	background-color: $dark-blue;
 }

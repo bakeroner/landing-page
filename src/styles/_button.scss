@@ -7,8 +7,7 @@
     border-radius: 5px;
     width: 150px;
     height: 55px;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    @include transform(0.4s);
 }
 .button--sign-up {
 	border-radius: 2px;
@@ -86,8 +85,7 @@
 }
 .arrow__image:hover {
     color: $dark-blue;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    @include transform(0.4s);
 }
 .arrow--up {
     padding-top: 1.6rem;

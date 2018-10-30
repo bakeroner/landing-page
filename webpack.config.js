@@ -2,17 +2,18 @@ var path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     mode: NODE_ENV,
     context: __dirname + '/src/js',//files directory
   	entry: {//entry points
-      common: './common'
+      common: './common',
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),
     	//filename: '[name].[chunkhash].js',
       filename: '[name].js',
-    	library: '[name]'
+      publicPath: '/'
   	},
   	watch: NODE_ENV == 'development',//tracking changes
   	watchOptions: {
@@ -20,8 +21,15 @@ module.exports = {
   	},
   	devtool: NODE_ENV == 'development' ? "source-map" : null,//map show
     devServer: {
-      contentBase: './build',
-      hot: true
+      host: 'localhost',
+      port: 3000,
+  /*    proxy: [{
+        path: /.backend/,
+        target: 'http://localhost:3000'
+      }],*/
+      //contentBase: './src/backend',
+      hot: true,
+      open: true
     },
     resolve: {//directory and extension for modules
         modules: ["node_modules"],
@@ -50,7 +58,8 @@ module.exports = {
   },﻿
     resolve: {
       alias: {
-        Styles: path.resolve(__dirname, './src/styles/')
+        Styles: path.resolve(__dirname, './src/styles/'),
+        Data: path.resolve(__dirname, './src/data/')
       }
     }, 
     plugins: [
@@ -113,6 +122,25 @@ module.exports = {
             }
           }
       },
+      {
+          test: /\.(json)$/,
+          //include: __dirname + './data',
+          exclude: /(node_modules)/,//do not transform additional modules
+          use: {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]'
+            }
+          }
+      },
+      /*{
+        type: 'javascript/auto',
+          test: /\.(json)$/,
+          //include: __dirname + './data',
+          exclude: /(node_modules)/,//do not transform additional modules
+          use: [ 'file-loader' ],
+          include: /\.\/config/
+      },*/
       {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           exclude: /(node_modules)/,//do not transform additional modules

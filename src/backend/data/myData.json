@@ -1,0 +1,13 @@
+{
+	"credentials": [
+	{
+		"login": "amatreshka",
+		"password": "123",
+		"status": "admin"
+	},
+	{
+		"login": "user1",
+		"password": "12345",
+		"status": "user"
+	}]
+}

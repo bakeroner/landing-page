@@ -24,7 +24,7 @@
                     <div class="navigation__link-mobile">
                         <i class="material-icons image--white nav-icons--size dehaze--hover swing" id="mobileMenu">dehaze</i>
                         <i class="material-icons image--white nav-icons--size dehaze--hover swing hideElement" id="clearMenu">clear</i>
-                        <i class="material-icons image--white nav-icons--size dehaze--hover">account_box</i>
+                        <i class="material-icons image--white nav-icons--size dehaze--hover" id="mobileSign">account_box</i>
                     </div>
                     <div class="navigation__link-menu" id="mobileMenuList">
                         <ul class="link-menu__list">
@@ -46,9 +46,17 @@
                         </ul>
                     </div>
                 	<div class="navigation__button">
-                    	<button class="button button--sign-up" type="button">sign up</button>
+                    	<button class="button button--sign-up" id="signIn" type="button">sign up</button>
                     </div>
             </nav>
+            <div class="header__sign-up hideElement" id="signBlock">
+                <p>
+                <input type="text" name="" value="login" id="popLogin"><br>
+                <input type="password" name="" value="password" id="popPassword"><br>
+                <input type="checkbox" name="" checked="checked" id="popChecker">Remember me<br>
+                <button class="" id="signButtonFromPop">Sign the fuck up</button>
+                </p>
+            </div>
             <div class="header__article">
                 <div class="article">
                     <h1 class="article__title text--white text--extra-bold article__title--text-size">LOREM IPSUM<br>DOLOR SIT AMET</h1>

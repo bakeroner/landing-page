@@ -24,7 +24,6 @@ module.exports = {
     mode: NODE_ENV,
     context: __dirname + '/src/js',//files directory
   	entry: {//entry points
-      common: './common',
       authorization: './authorization',
       newuser: './newuser',
       homePage: './homePage'

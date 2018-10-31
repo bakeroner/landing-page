@@ -1,4 +1,4 @@
-//import 'Styles/authorization.css';
+import 'Styles/authorization.css';
 const signFromPop = document.getElementById('signButtonFromPop');
 const popLogin = document.getElementById('popLogin');
 const popPassword = document.getElementById('popPassword');

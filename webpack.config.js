@@ -25,7 +25,9 @@ module.exports = {
     context: __dirname + '/src/js',//files directory
   	entry: {//entry points
       common: './common',
-      authorization: './authorization'
+      authorization: './authorization',
+      newuser: './newuser',
+      registrationRedirect: './registrationRedirect'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

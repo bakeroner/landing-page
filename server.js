@@ -18,7 +18,6 @@ app.use(webpackDevMiddleware(compiler, {
 }));
 
 /*#########Routing#############*/
-
 app.get('/signPage', (req, res) => {//change it
    		fs.readFile(__dirname + '/src/html/sign_page.html', (error, data) => {
    		if(error) throw error;

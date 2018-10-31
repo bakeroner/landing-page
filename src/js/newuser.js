@@ -1,5 +1,5 @@
-const confirm = document.getElementBuId('newUserConfirm');
+const acceptButton = document.getElementById('newUserConfirm');
 
-confirm.addEventListener('click', function () {
+acceptButton.addEventListener('click', function () {
 	window.location.href='/inside';
 })

@@ -40,7 +40,7 @@ app.get('/inside', (req, res) => {//change it
     	res.end(data);
    	});
 })
-app.get('/index/login', (req, res) => {
+app.get('/signPage/login', (req, res) => {
 	let login = req.header('login');
 	let password = req.header('pass');
 	for (let i=0; i<loginData.credentials.length; i++) {
@@ -49,11 +49,11 @@ app.get('/index/login', (req, res) => {
 			if (loginData.credentials[i].status == 'admin')
 			{
 				res.render('index', {who: `${login}`, status: 'admin'});
-				res.send(`All good! Admin account`);
+				res.end(`All good! Admin account`);
 			}
 			else if(loginData.credentials[i].status == 'user') {
 				res.render('index', {who: `${login}`, status: 'user'});
-				res.send(`All good! User account`);
+				res.end(`All good! User account`);
 			}
 		}
 	}

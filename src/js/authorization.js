@@ -13,12 +13,10 @@ redirectButton.addEventListener('click', function () {
 })
 
 signFromPop.addEventListener('click', function () {
-	//let auth = base_auth(popLogin.value, popPassword.value);
+
 	login = popLogin.value;
 	password = popPassword.value;
-	//console.log(auth);
 	checked = popChecker.checked;
-
 	let userCredits = new XMLHttpRequest();
 	userCredits.onload = () => {
 		if (userCredits.status == 200) {
@@ -28,9 +26,7 @@ signFromPop.addEventListener('click', function () {
 			alert('Not 200');
 		}
 	};
-	//userCredits.open('GET', 'backend/after_auth.html', true);
-	userCredits.open('GET', '/index/login', true);
-	//userCredits.setRequestHeader("authorization", auth);
+	userCredits.open('GET', '/signPage/login', true);
 	userCredits.setRequestHeader('login', `${login}`);
 	userCredits.setRequestHeader('pass', `${password}`);
 	userCredits.send();

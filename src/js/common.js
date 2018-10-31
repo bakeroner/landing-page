@@ -1,5 +1,4 @@
-require('./../index.html');
-//require('./../data/myData.json');
+//require('./../html/index.html');
 import 'Styles/import.scss';
 import "Styles/fonts/icofont/icofont.min.css";
 import './list_hide.js';

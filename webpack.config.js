@@ -2,12 +2,30 @@ var path = require('path');
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+/*-------*/
+function generateHtmlPlugins(templateDir) {
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+  return templateFiles.map(item => {
+    const parts = item.split('.');
+    const name = parts[0];
+    const extension = parts[1];
+    return new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
+      inject: false,
+    })
+  })
+}
+const htmlPlugins = generateHtmlPlugins('./src/html');
+/*-------*/
 module.exports = {
     mode: NODE_ENV,
     context: __dirname + '/src/js',//files directory
   	entry: {//entry points
       common: './common',
+      authorization: './authorization'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),
@@ -64,11 +82,11 @@ module.exports = {
     }, 
     plugins: [
       new webpack.NoEmitOnErrorsPlugin(),
-      new HtmlWebpackPlugin({
+   /*   new HtmlWebpackPlugin({
         template: './../index.html'
-      }),
+      }),*/
       new webpack.HotModuleReplacementPlugin()
-    ],
+    ].concat(htmlPlugins),
     module: {//babel connect
       rules: [{
           test: /\.js$/,
@@ -103,6 +121,19 @@ module.exports = {
       {
           test: /\.html$/,
           exclude: /(node_modules)/,//do not transform additional modules
+          include: path.resolve(__dirname, 'src/html'),
+          //use: ['raw-loader']
+          use: {
+              loader: 'html-loader',
+              options: {
+              minimize: true,
+              removeComments: true
+              }
+          }
+      },
+      /*      {
+          test: /\.html$/,
+          exclude: /(node_modules)/,//do not transform additional modules
           use: {
               loader: 'html-loader',
               options: {
@@ -110,7 +141,7 @@ module.exports = {
               removeComments: true
               }
             }
-      },
+      },*/
       {
           test: /\.(png|jpg|svg)$/,
           //include: __dirname + './images',
@@ -133,14 +164,6 @@ module.exports = {
             }
           }
       },
-      /*{
-        type: 'javascript/auto',
-          test: /\.(json)$/,
-          //include: __dirname + './data',
-          exclude: /(node_modules)/,//do not transform additional modules
-          use: [ 'file-loader' ],
-          include: /\.\/config/
-      },*/
       {
           test: /\.(woff|woff2|eot|ttf|otf)$/,
           exclude: /(node_modules)/,//do not transform additional modules

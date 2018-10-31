@@ -19,21 +19,21 @@ app.use(webpackDevMiddleware(compiler, {
 
 /*#########Routing#############*/
 
-app.get('/signPage', (req, res) => {
+app.get('/signPage', (req, res) => {//change it
    		fs.readFile(__dirname + '/src/html/sign_page.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 })
-app.get('/newUser', (req, res) => {
+app.get('/newUser', (req, res) => {//change it
 	   	fs.readFile(__dirname + '/src/html/reg_page.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 })
-app.get('/inside', (req, res) => {
+app.get('/inside', (req, res) => {//change it
 	   	fs.readFile(__dirname + '/src/html/inside.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });

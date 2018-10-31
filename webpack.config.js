@@ -26,8 +26,7 @@ module.exports = {
   	entry: {//entry points
       common: './common',
       authorization: './authorization',
-      newuser: './newuser',
-      registrationRedirect: './registrationRedirect'
+      newuser: './newuser'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

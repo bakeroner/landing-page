@@ -3,9 +3,14 @@ const signFromPop = document.getElementById('signButtonFromPop');
 const popLogin = document.getElementById('popLogin');
 const popPassword = document.getElementById('popPassword');
 const popChecker = document.getElementById('popChecker');
+const redirectButton = document.getElementById('registrationButton');
 let checked;
 let login;
 let password;
+
+redirectButton.addEventListener('click', function () {
+	window.location.href='/newUser';
+})
 
 signFromPop.addEventListener('click', function () {
 	//let auth = base_auth(popLogin.value, popPassword.value);

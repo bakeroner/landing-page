@@ -8,7 +8,7 @@ const config = require('./webpack.config.js');
 const compiler = webpack(config);
 app.set('port', config.devServer.port);
 app.engine('ejs', engine);
-app.set('views', __dirname + '/src/views');
+app.set('views', __dirname + '/src/backend/views');
 app.set('view engine', 'ejs');
 const loginData = require('./src/backend/data/myData.json');
 //app.set('') can set info from json(need to be required)
@@ -57,6 +57,7 @@ app.get('/signPage/login', (req, res) => {
 		}
 	}
 });
+/*######################*/
 app.use((req,res) => {
 	res.status(404).send('Page Not Found!');
 })

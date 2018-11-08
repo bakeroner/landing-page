@@ -1,24 +1,25 @@
 module.exports = function(app) {
-	const loginData = require('../data/myData.json');
-
+const loginData = require('../data/myData.json');
+const fs = require('fs');
 const userModel = require('../models/schema.js').userModel;
 
 	app.get('/signPage', (req, res) => {//when sign
-   		fs.readFile(__dirname + '/src/html/sign_page.html', (error, data) => {
+   		fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
+   		//fs.readFile('build/sign_page.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 })
 app.get('/newUser', (req, res) => {//creating new user
-	   	fs.readFile(__dirname + '/src/html/reg_page.html', (error, data) => {
+	   	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 });
 app.get('/inside', (req, res) => {//when log in
-	   	fs.readFile(__dirname + '/src/html/inside.html', (error, data) => {
+	   	fs.readFile(__dirname + './../../html/inside.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);

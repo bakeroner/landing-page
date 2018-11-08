@@ -10,53 +10,11 @@ app.set('port', config.devServer.port);
 app.engine('ejs', engine);
 app.set('views', __dirname + '/src/backend/views');
 app.set('view engine', 'ejs');
-const loginData = require('./src/backend/data/myData.json');
-//app.set('') can set info from json(need to be required)
-
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
 }));
-
 /*#########Routing#############*/
-app.get('/signPage', (req, res) => {//change it
-   		fs.readFile(__dirname + '/src/html/sign_page.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-})
-app.get('/newUser', (req, res) => {//change it
-	   	fs.readFile(__dirname + '/src/html/reg_page.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-})
-app.get('/inside', (req, res) => {//change it
-	   	fs.readFile(__dirname + '/src/html/inside.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-})
-app.get('/signPage/login', (req, res) => {
-	let login = req.header('login');
-	let password = req.header('pass');
-	for (let i=0; i<loginData.credentials.length; i++) {
-		console.log(i);
-		if (login == loginData.credentials[i].login && password == loginData.credentials[i].password) {
-			if (loginData.credentials[i].status == 'admin')
-			{
-				res.render('index', {who: `${login}`, status: 'admin'});
-				res.end(`All good! Admin account`);
-			}
-			else if(loginData.credentials[i].status == 'user') {
-				res.render('index', {who: `${login}`, status: 'user'});
-				res.end(`All good! User account`);
-			}
-		}
-	}
-});
+require('./src/backend/routes/routes.js')(app);
 /*######################*/
 app.use((req,res) => {
 	res.status(404).send('Page Not Found!');

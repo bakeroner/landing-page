@@ -10,8 +10,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
   console.log('DB connected ...');
 });
-
+module.exports = mongoose;
+//module.exports = db;
+/*
 const Cat = mongoose.model('Cat', { name: String });
 
 const kitty = new Cat({ name: 'Zildjian' });
-kitty.save().then(() => console.log('meow'));
+kitty.save().then(() => console.log('meow'));*/

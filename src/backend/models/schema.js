@@ -17,26 +17,7 @@ const userSchema = new mongoose.Schema({
 	}
 });
 
-/*const userSchema = new mongoose.Schema({
-	username: {
-		type: String,
-		unique: true,
-		required: true
-	},
-	hashedPassword: {
-		type: String,
-		required: true
-	},
-	salt: {
-		type: String,
-		required: true
-	},
-	status: {
-		type: String,
-		required: true
-	}
-});
-
+/*
 userSchema.methods.encryptPassword = function (password) {
 	return crypto.createHmac('shal', this.salt).update(password).digest('hex');
 };
@@ -50,7 +31,5 @@ userSchema.virtual('password')
 userSchema.methods.checkPassword = function (password) {
 	return this.encryptPassword(password) === this.hashedPassword;
 };*/
-/*userSchema.methods.checkPassword = function (password) {
-	return 
-}*/
+
 exports.userModel = mongoose.model('userModel',userSchema);

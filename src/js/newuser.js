@@ -1,15 +1,15 @@
 const acceptButton = document.getElementById('newUserConfirm');
 const newUserLogin = document.getElementById('newUserLogin');
-const newUserEmail = document.getElementById('newUserEmail');
 const newUserPassword = document.getElementById('newUserPassword');
 const newUserPasswordConfirm = document.getElementById('newUserPasswordConfirm');
 
-acceptButton.addEventListener('click', function () {
-	if (newUserLogin.value && newUserEmail.value && newUserPassword.value && newUserPassword.value == newUserPasswordConfirm.value) {
+/*acceptButton.addEventListener('click', function () {
+	if (newUserLogin.value && newUserPassword.value && newUserPassword.value == newUserPasswordConfirm.value) {
 		let newUserCredits = new XMLHttpRequest();
 		newUserCredits.onload = () => {
 			if (newUserCredits.status == 200) {
 				alert(`${newUserCredits.responseText}`);
+				//window.location.href='/inside';
 			}
 			else {
 				alert('error Not 404');
@@ -22,6 +22,6 @@ acceptButton.addEventListener('click', function () {
 	}
 	else {
 		alert('empty fields');
-		console.log(`log: ${newUserLogin.value} email: ${newUserEmail.value} pass: ${newUserPassword.value} passconf: ${newUserPasswordConfirm.value}`);
+		console.log(`log: ${newUserLogin.value} pass: ${newUserPassword.value} passconf: ${newUserPasswordConfirm.value}`);
 	}
-})
+})*/

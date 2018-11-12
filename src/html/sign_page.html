@@ -6,13 +6,13 @@
 </head>
 <body>
 	<div class="header__sign-up hideElement" id="signBlock">
-        <p>
-        <input type="text" name="" value="login" class="sign-up__text-field" id="popLogin"><br>
-        <input type="password" name="" value="password" class="sign-up__text-field" id="popPassword"><br>
-        <input type="checkbox" name="" checked="checked" id="popChecker">Remember me<br>
-        <button class="sign-up__button" id="signButtonFromPop">Sign the fuck up</button>
+        <form method="POST" action="/login">
+        	<input type="text" name="username" value="login" class="sign-up__text-field" id="popLogin"><br>
+        	<input type="password" name="password" value="password" class="sign-up__text-field" id="popPassword"><br>
+        	<input type="checkbox" name="" checked="checked" id="popChecker">Remember me<br>
+        	<input  type="submit" class="sign-up__button" id="signButtonFromPop">Sign the fuck up
+        </form>
         <button class="registration__button" id="registrationButton">Registration</button>
-        </p>
     </div>
 <script type="text/javascript" src="/authorization.js"></script>
 <script type="text/javascript" src="/common.js"></script>

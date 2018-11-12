@@ -1,5 +1,7 @@
 module.exports = function(app) {
 const fs = require('fs');
+
+
 const userModel = require('../models/schema.js').userModel;
 /*123*/
 const mongoose = require('./../db/mongoose.js');
@@ -7,29 +9,32 @@ mongoose.set('debug', true)
 /*123*/
 	app.get('/signPage', (req, res) => {//when sign
    		fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
+   			if(error) throw error;
+   			res.writeHead(200, { 'Content-Type': 'text/html' });
+    		res.end(data);
    	});
 })
 	/*############New User#############*/
 app.get('/newUser', (req, res) => {//creating new user
 	   	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
+   			if(error) throw error;
+   			res.writeHead(200, { 'Content-Type': 'text/html' });
+    		res.end(data);
    	});
 });
-app.get('/newUser/login', (req, res) => {
-	let login = req.header('login');
-	let password = req.header('pass');
+app.post('/registration', (req, res) => {
+	let login = req.body.username;
+	let password = req.body.password;
+	console.log(login);
+	console.log(password);
 	userModel.findOne({username: login}, function (err, user) {
 		if (user) {
 			res.end(`Current username is already used`);
 		}
 		else {
 			require('./../db/methods/userAdd')(login, password);
-			res.end(`Current username is empty`);
+			res.render('index', {who: `${login}`, status: `${user.status}`});
+			res.end();
 			console.log('Current username is empty');
 		}
 	})
@@ -47,13 +52,17 @@ app.get('/users/:id', (req, res, next) => {//one user
 	});
 });
 /*#################Auth#####################*/
-app.get('/signPage/login', (req, res) => {
-	let login = req.header('login');
-	let password = req.header('pass');
+app.post('/login', (req, res) => {
+	let login = req.body.username;
+	let password = req.body.password;
+	//console.log(req);
+	console.log(login);
+	console.log(password);
 	userModel.findOne({username: login}, function (err, user) {
 		if (user && user.password==password) {
 			res.render('index', {who: `${login}`, status: `${user.status}`});
-			res.end(`All good! ${user.status} account`);
+			res.end();
+			//res.end(`All good! ${user.status} account`);
 		}
 		else {
 			res.end(`no such user or wrong password`);
@@ -61,4 +70,12 @@ app.get('/signPage/login', (req, res) => {
 		}
 	})
 });
+
+/*app.get('/inside', (req, res) => {
+	fs.readFile(__dirname + './../../html/inside.html', (error, data) => {
+   		if(error) throw error;
+   		res.writeHead(200, { 'Content-Type': 'text/html' });
+    	res.end(data);
+	})
+});*/
 }

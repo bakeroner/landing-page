@@ -3,16 +3,16 @@ const signFromPop = document.getElementById('signButtonFromPop');
 const popLogin = document.getElementById('popLogin');
 const popPassword = document.getElementById('popPassword');
 const popChecker = document.getElementById('popChecker');
-const redirectButton = document.getElementById('registrationButton');
+const registrationButton = document.getElementById('registrationButton');
 let checked;
 let login;
 let password;
 
-redirectButton.addEventListener('click', function () {
-	window.location.href='/newUser';
+registrationButton.addEventListener('click', function () {
+	window.location.href = '/newUser';
 })
 
-signFromPop.addEventListener('click', function () {
+/*signFromPop.addEventListener('click', function () {
 
 	login = popLogin.value;
 	password = popPassword.value;
@@ -20,15 +20,15 @@ signFromPop.addEventListener('click', function () {
 	let userCredits = new XMLHttpRequest();
 	userCredits.onload = () => {
 		if (userCredits.status == 200) {
-			//alert('error');
 			alert(`${userCredits.responseText}`);
+			//window.location.href='/inside';
 		}
 		else {
-			alert('error Not 404');
+			alert('error 404');
 		}
 	};
 	userCredits.open('GET', '/signPage/login', true);
 	userCredits.setRequestHeader('login', `${login}`);
 	userCredits.setRequestHeader('pass', `${password}`);
 	userCredits.send();
-})
+})*/

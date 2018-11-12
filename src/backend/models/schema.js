@@ -50,4 +50,7 @@ userSchema.virtual('password')
 userSchema.methods.checkPassword = function (password) {
 	return this.encryptPassword(password) === this.hashedPassword;
 };*/
+/*userSchema.methods.checkPassword = function (password) {
+	return 
+}*/
 exports.userModel = mongoose.model('userModel',userSchema);

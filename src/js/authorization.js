@@ -20,10 +20,11 @@ signFromPop.addEventListener('click', function () {
 	let userCredits = new XMLHttpRequest();
 	userCredits.onload = () => {
 		if (userCredits.status == 200) {
+			//alert('error');
 			alert(`${userCredits.responseText}`);
 		}
 		else {
-			alert('Not 200');
+			alert('error Not 404');
 		}
 	};
 	userCredits.open('GET', '/signPage/login', true);

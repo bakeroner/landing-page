@@ -1,5 +1,4 @@
 module.exports = function(app) {
-const loginData = require('../data/myData.json');
 const fs = require('fs');
 const userModel = require('../models/schema.js').userModel;
 /*123*/

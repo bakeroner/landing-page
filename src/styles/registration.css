@@ -43,3 +43,11 @@ body {
 .fieldLabel {
     color: #fff;
 }
+.navigation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.navigation__logo {
+    margin-top: 1rem;
+}

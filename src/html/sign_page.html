@@ -5,14 +5,19 @@
     <title></title>
 </head>
 <body>
-	<div class="header__sign-up hideElement" id="signBlock">
-        <form method="POST" action="/login">
-        	<input type="text" name="username" value="login" class="sign-up__text-field" id="popLogin"><br>
-        	<input type="password" name="password" value="password" class="sign-up__text-field" id="popPassword"><br>
-        	<input type="checkbox" name="" checked="checked" id="popChecker">Remember me<br>
-        	<input  type="submit" class="sign-up__button" id="signButtonFromPop">Sign the fuck up
-        </form>
-        <button class="registration__button" id="registrationButton">Registration</button>
+	<div class="container__sign-up">
+       	<form method="POST" action="/login" class="sign-up">
+       		<label for="username" class="fieldLabel">Username</label>
+       		<input type="text" name="username" value="login" class="sign-up__text-field" id="popLogin"><br>
+       		<label for="password" class="fieldLabel">Password</label>
+       		<input type="password" name="password" value="password" class="sign-up__text-field" id="popPassword"><br>
+       		<input type="checkbox" name="checkRemember" checked="checked" id="popChecker">
+       		<label for="checkRemember" class="fieldLabel">Remember me</label><br>
+       		<div class="sign-up__buttons">
+       			<input  type="submit" class="sign-up__button" id="signButtonFromPop" value="Sign up">
+       			<button class="registration__button" id="registrationButton">Registration</button>
+       		</div>
+       	</form>
     </div>
 <script type="text/javascript" src="/authorization.js"></script>
 <script type="text/javascript" src="/common.js"></script>

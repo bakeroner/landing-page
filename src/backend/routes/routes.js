@@ -19,25 +19,33 @@ mongoose.set('debug', true)
     		res.end(data);
    	});
 })
-	/*############New User#############*/
-app.get('/newUser', (req, res) => {//creating new user
+	app.get('/newUser', (req, res) => {//creating new user
 	   	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    			if(error) throw error;
    			res.writeHead(200, { 'Content-Type': 'text/html' });
     		res.end(data);
    	});
 });
+	app.get('/inside', (req, res) => {//creating new user
+	   	res.render('index', {who: `${login}`, status: `user`});
+		res.end();
+   	});
+	/*############New User#############*/
+
 app.post('/registration', (req, res) => {
 	let login = req.body.username;
 	let password = req.body.password;
-	let passwordConfirm =req.body.passwordConfirm;
+	let passwordConfirm = req.body.passwordConfirm;
 	console.log(login);
 	console.log(password);
+	console.log(passwordConfirm);
 	userModel.findOne({username: login}, function (err, user) {
 		if (user) {
+			res.redirect('/newUser');
+			console.log(`Current username is already used`);
 			res.end(`Current username is already used`);
 		}
-		else if (login && password && password == passwordConfirm) {
+		else if (password === passwordConfirm) {
 			require('./../db/methods/userAdd')(login, password);
 			res.render('index', {who: `${login}`, status: `user`});
 			res.end();
@@ -45,6 +53,7 @@ app.post('/registration', (req, res) => {
 		}
 		else {
 			res.redirect('/newUser');
+			console.log(`Incorrect input`);
 			res.end(`Incorrect input`);
 		}
 	})

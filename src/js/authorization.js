@@ -1,16 +1,11 @@
 import 'Styles/authorization.css';
-const signFromPop = document.getElementById('signButtonFromPop');
-const popLogin = document.getElementById('popLogin');
-const popPassword = document.getElementById('popPassword');
-const popChecker = document.getElementById('popChecker');
-const registrationButton = document.getElementById('registrationButton');
+const signFromSign = document.getElementById('signButtonFromSign');
+const signLogin = document.getElementById('signLogin');
+const signPassword = document.getElementById('signPassword');
+const signChecker = document.getElementById('signChecker');
 let checked;
 let login;
 let password;
-
-/*registrationButton.addEventListener('click', function () {
-	window.location.href = '/newUser';
-})*/
 
 /*signFromPop.addEventListener('click', function () {
 

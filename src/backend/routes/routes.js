@@ -1,6 +1,6 @@
 module.exports = function(app) {
 const fs = require('fs');
-
+const bcrypt = require('bcrypt');
 
 const userModel = require('../models/schema.js').userModel;
 /*123*/
@@ -25,17 +25,22 @@ app.get('/newUser', (req, res) => {//creating new user
 app.post('/registration', (req, res) => {
 	let login = req.body.username;
 	let password = req.body.password;
+	let passwordConfirm =req.body.passwordConfirm;
 	console.log(login);
 	console.log(password);
 	userModel.findOne({username: login}, function (err, user) {
 		if (user) {
 			res.end(`Current username is already used`);
 		}
-		else {
+		else if (login && password && password == passwordConfirm) {
 			require('./../db/methods/userAdd')(login, password);
-			res.render('index', {who: `${login}`, status: `${user.status}`});
+			res.render('index', {who: `${login}`, status: `user`});
 			res.end();
 			console.log('Current username is empty');
+		}
+		else {
+			res.redirect('/newUser');
+			res.end(`Incorrect input`);
 		}
 	})
 });
@@ -55,16 +60,16 @@ app.get('/users/:id', (req, res, next) => {//one user
 app.post('/login', (req, res) => {
 	let login = req.body.username;
 	let password = req.body.password;
-	//console.log(req);
 	console.log(login);
 	console.log(password);
 	userModel.findOne({username: login}, function (err, user) {
-		if (user && user.password==password) {
+		if (user && bcrypt.compareSync(password, user.password)) {
 			res.render('index', {who: `${login}`, status: `${user.status}`});
 			res.end();
 			//res.end(`All good! ${user.status} account`);
 		}
 		else {
+			res.redirect('/signPage');
 			res.end(`no such user or wrong password`);
 			console.log('no such user or wrong password');
 		}

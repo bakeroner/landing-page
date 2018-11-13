@@ -38,11 +38,11 @@ body {
     border-radius: 2px;
     background-color: #fff;
     margin-top: 0.5rem;
-    margin-right: 0;
+    margin-left: 40vw;
 }
 .sign-up__buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .sign-up__text-field {
     width: 100%;

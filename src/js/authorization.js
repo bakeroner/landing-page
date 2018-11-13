@@ -8,9 +8,9 @@ let checked;
 let login;
 let password;
 
-registrationButton.addEventListener('click', function () {
+/*registrationButton.addEventListener('click', function () {
 	window.location.href = '/newUser';
-})
+})*/
 
 /*signFromPop.addEventListener('click', function () {
 

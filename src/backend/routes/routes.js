@@ -66,7 +66,6 @@ app.post('/login', (req, res) => {
 		if (user && bcrypt.compareSync(password, user.password)) {
 			res.render('index', {who: `${login}`, status: `${user.status}`});
 			res.end();
-			//res.end(`All good! ${user.status} account`);
 		}
 		else {
 			res.redirect('/signPage');
@@ -75,12 +74,4 @@ app.post('/login', (req, res) => {
 		}
 	})
 });
-
-/*app.get('/inside', (req, res) => {
-	fs.readFile(__dirname + './../../html/inside.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-	})
-});*/
 }

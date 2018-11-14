@@ -6,7 +6,6 @@ body {
 }
 .container__sign-up {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     margin: 0;
     border:2px solid #fff;
@@ -33,11 +32,14 @@ body {
     margin-top: 0.5rem;
     margin-left: 0;
 }
+.container__registration {
+    display: flex;
+    justify-content: space-around;
+}
 .sign-up__registration-link {
     color: #fff;
     text-decoration: none;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    margin-top: 10px;
 }
 .sign-up__buttons {
     display: flex;

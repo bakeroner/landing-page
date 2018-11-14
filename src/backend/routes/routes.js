@@ -2,7 +2,6 @@ module.exports = function(app) {
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userModel = require('../models/schema.js').userModel;
-//const mongoose = require('./../db/mongoose.js');
 const mongoose = require('mongoose');
 mongoose.set('debug', true)
 
@@ -20,24 +19,36 @@ app.get('/signPage', (req, res) => {//when sign
     	res.end(data);
    	});
 })
-app.get('/newUser', (req, res) => {//creating new user
+app.get('/newUser', (req, res) => {//when reg
 	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    		if(error) throw error;
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 });
-app.get('/login', (req, res) => {//creating new user
+app.get('/login', (req, res) => {//inside
 	userModel.findOne({_id: req.session.userId}, function (err, user) {
    		res.render('index', {who: `${user.username}`, status: `${user.status}`});
 		res.end();
 	})
 });
-	
+/*#####*/
+app.get('/login/changepass', (req, res) => {//inside
+	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
+   		if(error) throw error;
+   		res.writeHead(200, { 'Content-Type': 'text/html' });
+    	res.end(data);
+	})
+});
+app.get('/login/changeusername', (req, res) => {//inside
+	fs.readFile(__dirname + './../../html/change_username.html', (error, data) => {
+   		if(error) throw error;
+   		res.writeHead(200, { 'Content-Type': 'text/html' });
+    	res.end(data);
+	})
+});	
 /*#################Auth#####################*/
 app.post('/login', (req, res) => {
-	console.log(req.session);
-	console.log(req.session.userId);
 	console.log(req.body.checkRemember);
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user && bcrypt.compareSync(req.body.password, user.password)) {
@@ -52,7 +63,7 @@ app.post('/login', (req, res) => {
 	})
 });
 /*############New User#############*/
-app.post('/registration', (req, res, next) => {
+app.post('/registration', (req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user) {
 			res.redirect('/newUser');
@@ -71,14 +82,34 @@ app.post('/registration', (req, res, next) => {
 		}
 	})
 });
+/*############Change Pass and username#############*/
+app.post('/changeusername', (req, res) => {
+	require('./../db/methods/changeUsername')(req.session.userId, req.body.username);
+	res.redirect('/login');
+})
+app.post('/changepass', (req, res) => {
+	if (req.body.newPassword == req.body.newPasswordConfirm) {
+		require('./../db/methods/changePassword')(req.session.userId, req.body.oldPassword, req.body.newPassword);
+		res.redirect('/login');
+	}
+	else {
+		console.log(`Incorrect input`);
+		res.end(`Incorrect input`);
+	}
+})
+app.post('/logout', (req, res) => {
+	req.session.userId = '';
+	//res.redirect('/');
+})
+
 /*#########All users###########*/
-app.get('/users', (req, res) => {//all users
+app.get('/login/users', (req, res) => {//all users
 	userModel.find({}, (err, users) => {
 		if (err) return next(err);
 		res.json(users);
 	});
 });
-app.get('/users/:id', (req, res, next) => {//one user
+app.get('/login/users/:id', (req, res, next) => {//one user
 	userModel.findById(req.params.id, (err, user) => {
 		res.json(user);
 	});

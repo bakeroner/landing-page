@@ -26,7 +26,9 @@ module.exports = {
   	entry: {//entry points
       authorization: './authorization',
       newuser: './newuser',
-      homePage: './homePage'
+      homePage: './homePage',
+      changePassword: './changePassword',
+      changeUsername: './changeUsername',
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

@@ -8,6 +8,12 @@ const webpackDevMiddleware = require('webpack-dev-middleware');
 const app = express();
 const config = require('./webpack.config.js');
 const compiler = webpack(config);
+/*^^^^^^^^^^^^^^^test^^^^^*/
+
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
+const db = require('./src/backend/db/mongoose.js');
+/*^^^*/
 app.set('port', config.devServer.port);
 app.engine('ejs', engine);
 app.set('views', __dirname + '/src/backend/views');
@@ -23,6 +29,7 @@ app.use(session({
   secret: 'BubbleBeer',
   resave: true,
   saveUninitialized: true,
+  store: new MongoStore({ mongooseConnection: db })
 }));
 /*#########Routing#############*/
 require('./src/backend/routes/routes.js')(app);

@@ -1,6 +1,6 @@
 const crypto = require('crypto');
-const mongoose = require('./../db/mongoose.js');
-
+//const mongoose = require('./../db/mongoose.js');
+const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
 	username: {
 		type: String,

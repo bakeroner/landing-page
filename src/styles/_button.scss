@@ -24,6 +24,21 @@
     border: 1px solid $dark-blue;
     color: $dark-blue;
 }
+.button--sign-out {
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    padding: 6px 6px;
+    font-family: "RalewayRegular";
+}
+.button--sign-out:hover {
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+}
 .button--buy-now {
     background-color: $dark-blue;
     color: $white;

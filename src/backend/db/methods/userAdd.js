@@ -1,4 +1,5 @@
-const mongoose = require('./../mongoose.js');
+//const mongoose = require('./../mongoose.js');
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 mongoose.set('debug', true)
 module.exports = function(log, pass) {
@@ -7,4 +8,5 @@ module.exports = function(log, pass) {
 	user.save((err) => {
 		if (err) throw err;
 	})
+	return user._id;
 }

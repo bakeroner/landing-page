@@ -58,6 +58,19 @@ app.get('/login/changeusername', (req, res) => {//inside
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
 	})
+});
+/*user inside*/
+app.get('/login/adminPanel', (req, res) => {//all users
+	userModel.find({}, (err, users) => {
+		if (err) return next(err);
+		res.json(users);
+	});
+});
+app.get('/login/user', (req, res) => {//one user
+	userModel.findById(req.session.userId, (err, user) => {
+		if (err) throw err;
+		res.json(user);
+	});
 });	
 /*#################Auth#####################*/
 app.post('/login', (req, res) => {
@@ -118,20 +131,19 @@ app.post('/', (req, res) => {
 		res.end('true');
 	}
 	else {
-		res.end('false');
+		res.end('Not the best way to use it');
 	}
 })
-/*#########All users###########*/
-app.get('/login/users', (req, res) => {//all users
-	userModel.find({}, (err, users) => {
-		if (err) return next(err);
-		res.json(users);
+app.post('/statusCheck', (req, res) => {
+	userModel.findById(req.session.userId, (err, user) => {
+		if (err) throw err;
+		if (user.status == 'user') {
+			res.end('user');
+		}
+		else {
+			res.end('admin');
+		}
 	});
-});
-app.get('/login/users/:id', (req, res, next) => {//one user
-	userModel.findById(req.params.id, (err, user) => {
-		res.json(user);
-	});
-});
 
+})
 }

@@ -11,9 +11,10 @@
     <section>
       <%-body -%>
       <button id="logoutButton">Logout</button>
+      <button id="userButton">User</button>
       <ul>
         <li><a href="/">Back to the HomePage</a></li>
-        <li><a href="/login/users">User</a></li>
+        <!-- <li><a href="/login/users">User</a></li> -->
         <li><a href="/login/changeusername">Change username</a></li>
         <li><a href="/login/changepass">Change password</a></li>
       </ul>
@@ -32,6 +33,23 @@
       logout.addEventListener('click', () => {
         xhr.open('POST', '/logout', true);
         xhr.send();
+      })
+
+      const userButton = document.getElementById('userButton');
+      let userPost = new XMLHttpRequest();
+      userPost.onload = () => {
+        if (userPost.status === 200) {
+          if (userPost.responseText == 'user') {
+            window.location.href = '/login/user';
+          }
+          else {
+            window.location.href = '/login/adminPanel';
+          }
+        }
+      }
+      userButton.addEventListener('click', () => {
+        userPost.open('POST', '/statusCheck', true);
+        userPost.send();
       })
     </script>
     <script type="text/javascript" src=""></script>

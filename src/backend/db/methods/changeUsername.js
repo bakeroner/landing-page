@@ -6,7 +6,7 @@ module.exports = (id, newUsername) => {
 	!userModel.findOne({username: newUsername}, (err, user) => {
 		if (err) throw err;
 		if (!user) {
-			userModel.findOneAndUpdate({_id: id}, {username: newUsername}, function (err) {
+			userModel.findByIdAndUpdate(id, {username: newUsername}, function (err) {
 				if (err) throw err;
 			})
 		}

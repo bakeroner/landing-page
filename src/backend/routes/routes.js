@@ -39,7 +39,7 @@ app.get('/newUser', (req, res) => {//when reg
    	});
 });
 app.get('/login', (req, res) => {//inside
-	userModel.findOne({_id: req.session.userId}, function (err, user) {
+	userModel.findById(req.session.userId, (err, user) => {
    		res.render('index', {who: `${user.username}`, status: `${user.status}`});
 		res.end();
 	})

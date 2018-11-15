@@ -61,17 +61,13 @@ app.get('/login/changeusername', (req, res) => {//inside
 });
 /*user inside*/
 app.get('/login/adminPanel', (req, res) => {//all users
-	userModel.find({}, (err, users) => {
-		if (err) return next(err);
-		res.json(users);
+	   	res.render('indexUser');
+		res.end();
 	});
-});
 app.get('/login/user', (req, res) => {//one user
-	userModel.findById(req.session.userId, (err, user) => {
-		if (err) throw err;
-		res.json(user);
+	   	res.render('indexUser');
+		res.end();
 	});
-});	
 /*#################Auth#####################*/
 app.post('/login', (req, res) => {
 	console.log('body check ' + req.body.checkRemember);
@@ -151,5 +147,22 @@ app.post('/statusCheck', (req, res) => {
 		}
 	});
 
+})
+app.post('/userFiller', (req, res) => {
+	userModel.findById(req.session.userId, (err, user) => {
+		if (err) throw err;
+		if (user.status == 'user') {
+			userModel.findById(req.session.userId, (err, user) => {
+			if (err) throw err;
+			res.json(user);	
+			});
+		}
+		else {
+			userModel.find({}, (err, user) => {
+				if (err) return next(err);
+				res.json(user);
+			})
+		}
+	})
 })
 }

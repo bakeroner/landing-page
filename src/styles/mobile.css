@@ -95,6 +95,9 @@
 	.button--sign-up {
 		display: none;
 	}
+	.button--sign-out {
+		display: none;
+	}
 	.navigation__link-mobile {
 		display: block;
 		margin-right: 1.5rem;

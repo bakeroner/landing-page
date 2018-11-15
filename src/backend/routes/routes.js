@@ -19,6 +19,18 @@ app.get('/signPage', (req, res) => {//when sign
     	res.end(data);
    	});
 })
+app.get('/signPageMobile', (req, res) => {//when sign
+	if (!req.session.userId) {
+   		fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
+   			if(error) throw error;
+   			res.writeHead(200, { 'Content-Type': 'text/html' });
+    		res.end(data);
+   		});
+   	}
+   	else {
+   		res.redirect('/login');
+   	}
+})
 app.get('/newUser', (req, res) => {//when reg
 	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    		if(error) throw error;
@@ -99,9 +111,16 @@ app.post('/changepass', (req, res) => {
 })
 app.post('/logout', (req, res) => {
 	req.session.userId = '';
-	//res.redirect('/');
+	res.end();
 })
-
+app.post('/', (req, res) => {
+	if (req.session.userId) {
+		res.end('true');
+	}
+	else {
+		res.end('false');
+	}
+})
 /*#########All users###########*/
 app.get('/login/users', (req, res) => {//all users
 	userModel.find({}, (err, users) => {

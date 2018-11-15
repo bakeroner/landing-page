@@ -74,9 +74,15 @@ app.get('/login/user', (req, res) => {//one user
 });	
 /*#################Auth#####################*/
 app.post('/login', (req, res) => {
-	console.log(req.body.checkRemember);
+	console.log('body check ' + req.body.checkRemember);
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user && bcrypt.compareSync(req.body.password, user.password)) {
+			if (req.body.checkRemember) {
+				req.session.check = 'on';
+			}
+			else {
+				req.session.check = 'off';
+			}
 			req.session.userId = user._id;
 			res.redirect('/login');
 		}
@@ -127,7 +133,7 @@ app.post('/logout', (req, res) => {
 	res.end();
 })
 app.post('/', (req, res) => {
-	if (req.session.userId) {
+	if (req.session.userId && req.session.check == 'on') {
 		res.end('true');
 	}
 	else {

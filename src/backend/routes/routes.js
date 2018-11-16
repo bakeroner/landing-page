@@ -5,16 +5,25 @@ const userModel = require('../models/schema.js').userModel;
 const mongoose = require('mongoose');
 mongoose.set('debug', true)
 
-app.get('/', (req, res) => {
-   	fs.readFile(__dirname + './../../html/index.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-})
+app.route('/')
+	.get((req, res) => {
+	   	fs.readFile(__dirname + './../../html/index.html', (error, data) => {
+	   		if(error) return next(error);
+	   		res.writeHead(200, { 'Content-Type': 'text/html' });
+	    	res.end(data);
+	   	});
+	})
+	.post((req, res) => {
+		if (req.session.userId && req.session.check == 'on') {
+			res.end('true');
+		}
+		else {
+			res.end('Not the best way to use it');
+		}
+	});
 app.get('/signPage', (req, res) => {//when sign
    	fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
-   		if(error) throw error;
+   		if(error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
@@ -22,7 +31,7 @@ app.get('/signPage', (req, res) => {//when sign
 app.get('/signPageMobile', (req, res) => {//when sign
 	if (!req.session.userId) {
    		fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
-   			if(error) throw error;
+   			if(error) return next(error);
    			res.writeHead(200, { 'Content-Type': 'text/html' });
     		res.end(data);
    		});
@@ -33,44 +42,20 @@ app.get('/signPageMobile', (req, res) => {//when sign
 })
 app.get('/newUser', (req, res) => {//when reg
 	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
-   		if(error) throw error;
+   		//if(error) throw error;
+   		return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 });
-app.get('/login', (req, res) => {//inside
-	userModel.findById(req.session.userId, (err, user) => {
-   		res.render('index', {who: `${user.username}`, status: `${user.status}`});
-		res.end();
+app.route('/login')
+	.get((req, res) => {//inside
+		userModel.findById(req.session.userId, (err, user) => {
+	   		res.render('index', {who: `${user.username}`, status: `${user.status}`});
+			res.end();
+		})
 	})
-});
-/*#####*/
-app.get('/login/changepass', (req, res) => {//inside
-	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-	})
-});
-app.get('/login/changeusername', (req, res) => {//inside
-	fs.readFile(__dirname + './../../html/change_username.html', (error, data) => {
-   		if(error) throw error;
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-	})
-});
-/*user inside*/
-app.get('/login/adminPanel', (req, res) => {//all users
-	   	res.render('indexUser');
-		res.end();
-	});
-app.get('/login/user', (req, res) => {//one user
-	   	res.render('indexUser');
-		res.end();
-	});
-/*#################Auth#####################*/
-app.post('/login', (req, res) => {
-	console.log('body check ' + req.body.checkRemember);
+	.post((req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user && bcrypt.compareSync(req.body.password, user.password)) {
 			if (req.body.checkRemember) {
@@ -89,6 +74,30 @@ app.post('/login', (req, res) => {
 		}
 	})
 });
+/*#####*/
+app.get('/login/changepass', (req, res) => {//inside
+	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
+   		if(error) return next(error);
+   		res.writeHead(200, { 'Content-Type': 'text/html' });
+    	res.end(data);
+	})
+});
+app.get('/login/changeusername', (req, res) => {//inside
+	fs.readFile(__dirname + './../../html/change_username.html', (error, data) => {
+   		if(error) return next(error);
+   		res.writeHead(200, { 'Content-Type': 'text/html' });
+    	res.end(data);
+	})
+});
+/*user inside*/
+app.get('/login/adminPanel', (req, res) => {//all users
+	   	res.render('indexUser');
+		res.end();
+	});
+app.get('/login/user', (req, res) => {//one user
+	   	res.render('indexUser');
+		res.end();
+	});
 /*############New User#############*/
 app.post('/registration', (req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
@@ -128,17 +137,9 @@ app.post('/logout', (req, res) => {
 	req.session.userId = '';
 	res.end();
 })
-app.post('/', (req, res) => {
-	if (req.session.userId && req.session.check == 'on') {
-		res.end('true');
-	}
-	else {
-		res.end('Not the best way to use it');
-	}
-})
 app.post('/statusCheck', (req, res) => {
 	userModel.findById(req.session.userId, (err, user) => {
-		if (err) throw err;
+		if (err) return next(error);
 		if (user.status == 'user') {
 			res.end('user');
 		}
@@ -147,13 +148,13 @@ app.post('/statusCheck', (req, res) => {
 		}
 	});
 
-})
+});
 app.post('/userFiller', (req, res) => {
 	userModel.findById(req.session.userId, (err, user) => {
-		if (err) throw err;
+		if (err) return next(error);
 		if (user.status == 'user') {
 			userModel.findById(req.session.userId, (err, user) => {
-			if (err) throw err;
+			if (err) return next(error);
 			res.json(user);	
 			});
 		}
@@ -170,7 +171,6 @@ app.post('/deleteUser', (req, res) => {
 	res.end('All good');
 })
 app.post('/grantUser', (req, res) => {
-	console.log(req.body.name);
 	require('./../db/methods/changeStatus')(req.body.name, true);
 	res.end('All good');
 })

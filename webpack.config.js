@@ -29,7 +29,8 @@ module.exports = {
       homePage: './homePage',
       changePassword: './changePassword',
       changeUsername: './changeUsername',
-      userSettings: './userSettings'
+      userSettings: './userSettings',
+      profile: './profile'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

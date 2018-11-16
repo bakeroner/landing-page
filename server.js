@@ -34,7 +34,7 @@ app.use(session({
 require('./src/backend/routes/routes.js')(app);
 /*######################*/
 app.use((req,res) => {
-	res.status(404).send('Page Not Found!');
+	res.status(404).send('Page Not Found!!');
 })
 // Serve the files on port 3000.
 app.listen(app.get('port'), () => {

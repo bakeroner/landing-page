@@ -1,3 +1,4 @@
+import 'Styles/userPage.css';
 const userList = document.getElementById('userList');
       let xhr = new XMLHttpRequest();
       xhr.onload = () => {

@@ -2,6 +2,7 @@ module.exports = function(app) {
 const fs = require('fs');
 const bcrypt = require('bcrypt');
 const userModel = require('../models/schema.js').userModel;
+const messageModel = require('../models/messageSchema.js').messageModel;
 const mongoose = require('mongoose');
 mongoose.set('debug', true)
 
@@ -131,6 +132,12 @@ app.post('/newMessage', (req, res) => {
 		res.end('You have to log in to write message');
 	}
 });
+app.get('/messages', (req, res, next) => {
+	messageModel.find({}, (err, messages) => {
+		if (err) return next(error);
+		res.json(messages);
+	})	
+})
 /*############Change Pass and username#############*/
 app.post('/changeusername', (req, res) => {
 	require('./../db/methods/changeUsername')(req.session.userId, req.body.username);

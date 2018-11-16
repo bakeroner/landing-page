@@ -166,14 +166,16 @@ app.post('/userFiller', (req, res) => {
 	})
 })
 app.post('/deleteUser', (req, res) => {
-	res.end();
+	require('./../db/methods/deleteUser')(req.body.name);
+	res.end('All good');
 })
 app.post('/grantUser', (req, res) => {
-	require('./../db/methods/changeStatus')(req.body.username, true);
+	console.log(req.body.name);
+	require('./../db/methods/changeStatus')(req.body.name, true);
 	res.end('All good');
 })
 app.post('/degradeUser', (req, res) => {
-	require('./../db/methods/changeStatus')(req.body.username, false);
+	require('./../db/methods/changeStatus')(req.body.name, false);
 	res.end('All good');
 })
 }

@@ -13,14 +13,7 @@ signIn.addEventListener('click', () => {
 
 profile.addEventListener('click', () => {
 	window.location.href='/login';
-    /*logoutPost.open('POST', '/logout', true);
-    logoutPost.send();*/
 })
-/*logoutPost.onload = () => {
-    if (logoutPost.status == 200) {
-    	window.location.href='/';
-    }
-}*/
 window.addEventListener('load', () => {
     checkSign.open('POST', '/', true);
     checkSign.send();

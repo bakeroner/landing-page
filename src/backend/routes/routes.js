@@ -165,4 +165,15 @@ app.post('/userFiller', (req, res) => {
 		}
 	})
 })
+app.post('/deleteUser', (req, res) => {
+	res.end();
+})
+app.post('/grantUser', (req, res) => {
+	require('./../db/methods/changeStatus')(req.body.username, true);
+	res.end('All good');
+})
+app.post('/degradeUser', (req, res) => {
+	require('./../db/methods/changeStatus')(req.body.username, false);
+	res.end('All good');
+})
 }

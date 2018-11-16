@@ -72,6 +72,6 @@ const userList = document.getElementById('userList');
       }
       function requestLoad (requestName) {
         if (requestName.status === 200) {
-          window.location.href = '/login/adminPanel';       
+          window.location.href = '/login/adminPanel';     
         }        
       }

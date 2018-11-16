@@ -118,6 +118,19 @@ app.post('/registration', (req, res) => {
 		}
 	})
 });
+/*############New Comment#############*/
+app.post('/newMessage', (req, res) => {
+	if (req.session.userId) {
+		require('./../db/methods/newMessage')(req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+			console.log(req.body);
+			console.log(req.body.firstName);
+			res.end('All good');
+	}
+	else {
+		console.log('You have to log in to write message');
+		res.end('You have to log in to write message');
+	}
+});
 /*############Change Pass and username#############*/
 app.post('/changeusername', (req, res) => {
 	require('./../db/methods/changeUsername')(req.session.userId, req.body.username);

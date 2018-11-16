@@ -457,18 +457,18 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna
                 </p>
-                <form name="contact__form" class="contact__form">
+                <form name="contact__form" method="POST" action="/newMessage" class="contact__form">
                     <div class="form">
                         <div class="form__row">
-                            <input type="text" name="" placeholder="First Name" tabindex="1" class="row__input-first-name">
-                            <input type="text" name="" placeholder="Last Name" tabindex="2" class="row__input-last-name">
+                            <input type="text" name="firstName" placeholder="First Name" tabindex="1" class="row__input-first-name">
+                            <input type="text" name="lastName" placeholder="Last Name" tabindex="2" class="row__input-last-name">
                         </div>
                         <div class="form__row">
-                            <input type="text" name="" placeholder="Email" tabindex="3" class="row__input-email">
-                            <input type="text" name="" placeholder="Phone" tabindex="4" class="row__input-phone">
+                            <input type="text" name="email" placeholder="Email" tabindex="3" class="row__input-email">
+                            <input type="text" name="phone" placeholder="Phone" tabindex="4" class="row__input-phone">
                         </div>
                         <div class="form__row row--message">
-                        <input type="text" name="" placeholder="Message" tabindex="5" class="row__input-message">
+                        <input type="text" name="message" placeholder="Message" tabindex="5" class="row__input-message">
                         </div>
                         <div class="form__row row--button-part">
                             <input type="checkbox" name="c_box" class="row__checkbox">

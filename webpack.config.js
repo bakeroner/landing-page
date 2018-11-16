@@ -30,7 +30,8 @@ module.exports = {
       changePassword: './changePassword',
       changeUsername: './changeUsername',
       userSettings: './userSettings',
-      profile: './profile'
+      profile: './profile',
+      common: './common'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

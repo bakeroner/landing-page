@@ -1,3 +1,4 @@
+@import url("font.css");
 body {
     margin: 0;
     height: 100%;
@@ -23,6 +24,7 @@ body {
     margin-bottom: 50px;
 }
 .sign-up__button {
+    color: #061e37;
 	padding: 12px 16px;
     text-align: center;
     font-size: 15px;
@@ -31,6 +33,10 @@ body {
     background-color: #fff;
     margin-top: 0.5rem;
     margin-left: 0;
+}
+.sign-up__button:hover {
+    color: #fff;
+    background-color: #061e37;
 }
 .container__registration {
     display: flex;
@@ -46,6 +52,7 @@ body {
     justify-content: space-around;
 }
 .sign-up__text-field {
+    font-family: "RalewaySemiBold";
     width: 100%;
 	border: 2px solid #fff;
     border-radius: 2px;  
@@ -53,6 +60,13 @@ body {
 }
 .fieldLabel {
     color: #fff;
+}
+.font--regular {
+    font-family: "RalewayRegular";
+}
+.font--button {
+    font-family: "RalewayBold";
+    font-size: 18px;
 }
 .navigation {
     width: 100%;

@@ -1,0 +1,143 @@
+@import url("font.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;	
+}
+header{
+	width: 100%;
+	margin: 0;
+}
+section {
+	width: 100%;
+	margin: 0;	
+}
+.navigation-header,
+.user-part,
+.footer-part__footer-content {
+	max-width: 1080px;
+	margin: 0 auto;
+	width: 100%;
+}
+.home-link__font-image {
+	color: #061e37;
+	font-size: 45px;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.home-link__font-image:hover {
+	color: #fff;
+	background-color: #061e37;
+	border-radius: 5px;
+}
+.navigation-header__header-content {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	padding: 2rem 0;
+	padding-top: 4rem;
+}
+.login__out-button {
+    color: #061e37;
+    border: 2px solid #061e37;
+	padding: 12px 16px;
+    text-align: center;
+    font-family: "RobotoRegular";
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.login__out-button:hover {
+    color: #fff;
+    background-color: #061e37;
+}
+.login__name {
+	color: #061e37;
+	font-family: "RalewayRegular";
+	margin-right: 20px;
+}
+.header-content__home-link {
+	font-family: "RalewayRegular";
+	text-align: center;
+	text-decoration: none;
+	color: #061e37;
+}
+.header-content__home-link:hover {
+	text-decoration: underline;
+}
+.side-bar__menu {
+	padding-left: 0;
+	padding-right: 2rem;
+	border-right: 2px solid #061e37;
+}
+.menu__list-item {
+	padding: 0.2rem 0;
+	padding-top: 0;
+}
+.list-item__link {
+	font-family: "RalewayRegular";
+	text-decoration: none;
+	color: #061e37;
+}
+.list-item__link:hover {
+	text-decoration: underline;
+}
+.user-part {
+	display: flex;
+	flex-direction: column;
+}
+.user-part__title-block {
+	justify-content: center;
+	display: flex;
+	width: 100%;
+}
+.try {
+	display: flex;
+	flex-direction: row;
+}
+.user-part__side-bar {
+	display: flex;
+	width: 20%;
+}
+.user-part__message {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+}
+.title-block__title {
+	font-size: 30px;
+	font-family: "RalewayExtraBold";
+	text-align: center;
+	margin: 0;
+	color: #061e37;
+}
+.message__text-block {
+}
+.text-block__title {
+	color: #061e37;
+	font-family: "RalewaySemiBold";
+	margin-bottom: 0;
+}
+.text-block__text {
+	color: #061e37;
+	font-family: "RalewayRegular";
+	line-height: 1.5;
+}
+.footer-part {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    padding-left: 0;
+}
+.hideElement {
+	display: none;
+}

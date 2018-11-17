@@ -1,3 +1,4 @@
+@import url("font.css");
 body {
     margin: 0;
     height: 100%;
@@ -25,22 +26,32 @@ body {
     text-align: center;
     font-size: 15px;
     border: 2px solid #fff;
-    border-radius: 2px;
+    border-radius: 5px;
     background-color: #fff;
     margin-top: 0.5rem;
     margin-left: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-family: "RobotoRegular";
+    font-size: 18px;
+}
+.button__send-form:hover {
+    color: #fff;
+    background-color: #061e37;    
 }
 .registration__button {
     display: flex;
     justify-content: space-around;
 }
 .registration__text-field {
+    font-family: "RalewaySemiBold";
     width: 100%;
 	border: 2px solid #fff;
     border-radius: 2px;  
     margin: 0.5rem 0;
 }
 .fieldLabel {
+    font-family: "RalewayRegular";
     color: #fff;
 }
 .navigation {

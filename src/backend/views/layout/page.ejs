@@ -6,20 +6,58 @@
   <body>
     <header>
       <%-blocks.header%>
+      <div class="navigation-header">
+        <div class="navigation-header__header-content">
+          <a href="/" class="header-content__home-link">
+            <i class="material-icons home-link__font-image">home</i>
+          </a>
+          <div class="header-content__login">
+            <span class="login__name"><%=who%></span>
+            <button id="logoutButton" class="login__out-button">Logout</button>
+          </div>
+        </div>
+      </div>
     </header>
     <section>
-      <%-body -%>
-      <button id="logoutButton">Logout</button>
-      <button id="userButton">User</button>
-      <ul>
-        <li><a href="/">Back to the HomePage</a></li>
-        <!-- <li><a href="/login/users">User</a></li> -->
-        <li><a href="/login/changeusername">Change username</a></li>
-        <li><a href="/login/changepass">Change password</a></li>
-      </ul>
+      
+      <div class="user-part">
+        <div class="user-part__title-block">
+          <%-body -%>
+        </div>
+        <div class="try">
+          <div class="user-part__side-bar">
+            <ul class="side-bar__menu" type="none">
+              <li class="menu__list-item">
+                <a href="/" class="list-item__link">HomePage</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="/login/changeusername" class="list-item__link">Change username</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="/login/changepass" class="list-item__link">Change password</a>
+              </li>
+              <li class="menu__list-item">
+                <a href="" class="list-item__link" id="userButton">User</a>
+              </li>
+            </ul>
+          </div>
+          <div class="user-part__message">       
+            <div class="message__text-block">
+              <h2 class="text-block__title hideElement" id="messageTitle">Your last message:</h2>
+              <p class="text-block__text" id="messageText">
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <footer>
-      <%-blocks.footer%>
+    <footer class="footer-part">
+      <div class="footer-part__footer-content">
+        <a href="/">
+          <img src="../images/logo_with_name.png" alt="top-logo-image" class="navigation__logo">
+        </a>
+        <%-blocks.footer%>
+      </div>
     </footer>
     <%-scripts%>
   </body>

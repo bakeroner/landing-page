@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 mongoose.set('debug', true)
 
 app.route('/')
-	.get((req, res) => {
+	.get((req, res, next) => {
 	   	fs.readFile(__dirname + './../../html/index.html', (error, data) => {
 	   		if(error) return next(error);
 	   		res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -22,14 +22,14 @@ app.route('/')
 			res.end('Not the best way to use it');
 		}
 	});
-app.get('/signPage', (req, res) => {//when sign
+app.get('/signPage', (req, res, next) => {//when sign
    	fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
    		if(error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
 })
-app.get('/signPageMobile', (req, res) => {//when sign
+app.get('/signPageMobile', (req, res, next) => {//when sign
 	if (!req.session.userId) {
    		fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
    			if(error) return next(error);
@@ -41,10 +41,10 @@ app.get('/signPageMobile', (req, res) => {//when sign
    		res.redirect('/login');
    	}
 })
-app.get('/newUser', (req, res) => {//when reg
+app.get('/newUser', (req, res, next) => {//when reg
 	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    		//if(error) throw error;
-   		return next(error);
+   		if (error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
@@ -76,14 +76,14 @@ app.route('/login')
 	})
 });
 /*#####*/
-app.get('/login/changepass', (req, res) => {//inside
+app.get('/login/changepass', (req, res, next) => {//inside
 	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
    		if(error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
 	})
 });
-app.get('/login/changeusername', (req, res) => {//inside
+app.get('/login/changeusername', (req, res, next) => {//inside
 	fs.readFile(__dirname + './../../html/change_username.html', (error, data) => {
    		if(error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
@@ -122,7 +122,7 @@ app.post('/registration', (req, res) => {
 /*############New Comment#############*/
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
-		require('./../db/methods/newMessage')(req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
 			console.log(req.body);
 			console.log(req.body.firstName);
 			res.end('All good');
@@ -131,6 +131,17 @@ app.post('/newMessage', (req, res) => {
 		console.log('You have to log in to write message');
 		res.end('You have to log in to write message');
 	}
+});
+app.get('/message', (req, res, next) => {
+	messageModel.findOne({user: req.session.userId}, (err, userMessage) => {
+		if (err) return next(error);
+		if (userMessage) {
+			res.json(userMessage.message);
+		}
+		else {
+			res.end();
+		}
+	})	
 });
 app.get('/messages', (req, res, next) => {
 	messageModel.find({}, (err, messages) => {
@@ -157,7 +168,7 @@ app.post('/logout', (req, res) => {
 	req.session.userId = '';
 	res.end();
 })
-app.post('/statusCheck', (req, res) => {
+app.post('/statusCheck', (req, res, next) => {
 	userModel.findById(req.session.userId, (err, user) => {
 		if (err) return next(error);
 		if (user.status == 'user') {
@@ -169,7 +180,7 @@ app.post('/statusCheck', (req, res) => {
 	});
 
 });
-app.post('/userFiller', (req, res) => {
+app.post('/userFiller', (req, res, next) => {
 	userModel.findById(req.session.userId, (err, user) => {
 		if (err) return next(error);
 		if (user.status == 'user') {

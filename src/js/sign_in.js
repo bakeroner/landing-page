@@ -1,12 +1,18 @@
 const signIn = document.getElementById('signIn');
 const profile = document.getElementById('profile');
 const mobileSign = document.getElementById('mobileSign');
+const formSubmit = document.getElementById("ContactFormSubmit");
 let logoutPost = new XMLHttpRequest();
 let checkSign = new XMLHttpRequest();
 
 mobileSign.addEventListener('click', () => {
 	window.location.href='/signPageMobile';
 })
+/*formSubmit.addEventListener('submit', (evt) => {
+	console.log('123');
+	evt.preventDefault();
+	return false;
+})*/
 signIn.addEventListener('click', () => {
 	window.location.href='/signPage';
 })

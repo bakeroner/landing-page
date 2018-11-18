@@ -1,7 +1,9 @@
 @import url("font.css");
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 body {
+    position: relative;
     margin: 0;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     overflow-x: hidden;	
@@ -11,6 +13,7 @@ header{
 	margin: 0;
 }
 section {
+
 	width: 100%;
 	margin: 0;
     margin-bottom: 100px;
@@ -74,7 +77,7 @@ section {
 	text-decoration: underline;
 }
 .footer-part {
-	position: fixed;
+	position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;

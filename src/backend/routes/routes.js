@@ -126,7 +126,8 @@ app.post('/registration', (req, res) => {
 /*############New Comment#############*/
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
-		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+		//require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+			//res.end();
 			res.end();
 	}
 	else {
@@ -137,7 +138,7 @@ app.post('/newMessage', (req, res) => {
 app.get('/message', (req, res, next) => {
 	messageModel.find({user: req.session.userId}, (err, userMessage) => {
 		if (err) return next(error);		
-		if (userMessage) {
+		if (userMessage.length) {
 			res.json(userMessage.pop().message);
 		}
 		else {

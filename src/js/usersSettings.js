@@ -23,6 +23,7 @@ const userList = document.getElementById('userList');
                 degradeButton.setAttribute("data-user", answer[i].username);
 
                 let item = document.createElement('li');
+                item.setAttribute("data-user", answer[i].username);
                 item.innerHTML = `username: ${answer[i].username}<br>status: ${answer[i].status}<br>`;
                 item.classList.add('listItem', 'listItem__text');
                 userList.appendChild(item);
@@ -52,31 +53,61 @@ const userList = document.getElementById('userList');
       let deleteUser = new XMLHttpRequest();
       let grantUser = new XMLHttpRequest();
       let degradeUser = new XMLHttpRequest();
+      let user;
+      let userBlock;
       userList.addEventListener("click", (event) => {
         let target = event.target;
         if (target.classList.contains('delete')) {
+          user = target.getAttribute('data-user');
+          userBlock = document.querySelector(`[data-user='${user}']`);
           requestProcess('/deleteUser', target, deleteUser);
         }
         if (target.classList.contains('grantAdmin')) {
+          user = target.getAttribute('data-user');
+          userBlock = document.querySelector(`[data-user='${user}']`);
           requestProcess('/grantUser', target, grantUser);
         }
         if (target.classList.contains('degrade')) {
+          user = target.getAttribute('data-user');
+          userBlock = document.querySelector(`[data-user='${user}']`);
           requestProcess('/degradeUser', target, degradeUser);
         }
       })
-      deleteUser.onload = requestLoad(deleteUser);
-      grantUser.onload = requestLoad(grantUser);
-      degradeUser.onload = requestLoad(degradeUser);
+      deleteUser.onload = () => {
+        requestLoad(deleteUser);
+      }
+      grantUser.onload = () => {
+        requestLoad(grantUser);
+      }
+      degradeUser.onload = () => {
+        requestLoad(degradeUser);
+      }
       function requestProcess (way, target, requestName) {
-          let user = target.getAttribute('data-user');
           let body = 'name=' + encodeURIComponent(user);
-          console.log(user);
           requestName.open('POST', way, true);
           requestName.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
           requestName.send(body);
       }
       function requestLoad (requestName) {
         if (requestName.status === 200) {
-          window.location.href = '/login/adminPanel';     
+          let blockContent = userBlock.innerHTML;
+          switch (requestName.responseText) {
+            case 'grant':
+              blockContent = blockContent.replace('status: user', 'status: admin');
+              userBlock.innerHTML = blockContent;
+              break;
+            case 'degrade':
+              blockContent = blockContent.replace('status: admin', 'status: user');
+              userBlock.innerHTML = blockContent;
+              break;
+            case 'deleteSelf':
+              console.log('delete');
+              window.location.href = '/';
+              break;
+            case 'delete':
+            userBlock.innerHTML = '';
+              console.log('delete');
+              break;
+          }     
         }        
       }

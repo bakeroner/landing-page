@@ -127,9 +127,7 @@ app.post('/registration', (req, res) => {
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
 		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
-			console.log(req.body);
-			console.log(req.body.firstName);
-			res.end('All good');
+			res.end();
 	}
 	else {
 		console.log('You have to log in to write message');
@@ -137,22 +135,22 @@ app.post('/newMessage', (req, res) => {
 	}
 });
 app.get('/message', (req, res, next) => {
-	messageModel.findOne({user: req.session.userId}, (err, userMessage) => {
-		if (err) return next(error);
+	messageModel.find({user: req.session.userId}, (err, userMessage) => {
+		if (err) return next(error);		
 		if (userMessage) {
-			res.json(userMessage.message);
+			res.json(userMessage.pop().message);
 		}
 		else {
 			res.end();
 		}
 	})	
 });
-app.get('/messages', (req, res, next) => {
+/*app.get('/messages', (req, res, next) => {
 	messageModel.find({}, (err, messages) => {
 		if (err) return next(error);
 		res.json(messages);
 	})	
-})
+})*/
 /*############Change Pass and username#############*/
 app.post('/changeusername', (req, res) => {
 	require('./../db/methods/changeUsername')(req.session.userId, req.body.username);
@@ -201,16 +199,27 @@ app.post('/userFiller', (req, res, next) => {
 		}
 	})
 })
-app.post('/deleteUser', (req, res) => {
-	require('./../db/methods/deleteUser')(req.body.name);
-	res.end('All good');
+app.post('/deleteUser', (req, res, next) => {
+	let userBd;
+	userModel.findById(req.session.userId, (err, user) => {
+		if (err) return next(error);
+		userBd = user.username;
+		if (userBd == req.body.name) {
+			require('./../db/methods/deleteUser')(req.body.name);
+			res.end('deleteSelf');
+		}
+		else {
+			require('./../db/methods/deleteUser')(req.body.name);
+			res.end('delete');
+		}
+	})
 })
 app.post('/grantUser', (req, res) => {
 	require('./../db/methods/changeStatus')(req.body.name, true);
-	res.end('All good');
+	res.end('grant');
 })
 app.post('/degradeUser', (req, res) => {
 	require('./../db/methods/changeStatus')(req.body.name, false);
-	res.end('All good');
+	res.end('degrade');
 })
 }

@@ -57,9 +57,19 @@ section {
     color: #fff;
     background-color: #061e37;
 }
+/*.header-content__login {
+	display: flex;
+}*/
 .login__name {
 	color: #061e37;
 	font-family: "RalewayRegular";
+	margin-right: 20px;
+}
+.login__profile-image {
+	background-color: #061e37;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
 	margin-right: 20px;
 }
 .header-content__home-link {

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <%-partial('../partials/header')%>
+      <%-blocks.header%>
+    </header>
+    <section>
+      <div class="user-block">
+        <%-body -%>
+        <ul id="userList" type="none" class="user-block__user-list">
+        </ul>
+        <a href="/login" class="user-block__back-link">Back</a>
+      </div>
+    </section>
+    <footer class="footer-part">
+      <%-partial('../partials/footer')%>
+      <%-blocks.footer%>
+    </footer>
+    <%-scripts%>
+  </body>
+</html>

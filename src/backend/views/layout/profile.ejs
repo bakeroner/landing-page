@@ -6,20 +6,9 @@
   <body>
     <header>
       <%-blocks.header%>
-      <div class="navigation-header">
-        <div class="navigation-header__header-content">
-          <a href="/" class="header-content__home-link">
-            <i class="material-icons home-link__font-image">home</i>
-          </a>
-          <div class="header-content__login">
-            <span class="login__name"><%=who%></span>
-            <button id="logoutButton" class="login__out-button">Logout</button>
-          </div>
-        </div>
-      </div>
+      <%-partial('../partials/header')%>
     </header>
-    <section>
-      
+    <section>      
       <div class="user-part">
         <div class="user-part__title-block">
           <%-body -%>
@@ -52,12 +41,7 @@
       </div>
     </section>
     <footer class="footer-part">
-      <div class="footer-part__footer-content">
-        <a href="/">
-          <img src="../images/logo_with_name.png" alt="top-logo-image" class="navigation__logo">
-        </a>
-        <%-blocks.footer%>
-      </div>
+      <%-partial('../partials/footer')%>
     </footer>
     <%-scripts%>
   </body>

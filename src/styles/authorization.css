@@ -4,12 +4,14 @@ body {
     height: 100%;
     width: 100%;
     background-color: #061e37;
+   /* background-color: #fff;*/
 }
 .container__sign-up {
     display: flex;
     justify-content: center;
     margin: 0;
     border:2px solid #fff;
+   /* border:2px solid #061e37;*/
     border-radius: 5px;
     margin-top: 20vh;
     width: 400px;
@@ -29,6 +31,7 @@ body {
     text-align: center;
     font-size: 15px;
     border: 2px solid #fff;
+    /*border: 2px solid #061e37;*/
     border-radius: 5px;
     background-color: #fff;
     margin-top: 0.5rem;
@@ -46,6 +49,7 @@ body {
 }
 .sign-up__registration-link {
     color: #fff;
+    /*color: #061e37;*/
     text-decoration: none;
     margin-top: 10px;
 }
@@ -57,11 +61,16 @@ body {
     font-family: "RalewaySemiBold";
     width: 100%;
 	border: 2px solid #fff;
+    /*border: 2px solid #061e37;*/
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
     border-radius: 2px;  
     margin: 0.5rem 0;
 }
 .fieldLabel {
     color: #fff;
+   /* color: #061e37;*/
 }
 .font--regular {
     font-family: "RalewayRegular";

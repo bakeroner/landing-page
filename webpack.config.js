@@ -29,10 +29,11 @@ module.exports = {
       homePage: './homePage',
       changePassword: './changePassword',
       changeUsername: './changeUsername',
-      userSettings: './userSettings',
+      usersSettings: './usersSettings',
       profile: './profile',
       common: './common',
-      error: './error'
+      error: './error',
+      logout: './logout'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

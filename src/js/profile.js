@@ -1,8 +1,8 @@
 import 'Styles/profile.css';
-const logout = document.getElementById('logoutButton');
+
 const messageText = document.getElementById('messageText');
 const messageTitle = document.getElementById('messageTitle');
-let xhr = new XMLHttpRequest();
+
 let message = new XMLHttpRequest();
 window.addEventListener('load', () => {
   message.open('GET', '/message', true);
@@ -15,15 +15,8 @@ message.onload = () => {
     messageText.innerHTML = answer;
   }
 }
-xhr.onload = () => {
-  if (xhr.status === 200) {
-  window.location.href='/';
-  }
-}
-logout.addEventListener('click', () => {
-  xhr.open('POST', '/logout', true);
-  xhr.send();
-})
+
+
 
 const userButton = document.getElementById('userButton');
 let userPost = new XMLHttpRequest();

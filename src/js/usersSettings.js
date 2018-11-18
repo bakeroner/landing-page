@@ -1,31 +1,30 @@
-import 'Styles/userPage.css';
+import 'Styles/usersPage.css';
 const userList = document.getElementById('userList');
       let xhr = new XMLHttpRequest();
       xhr.onload = () => {
         if (xhr.status === 200) {
-          //let item = document.createElement("p");
           let answer = JSON.parse(xhr.responseText);
           if (answer.length) {
             for (let i = 0; i<answer.length; i++) {
                 
                 let deleteButton = document.createElement('button');
                 deleteButton.textContent = 'Delete';
-                deleteButton.classList.add('delete');
+                deleteButton.classList.add('delete', 'control-button');
                 deleteButton.setAttribute("data-user", answer[i].username);
 
                 let grantButton = document.createElement('button');
-                grantButton.textContent = 'GrantAdmin';
-                grantButton.classList.add('grantAdmin');
+                grantButton.textContent = 'Grant Admin';
+                grantButton.classList.add('grantAdmin', 'control-button');
                 grantButton.setAttribute("data-user", answer[i].username);
 
                 let degradeButton = document.createElement('button');
-                degradeButton.textContent = 'DegradeStatus';
-                degradeButton.classList.add('degrade');
+                degradeButton.textContent = 'Degrade Status';
+                degradeButton.classList.add('degrade', 'control-button');
                 degradeButton.setAttribute("data-user", answer[i].username);
 
                 let item = document.createElement('li');
-                item.innerHTML = 'username: ' + answer[i].username + '; status: ' + answer[i].status;
-                item.classList.add('listItem');
+                item.innerHTML = `username: ${answer[i].username}<br>status: ${answer[i].status}<br>`;
+                item.classList.add('listItem', 'listItem__text');
                 userList.appendChild(item);
                 item.appendChild(deleteButton);
                 item.appendChild(grantButton);
@@ -33,10 +32,16 @@ const userList = document.getElementById('userList');
             }
           }
           else {
-            let item = document.createElement('li');
-            item.innerHTML = 'username: ' + answer.username + '; status: ' + answer.status;
-            item.classList.add('listItem');
-            userList.appendChild(item);            
+                let deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.classList.add('delete', 'control-button');
+                deleteButton.setAttribute("data-user", answer.username);
+
+                let item = document.createElement('li');
+                item.innerHTML = `username: ${answer.username}<br>status: ${answer.status}<br>`;
+                item.classList.add('listItem', 'listItem__text');
+                userList.appendChild(item);
+                item.appendChild(deleteButton);         
           }
         }
       }

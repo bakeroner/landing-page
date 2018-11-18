@@ -52,7 +52,7 @@ app.get('/newUser', (req, res, next) => {//when reg
 app.route('/login')
 	.get((req, res) => {//inside
 		userModel.findById(req.session.userId, (err, user) => {
-	   		res.render('index', {who: `${user.username}`, status: `${user.status}`});
+	   		res.render('indexProfile', {who: `${user.username}`, status: `${user.status}`});
 			res.end();
 		})
 	})
@@ -92,13 +92,17 @@ app.get('/login/changeusername', (req, res, next) => {//inside
 });
 /*user inside*/
 app.get('/login/adminPanel', (req, res) => {//all users
-	   	res.render('indexUser');
+	userModel.findById(req.session.userId, (err, user) => {
+	   	res.render('indexUsers', {who: `${user.username}`});
 		res.end();
-	});
+	})
+});
 app.get('/login/user', (req, res) => {//one user
-	   	res.render('indexUser');
+	userModel.findById(req.session.userId, (err, user) => {
+	   	res.render('indexUsers', {who: `${user.username}`});
 		res.end();
-	});
+	})
+});
 /*############New User#############*/
 app.post('/registration', (req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {

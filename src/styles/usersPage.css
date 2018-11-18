@@ -12,10 +12,12 @@ header{
 }
 section {
 	width: 100%;
-	margin: 0;	
+	margin: 0;
+    margin-bottom: 100px;
+    margin-left: 5vw;
 }
 .navigation-header,
-.user-part,
+.user-block,
 .footer-part__footer-content {
 	max-width: 1080px;
 	margin: 0 auto;
@@ -71,64 +73,6 @@ section {
 .header-content__home-link:hover {
 	text-decoration: underline;
 }
-.side-bar__menu {
-	padding-left: 0;
-	padding-right: 2rem;
-	border-right: 2px solid #061e37;
-}
-.menu__list-item {
-	padding: 0.2rem 0;
-	padding-top: 0;
-}
-.list-item__link {
-	font-family: "RalewayRegular";
-	text-decoration: none;
-	color: #061e37;
-}
-.list-item__link:hover {
-	text-decoration: underline;
-}
-.user-part {
-	display: flex;
-	flex-direction: column;
-}
-.user-part__title-block {
-	justify-content: center;
-	display: flex;
-	width: 100%;
-}
-.try {
-	display: flex;
-	flex-direction: row;
-}
-.user-part__side-bar {
-	display: flex;
-	width: 20%;
-}
-.user-part__message {
-	display: flex;
-	flex-direction: column;
-	width: 80%;
-}
-.title-block__title {
-	font-size: 30px;
-	font-family: "RalewayExtraBold";
-	text-align: center;
-	margin: 0;
-	color: #061e37;
-}
-.message__text-block {
-}
-.text-block__title {
-	color: #061e37;
-	font-family: "RalewaySemiBold";
-	margin-bottom: 0;
-}
-.text-block__text {
-	color: #061e37;
-	font-family: "RalewayRegular";
-	line-height: 1.5;
-}
 .footer-part {
 	position: fixed;
     left: 0;
@@ -139,6 +83,50 @@ section {
     padding: 1rem;
     padding-left: 0;
 }
-.hideElement {
-	display: none;
+.listItem {
+  /*border-top: 2px solid #000;*/
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.listItem__text {
+    font-family: "RalewayRegular";
+    color: #061e37;
+    line-height: 1.5;
+}
+.delete {
+}
+.degrade {
+}
+.control-button {
+    color: #061e37;
+    border: 2px solid #061e37;
+	padding: 8px 16px;
+    text-align: center;
+    font-family: "RobotoRegular";
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px 0;
+    margin-right: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.control-button:hover {
+    color: #fff;
+    background-color: #061e37;
+}
+.user-block__user-list {
+    padding-left: 0;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.user-block__back-link {
+    font-family: "RalewayRegular";
+    text-decoration: none;
+    color: #061e37;
+   /* margin-left: 5vw;*/
+}
+.user-block__back-link:hover {
+    text-decoration: underline;
 }

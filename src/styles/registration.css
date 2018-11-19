@@ -54,12 +54,15 @@ body {
     border-top: 2px solid #061e37;
     border-left: 2px solid #061e37; 
     border-right: 2px solid #061e37;
-    /*border-bottom: 2px solid #fff;*/
     padding-left: 5px;
     padding-top: 2px;
     padding-bottom: 5px;
     border-radius: 2px;  
     margin: 1rem 0;
+}
+.registration__text-field::placeholder {
+    font-style: italic;
+    color: #58606a;
 }
 .registration__text-field:focus {
     outline: none;

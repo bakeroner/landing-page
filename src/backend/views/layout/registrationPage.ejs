@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>      
+        <div class="container__registration">
+    <form method="POST" action="/registration" encrypt="multipart/form-data" class="registration">
+          <a href="/" class="registration__link">
+              <img src="../images/logo_with_name.png" alt="top-logo-image" class="link__logo">
+          </a>
+      <label for="username" class="fieldLabel">Username</label>
+      <% if(styleClass){ %>
+      <input type="text" value="" placeholder="Login Goes Here" name="username" id="newUserLogin" class="registration__text-field text-field__border" required><br>
+      <% } else{ %>
+      <input type="text" value="" placeholder="Login Goes Here" name="username" id="newUserLogin" class="registration__text-field text-field__validate-error-border" required><br>
+      <% } %>       
+      <label for="password" class="fieldLabel">Password</label>
+      <input type="password" name="password" id="newUserPassword" placeholder="Pass Goes Here" class="registration__text-field text-field__border" required><br>
+      <label for="passwordConfirm" class="fieldLabel">Confirm Password</label>
+      <input type="password" name="passwordConfirm" placeholder="Pass Confirm" id="newUserPasswordConfirm" class="registration__text-field text-field__border" required><br>
+      <div class="registration__button">
+        <input type="submit" name="submit" id="newUserConfirm" class="button__send-form" value="Confirm">
+      </div>  
+    </form>
+  </div>
+    </section>
+    <footer class="footer-part">
+    </footer>
+    <%-scripts%>
+  </body>
+</html>

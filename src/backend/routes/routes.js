@@ -46,13 +46,17 @@ app.get('/signPageMobile', (req, res, next) => {//when sign
    		res.redirect('/login');
    	}
 })
-app.get('/newUser', (req, res, next) => {//when reg
+/*app.get('/newUser', (req, res, next) => {//when reg
 	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
    		//if(error) throw error;
    		if (error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
+});*/
+app.get('/newUser', (req, res, next) => {//when reg
+	res.render('indexRegistration', {styleClass: true});
+	res.end();
 });
 app.route('/login')
 	.get((req, res) => {//inside
@@ -138,9 +142,11 @@ app.get('/login/user', (req, res) => {//one user
 app.post('/registration', (req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user) {
-			res.redirect('/newUser');
+/*			res.redirect('/newUser');
 			console.log(`Current username is already used`);
-			res.end(`Current username is already used`);
+			res.end(`Current username is already used`);*/
+			res.render('indexRegistration', {styleClass: false});
+			res.end();
 		}
 		else if (req.body.password === req.body.passwordConfirm) {
 			req.session.userId = require('./../db/methods/userAdd')(req.body.username, req.body.password);
@@ -148,9 +154,11 @@ app.post('/registration', (req, res) => {
 			console.log('Current username is empty');
 		}
 		else {
-			res.redirect('/newUser');
+/*			res.redirect('/newUser');
 			console.log(`Incorrect input`);
-			res.end(`Incorrect input`);
+			res.end(`Incorrect input`);*/
+			res.render('indexRegistration', {styleClass: true});
+			res.end();
 		}
 	})
 });

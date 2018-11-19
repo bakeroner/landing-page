@@ -79,6 +79,10 @@ body {
 .new-login__text-field:focus {
     outline: none;
 }
+.new-login__text-field::placeholder {
+    font-style: italic;
+    color: #58606a;
+}
 .text-field__border {
     border-bottom: 2px solid #fff;
 }

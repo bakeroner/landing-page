@@ -76,6 +76,9 @@ body {
     border-radius: 2px;  
     margin: 1rem 0;
 }
+.sign-up__text-field:focus {
+    outline: none;
+}
 .field__label {
     color: #fff;
    /* color: #061e37;*/

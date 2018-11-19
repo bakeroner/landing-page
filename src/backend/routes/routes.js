@@ -165,14 +165,14 @@ app.post('/registration', (req, res) => {
 /*############New Comment#############*/
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
-		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+		//require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
 			console.log('all good');
-			res.redirect('/');
-			//res.end();
+		res.render('indexMessageAccept', {check: true, firstName: `${req.body.firstName}`, lastName: `${req.body.lastName}`, email: `${req.body.email}`});
+		res.end();
 	}
 	else {
-		console.log('You have to log in to write message');
-		res.end('You have to log in to write message');
+		res.render('indexMessageAccept', {check: false});
+		res.end();
 	}
 });
 app.get('/message', (req, res, next) => {

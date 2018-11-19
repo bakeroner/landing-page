@@ -33,7 +33,8 @@ module.exports = {
       profile: './profile',
       common: './common',
       error: './error',
-      logout: './logout'
+      logout: './logout',
+      messageAccept: './messageAccept'
     },
   	output: {//output file
   		path: path.resolve(__dirname, './build'),

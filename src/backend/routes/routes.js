@@ -43,11 +43,12 @@ app.get('/newUser', (req, res, next) => {//when reg
 	res.end();
 });
 app.route('/login')
-	.get((req, res) => {//inside
-		userModel.findById(req.session.userId, (err, user) => {
-	   		res.render('indexProfile', {who: `${user.username}`, status: `${user.status}`});
-			res.end();
-		})
+	.get((req, res, next) => {//inside
+			userModel.findById(req.session.userId, (err, user) => {
+				if (err) return next(err);
+	   			res.render('indexProfile', {who: `${user.username}`, status: `${user.status}`});
+				res.end();
+			})
 	})
 	.post((req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
@@ -196,6 +197,7 @@ app.post('/deleteUser', (req, res, next) => {
 		userBd = user.username;
 		if (userBd == req.body.name) {
 			require('./../db/methods/deleteUser')(req.body.name);
+			req.session.userId = '';
 			res.end('deleteSelf');
 		}
 		else {

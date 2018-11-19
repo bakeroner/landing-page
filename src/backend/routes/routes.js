@@ -22,12 +22,17 @@ app.route('/')
 			res.end('Not the best way to use it');
 		}
 	});
-app.get('/signPage', (req, res, next) => {//when sign
+/*app.get('/signPage', (req, res, next) => {//when sign
    	fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
    		if(error) return next(error);
    		res.writeHead(200, { 'Content-Type': 'text/html' });
     	res.end(data);
    	});
+})*/
+app.get('/signPage', (req, res, next) => {//when sign
+	/*res.render('indexSign', {styleClass: `text-field__border`});*/
+	res.render('indexSign', {styleClass: true});
+	res.end();
 })
 app.get('/signPageMobile', (req, res, next) => {//when sign
 	if (!req.session.userId) {
@@ -69,12 +74,39 @@ app.route('/login')
 			res.redirect('/login');
 		}
 		else {
-			res.redirect('/signPage');
+			res.render('indexSign', {styleClass: false});
+			res.end();
+/*			res.redirect('/signPage');
 			res.end(`no such user or wrong password`);
-			console.log('no such user or wrong password');
+			console.log('no such user or wrong password');*/
 		}
 	})
 });
+/*const WebSocketServer = new require('ws');
+const clients = {};
+const webSocketServer = new WebSocketServer.Server({
+  port: 3000
+});
+webSocketServer.on('connection', function(ws) {
+
+  const id = Math.random();
+  clients[id] = ws;
+  console.log("новое соединение " + id);
+
+  ws.on('message', function(message) {
+    console.log('получено сообщение ' + message);
+
+    for (var key in clients) {
+      clients[key].send(message);
+    }
+  });
+
+  ws.on('close', function() {
+    console.log('соединение закрыто ' + id);
+    delete clients[id];
+  });
+
+});*/
 /*#####*/
 app.get('/login/changepass', (req, res, next) => {//inside
 	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
@@ -83,12 +115,11 @@ app.get('/login/changepass', (req, res, next) => {//inside
     	res.end(data);
 	})
 });
+
+
 app.get('/login/changeusername', (req, res, next) => {//inside
-	fs.readFile(__dirname + './../../html/change_username.html', (error, data) => {
-   		if(error) return next(error);
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-	})
+	   	res.render('indexChangeUsername', {styleClass: true});
+		res.end();
 });
 /*user inside*/
 app.get('/login/adminPanel', (req, res) => {//all users
@@ -154,9 +185,15 @@ app.get('/message', (req, res, next) => {
 	})	
 })*/
 /*############Change Pass and username#############*/
+/*	   	res.render('indexChangeUsername', {styleClass: true});*/
 app.post('/changeusername', (req, res) => {
-	require('./../db/methods/changeUsername')(req.session.userId, req.body.username);
-	res.redirect('/login');
+	if(!require('./../db/methods/changeUsername')(req.session.userId, req.body.username)) {
+		res.render('indexChangeUsername', {styleClass: false});
+		res.end();
+	}
+	else {
+		res.redirect('/login');
+	}
 })
 app.post('/changepass', (req, res) => {
 	if (req.body.newPassword == req.body.newPasswordConfirm) {

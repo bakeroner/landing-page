@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>      
+        <div class="container__new-login">
+        <form method="POST" action="/changeusername" class="new-login">
+          <label for="username" class="fieldLabel">Write new Username</label>
+          <% if(styleClass){ %>
+            <input type="text" name="username" placeholder="New Username" class="new-login__text-field text-field__border" required><br>
+            <% } else{ %>
+            <input type="text" name="username" placeholder="New Username" class="new-login__text-field text-field__validate-error-border" required><br>
+            <% } %> 
+          <div class="new-login__buttons">
+            <input  type="submit" class="new-login__button" value="Confirm">
+          </div>
+        </form>      
+  </div>
+  <div class="container__back">
+    <a href="/login" class="new-login__back-link">Go Back</a>
+  </div>
+    </section>
+    <footer class="footer-part">
+    </footer>
+    <%-scripts%>
+  </body>
+</html>

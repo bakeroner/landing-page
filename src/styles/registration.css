@@ -9,9 +9,10 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
-    border:2px solid #fff;
-    border-radius: 5px;
-    margin-top: 20vh;
+    border-bottom: 2px solid #061e37;
+    margin-bottom: 3rem;
+    border-radius: 2px;
+    margin-top: 10vh;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -22,18 +23,20 @@ body {
     margin-bottom: 60px;
 }
 .button__send-form {
-	padding: 12px 16px;
+    color: #061e37;
+    padding: 8px 20px;
     text-align: center;
     font-size: 15px;
     border: 2px solid #fff;
+    /*border: 2px solid #061e37;*/
     border-radius: 5px;
     background-color: #fff;
-    margin-top: 0.5rem;
+    margin-top: 3rem;
     margin-left: 0;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
     font-family: "RobotoRegular";
     font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
 }
 .button__send-form:hover {
     color: #fff;
@@ -44,14 +47,28 @@ body {
     justify-content: space-around;
 }
 .registration__text-field {
+        color: #fafafa;
+    background-color: transparent;
     font-family: "RalewaySemiBold";
     width: 100%;
-	border: 2px solid #fff;
-    border-radius: 2px;  
-    margin: 0.5rem 0;
+    border-top: 2px solid #061e37;
+    border-left: 2px solid #061e37; 
+    border-right: 2px solid #061e37;
+    /*border-bottom: 2px solid #fff;*/
     padding-left: 5px;
     padding-top: 2px;
-    padding-bottom: 2px;
+    padding-bottom: 5px;
+    border-radius: 2px;  
+    margin: 1rem 0;
+}
+.text-field__border {
+    border-bottom: 2px solid #fff;
+}
+.text-field__validate-border {
+    border-bottom: 2px solid #1eae7c;
+}
+.text-field__validate-error-border {
+    border-bottom: 2px solid #b12525;
 }
 .fieldLabel {
     font-family: "RalewayRegular";
@@ -62,6 +79,12 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-.navigation__logo {
+.registration__link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+}
+.link__logo {
     margin-top: 1rem;
 }

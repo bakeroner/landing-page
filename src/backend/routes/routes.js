@@ -128,6 +128,7 @@ app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
 		//require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
 			//res.end();
+			console.log('all good');
 			res.end();
 	}
 	else {

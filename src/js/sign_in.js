@@ -8,10 +8,10 @@ let checkSign = new XMLHttpRequest();
 mobileSign.addEventListener('click', () => {
 	window.location.href='/signPageMobile';
 })
-/*formSubmit.addEventListener('submit', (evt) => {
+/*formSubmit.addEventListener('click', (evt) => {
 	console.log('123');
 	evt.preventDefault();
-	return false;
+	//return false;
 })*/
 signIn.addEventListener('click', () => {
 	window.location.href='/signPage';

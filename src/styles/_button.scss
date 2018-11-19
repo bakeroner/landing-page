@@ -9,7 +9,7 @@
     height: 55px;
     @include transform(0.4s);
 }
-.button--sign-up {
+.button--sign-in {
 	border-radius: 2px;
     background: transparent;
     border: 1px solid $white;
@@ -20,7 +20,7 @@
     padding: 6px 6px;
     font-family: "RalewayRegular";
 }
-.button--sign-up:hover {
+.button--sign-in:hover {
     border: 1px solid $dark-blue;
     color: $dark-blue;
 }

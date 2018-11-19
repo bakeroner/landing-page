@@ -5,24 +5,31 @@
     <title></title>
 </head>
 <body>
-  <div class="navigation">
-    <a href="/">
-      <img src="../images/logo_with_name.png" alt="top-logo-image" class="navigation__logo">
+<!--   <div class="navigation">
+    <a href="/" class="navigation__link">
+      <img src="../images/logo_with_name.png" alt="top-logo-image" class="link__logo">
     </a>
-  </div>
-	<div class="container__sign-up">
-       	<form method="POST" action="/login" class="sign-up">
-       		<label for="username" class="fieldLabel font--regular">Username</label>
-       		<input type="text" name="username" placeholder="Login Goes Here" class="sign-up__text-field" id="signLogin" required><br>
-       		<label for="password" class="fieldLabel font--regular">Password</label>
-       		<input type="password" name="password" value="" placeholder="Pass Goes Here" class="sign-up__text-field" id="signPassword" required><br>
-       		<input type="checkbox" name="checkRemember" checked="checked" id="signChecker">
-       		<label for="checkRemember" class="fieldLabel font--regular">Remember me</label><br>
-       		<div class="sign-up__buttons">
-       			<input  type="submit" class="sign-up__button font--button" id="signButtonFromSign" value="Sign up">
-       		</div>
-       	</form>      
-  </div>
+  </div> -->
+	 <div class="container__sign-up">
+        <div class="sign-up__logo-part">
+                <a href="/" class="logo-part__link">
+              <img src="../images/logo_with_name.png" alt="top-logo-image" class="link__logo">
+            </a>
+        </div>
+         	<form method="POST" action="/login" class="sign-up">
+         		<label for="username" class="field__label font--regular">Username</label>
+         		<input type="text" name="username" placeholder="Login Goes Here" class="sign-up__text-field" id="signLogin" required ><br>
+         		<label for="password" class="field__label font--regular">Password</label>
+         		<input type="password" name="password" value="" placeholder="Pass Goes Here" class="sign-up__text-field" id="  signPassword" required><br>
+            <div class="sign-up__checkbox">
+         		 <input type="checkbox" name="checkRemember" checked="checked" class="checkbox" id="signChecker">
+         		 <label for="checkRemember" class="field__label field__label--check font--regular">Remember me</label><br>
+            </div>
+         		<div class="sign-up__buttons">
+         			<input  type="submit" class="sign-up__button font--button" id="signButtonFromSign" value="Sign In">
+         		</div>
+         	</form>      
+    </div>
   <div class="container__registration">
     <a href="/newUser" class="sign-up__registration-link font--regular">Create New Account</a>
   </div>

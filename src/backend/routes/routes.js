@@ -22,15 +22,7 @@ app.route('/')
 			res.end('Not the best way to use it');
 		}
 	});
-/*app.get('/signPage', (req, res, next) => {//when sign
-   	fs.readFile(__dirname + './../../html/sign_page.html', (error, data) => {
-   		if(error) return next(error);
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-})*/
 app.get('/signPage', (req, res, next) => {//when sign
-	/*res.render('indexSign', {styleClass: `text-field__border`});*/
 	res.render('indexSign', {styleClass: true});
 	res.end();
 })
@@ -46,14 +38,6 @@ app.get('/signPageMobile', (req, res, next) => {//when sign
    		res.redirect('/login');
    	}
 })
-/*app.get('/newUser', (req, res, next) => {//when reg
-	fs.readFile(__dirname + './../../html/reg_page.html', (error, data) => {
-   		//if(error) throw error;
-   		if (error) return next(error);
-   		res.writeHead(200, { 'Content-Type': 'text/html' });
-    	res.end(data);
-   	});
-});*/
 app.get('/newUser', (req, res, next) => {//when reg
 	res.render('indexRegistration', {styleClass: true});
 	res.end();
@@ -80,37 +64,9 @@ app.route('/login')
 		else {
 			res.render('indexSign', {styleClass: false});
 			res.end();
-/*			res.redirect('/signPage');
-			res.end(`no such user or wrong password`);
-			console.log('no such user or wrong password');*/
 		}
 	})
 });
-/*const WebSocketServer = new require('ws');
-const clients = {};
-const webSocketServer = new WebSocketServer.Server({
-  port: 3000
-});
-webSocketServer.on('connection', function(ws) {
-
-  const id = Math.random();
-  clients[id] = ws;
-  console.log("новое соединение " + id);
-
-  ws.on('message', function(message) {
-    console.log('получено сообщение ' + message);
-
-    for (var key in clients) {
-      clients[key].send(message);
-    }
-  });
-
-  ws.on('close', function() {
-    console.log('соединение закрыто ' + id);
-    delete clients[id];
-  });
-
-});*/
 /*#####*/
 app.get('/login/changepass', (req, res, next) => {//inside
 	fs.readFile(__dirname + './../../html/change_password.html', (error, data) => {
@@ -142,9 +98,6 @@ app.get('/login/user', (req, res) => {//one user
 app.post('/registration', (req, res) => {
 	userModel.findOne({username: req.body.username}, function (err, user) {
 		if (user) {
-/*			res.redirect('/newUser');
-			console.log(`Current username is already used`);
-			res.end(`Current username is already used`);*/
 			res.render('indexRegistration', {styleClass: false});
 			res.end();
 		}
@@ -154,9 +107,6 @@ app.post('/registration', (req, res) => {
 			console.log('Current username is empty');
 		}
 		else {
-/*			res.redirect('/newUser');
-			console.log(`Incorrect input`);
-			res.end(`Incorrect input`);*/
 			res.render('indexRegistration', {styleClass: true});
 			res.end();
 		}
@@ -165,7 +115,7 @@ app.post('/registration', (req, res) => {
 /*############New Comment#############*/
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
-		//require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
+		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
 			console.log('all good');
 		res.render('indexMessageAccept', {check: true, firstName: `${req.body.firstName}`, lastName: `${req.body.lastName}`, email: `${req.body.email}`});
 		res.end();
@@ -186,14 +136,7 @@ app.get('/message', (req, res, next) => {
 		}
 	})	
 });
-/*app.get('/messages', (req, res, next) => {
-	messageModel.find({}, (err, messages) => {
-		if (err) return next(error);
-		res.json(messages);
-	})	
-})*/
 /*############Change Pass and username#############*/
-/*	   	res.render('indexChangeUsername', {styleClass: true});*/
 app.post('/changeusername', (req, res) => {
 	if(!require('./../db/methods/changeUsername')(req.session.userId, req.body.username)) {
 		res.render('indexChangeUsername', {styleClass: false});

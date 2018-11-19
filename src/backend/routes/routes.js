@@ -126,10 +126,10 @@ app.post('/registration', (req, res) => {
 /*############New Comment#############*/
 app.post('/newMessage', (req, res) => {
 	if (req.session.userId) {
-		//require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
-			//res.end();
+		require('./../db/methods/newMessage')(req.session.userId, req.body.firstName, req.body.lastName, req.body.email, req.body.phone, req.body.message);
 			console.log('all good');
-			res.end();
+			res.redirect('/');
+			//res.end();
 	}
 	else {
 		console.log('You have to log in to write message');

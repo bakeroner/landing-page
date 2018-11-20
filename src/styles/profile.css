@@ -37,8 +37,9 @@ section {
 .navigation-header__header-content {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	align-content: center;
-	padding: 2rem 0;
+	padding: 3rem 0;
 	padding-top: 4rem;
 }
 .login__out-button {
@@ -59,9 +60,11 @@ section {
     color: #fff;
     background-color: #061e37;
 }
-/*.header-content__login {
+.header-content__login {
 	display: flex;
-}*/
+	justify-content: center;
+	align-items: center;
+}
 .login__name {
 	color: #061e37;
 	font-family: "RalewayRegular";

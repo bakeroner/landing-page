@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt');
 const userModel = require('../models/schema.js').userModel;
 const messageModel = require('../models/messageSchema.js').messageModel;
 const mongoose = require('mongoose');
+const formidable = require('formidable');
 mongoose.set('debug', true)
 
 app.route('/')
@@ -214,4 +215,27 @@ app.post('/degradeUser', (req, res) => {
 	require('./../db/methods/changeStatus')(req.body.name, false);
 	res.end('degrade');
 })
+/*app.post('/imageUpload', (req, res) => {
+	let newpath;
+	let oldpath;
+	const form = new formidable.IncomingForm();
+	//form.multiples = false;
+	form.parse(req);
+	form.on('fileBegin', (name, file) => {
+		//console.log(file.path);
+		oldpath = file.path;
+		newpath = `${__dirname}./../uploads/${file.name}`;
+	})
+    form.on('file', (name, file) => {
+        console.log('Uploaded ' + file.name);
+        console.log('oldpath ' + oldpath);
+        console.log('newpath ' + newpath);
+        fs.rename(oldpath, newpath, (err) => {
+        	if (err) throw err;
+        	console.log('Removing file');
+        })
+    });
+		res.end();
+	
+})*/
 }

@@ -140,19 +140,8 @@ module.exports = {
               }
           }
       },
-      /*      {
-          test: /\.html$/,
-          exclude: /(node_modules)/,//do not transform additional modules
-          use: {
-              loader: 'html-loader',
-              options: {
-              minimize: true,
-              removeComments: true
-              }
-            }
-      },*/
       {
-          test: /\.(png|jpg|svg)$/,
+          test: /\.(png|jpg|svg|ico)$/,
           //include: __dirname + './images',
           exclude: /(node_modules)/,//do not transform additional modules
           use: {

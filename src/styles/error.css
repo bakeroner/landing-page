@@ -1,0 +1,32 @@
+@import url("font.css");
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.error {
+  margin-top: 40vh;
+  width: 100%;
+  text-align: center;
+}
+.error__title {
+  color: #061e37;
+  font-family: "RalewayExtraBold";
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+.error__text {
+  color: #061e37;
+  font-family: "RalewaySemiBold";
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.error__link {
+  color: #061e37;
+  font-family: "RalewayRegular";
+  text-decoration: none;
+}
+.error__link:hover {
+  text-decoration: underline;
+}

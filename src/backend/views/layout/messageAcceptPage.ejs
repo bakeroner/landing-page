@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+    </header>
+    <section>
+    <% if(check){ %>      
+      <div class="message">
+        <h1 class="message__title">Thanks for your Message, <%=lastName%> <%=firstName%>!</h1>
+        <p class="message__text">We'll write You on Email: <%=email%></p>
+        <a href="/" class="message__link">Back to Action</a>
+      </div>
+      <% } else{ %>
+      <div class="message">
+        <h1 class="message__title">Sorry!</h1>
+        <p class="message__text">You Need to Sign In to write Message!</p>
+        <a href="/signPage" class="message__link link--sign-in">Sign In Here</a>
+        <a href="/" class="message__link link--home">Home Page</a>
+      </div>
+      <% } %>
+    </section>
+    <footer class="footer-part">
+    </footer>
+    <%-scripts%>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+@mixin transform($property) {
+     -webkit-transition-duration: $property;
+    transition-duration: $property;
+}
+$white: #fff;
+$dark-blue: #061e37;
+html {
+	max-height: 100%;
+	overflow-x: hidden;
+}
+.page {
+	position: relative;
+    width: 100%;
+    max-height: 100%;
+    margin: 0;
+    overflow: auto;
+    /* overflow-x: hidden; */
+}
+.header,
+.insides__description,
+.insides-color-line__statistics,
+.insides__services,
+.insides__comments,
+.insides__team,
+.insides__contact,
+.insides__footer {
+	max-width: 1440px;
+	margin: 0 auto;
+	width: 100%;
+}
+.header__article,
+.article__button,
+.description__content,
+.page__insides,
+.page__insides-color-line,
+.insides-color-line__statistics,
+.statistics,
+.statistics__value,
+.list__items,
+.comments,
+.slider-block__slide,
+.team__gallery,
+.member__social,
+.form__row,
+.left-part__list-bottom,
+.right-part__list-bottom,
+.right-part__social,
+.footer__top-part,
+.footer__bottom-part,
+.navigation__button,
+.navigation__link-panel,
+.team__about-member {
+	display: flex;
+    flex-direction: row;
+}
+.article,
+.description__title,
+.content__figure,
+.description__button,
+.services,
+.comments__title,
+.comments__slider-block,
+.slide__comment,
+.team,
+.gallery__member,
+.contact,
+.footer,
+.form,
+.items__text-container,
+.member__info {
+	display: flex;
+    flex-direction: column;
+}
+.video,
+.figure__icon,
+.statistics__icon,
+.items__picture,
+.slide__user,
+.left-part__logo {
+	width: 100%;
+	padding: 0 0;
+}
+.hideElement {
+	display: none;
+/*	transform: rotateX(-90deg);
+	transition: all 0.5s cubic-bezier(.36,-0.64,.34,1.76);*/
+}

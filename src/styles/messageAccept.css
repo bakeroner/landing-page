@@ -1,0 +1,38 @@
+@import url("font.css");
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+.message {
+  margin-top: 30vh;
+  width: 100%;
+  text-align: center;
+}
+.message__title {
+  color: #061e37;
+  font-family: "RalewayExtraBold";
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+.message__text {
+  color: #061e37;
+  font-family: "RalewaySemiBold";
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.link--sign-in {
+	padding-right: 2rem;
+}
+.link--home {
+	padding-left: 2rem;
+}
+.message__link {
+  color: #061e37;
+  font-family: "RalewayRegular";
+  text-decoration: none;
+}
+.message__link:hover {
+  text-decoration: underline;
+}

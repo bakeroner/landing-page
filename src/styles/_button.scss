@@ -1,0 +1,116 @@
+.button {
+    padding: 16px 16px;
+    text-align: center;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 150px;
+    height: 55px;
+    @include transform(0.4s);
+}
+.button--sign-in {
+	border-radius: 2px;
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    padding: 6px 6px;
+    font-family: "RalewayRegular";
+}
+.button--sign-in:hover {
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+}
+.button--sign-out {
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid $white;
+    color: $white;
+    width: 80px;
+    height: 25px;
+    font-size: 12px;
+    padding: 6px 6px;
+    font-family: "RalewayRegular";
+}
+.button--sign-out:hover {
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+}
+.button--buy-now {
+    background-color: $dark-blue;
+    color: $white;
+    font-family: "RobotoRegular";
+    margin-right: 1.875rem;
+    align-self: flex-end;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+.button--buy-now:hover {
+    background-color: $white;
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
+}
+.button--try-for-free {
+    background-color: $white;
+    width: 160px;
+    height: 55px;
+    color: $dark-blue;
+    align-self: flex-end;
+    font-family: "RalewayBold";
+    margin-right: 3%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+.button--try-for-free:hover {
+    background-color: $dark-blue;
+    color: $white;
+    border: 2px solid $white;
+}
+.button--get-started-description {
+	font-family: "RalewayMedium";
+    background-color: #1de9b6;
+    color: $white;
+    box-shadow: 0 0 5px rgba(0,0,0,0.15);
+}
+.button--get-started-description:hover {
+    background-color: $white;
+    color: #1de9b6;
+    border: 2px solid #1de9b6;
+}
+.button--get-started-comment {
+	background-color: $dark-blue;
+    color: $white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.button--get-started-comment:hover {
+    background-color: $white;
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
+}
+.slider-block__arrow {
+	margin-left: 59%;
+    margin-right: auto;
+    outline: none;
+    border: 0;
+    background: transparent;
+}
+.arrow__image {
+    color: $white;
+}
+.arrow__image:hover {
+    color: $dark-blue;
+    @include transform(0.4s);
+}
+.arrow--up {
+    padding-top: 1.6rem;
+}
+.arrow--down {
+    padding-bottom: 0.2rem;
+}
+/*--.arrow--up {
+    padding-top: 2.6rem;
+}
+.arrow--down {
+    padding-bottom: 1.5rem;---*/
+

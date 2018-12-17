@@ -1,0 +1,175 @@
+.text--regular {
+	font-family: "RalewayRegular";
+}
+.text--semi-bold {
+	font-family: "RalewaySemiBold";
+}
+.text--extra-bold {
+	font-family: "RalewayExtraBold";
+}
+.text--medium {
+	font-family: "RalewayMedium";
+}
+.text--bold {
+	font-family: "RalewayBold";
+}
+.text--white {
+	color: $white;
+}
+.text--dark-blue {
+	color: $dark-blue;
+}
+.text--light-gray {
+	color: #78909c;
+}
+.text--gray {
+	color: #b0bec5;
+}
+.text--semi-gray {
+	color: #90a4ae;
+}
+.link-panel--text-size,
+.link-menu--text-size,
+.figure__text--text-size,
+.list--services--text-size,
+.title__text--text-size,
+.comment__text--text-size,
+.team__text--text-size,
+.member__text--text-size,
+.contact__text--text-size,
+.checkbox--text-size,
+.list-bottom--text-size {
+font-size: 15px;
+}
+.article__title--text-size {
+	font-size: 55px;
+}
+.title__header--text-size,
+.services__title--text-size,
+.team__header--text-size,
+.contact__header--text-size,
+.arrow--size {
+	font-size: 45px;
+}
+.icons--size {
+	font-size: 30px;
+}
+.header--description-second--text-size {
+	font-size: 25px;
+}
+.list__header--icon-size,
+.figure__label--text-size,
+.value__text--text-size,
+.social__link--icon-size {
+	font-size: 20px;
+}
+.article__text--text-size,
+.comment__user-name--text-size,
+.member__name--text-size {
+	font-size: 18px;
+}
+.text--center {
+	text-align: center;
+}
+.article__title {
+	margin: 0;
+	text-align: justify;
+	margin-top: -0.5rem;
+}
+.article__text { 
+    width: 71.5%;
+    padding-top: 0.3rem; 
+    margin-top: 0; 
+    margin-bottom: auto;
+    line-height: 2;
+}
+.header--description {
+	margin: 0;
+	padding-top: 0.6rem; 
+	padding-bottom: 0.55rem;
+}
+.header--description-second {
+	margin: 0;
+	padding-top: 0.2rem; 
+	padding-bottom: 0.55rem;
+}
+.title__text--description {
+	width: 39%; 
+	line-height: 1.8; 
+	margin: 0;
+}
+.figure__label {
+	 margin: 2.30rem auto 0.7rem;
+}
+.figure__text {
+	text-align: center;
+	width: 100%;
+	line-height: 1.35;
+}
+.text--business {
+	margin-right: 4.7rem;
+}
+.services__title {
+	margin-bottom: 0;
+}
+.services__text {
+	margin: 0;
+	padding-top: 0.9rem;
+	padding-bottom: 1.8rem;
+	width: 39%;
+	line-height: 1.7;
+}
+.team__header {
+	margin: 0;
+	padding-top: 1.2rem;
+}
+.team__text {
+	padding-top: 1rem;
+	margin: 0;
+	width: 40%;
+	line-height: 1.5;
+}
+.contact__header {
+	margin: 0;
+}
+.contact__text {
+	padding-top: 1rem;
+	margin: 0;
+	line-height: 1.5;
+	width: 39%;
+	text-align: center;
+}
+.items__properties {
+	margin: 0;
+}
+.header--comments {
+	margin: 0;
+	padding-top: 7.95rem;
+}
+.title__text--comment-position {
+	padding-top: 0.8rem;
+	padding-bottom: 4.6rem;
+	margin: 0;
+	width: 88%;
+	line-height: 1.6;
+}
+.title__text {
+
+}
+.comment__text {
+	font-style: italic;
+	line-height: 1.6;
+	width: 94%;
+	margin: 0;
+	padding-top: 0.5rem;
+}
+.member__text {
+	text-align: center;
+	width: 46%;
+	margin: 0 auto;
+	line-height: 1.6;
+}
+.row__checkbox-label {
+     align-self: flex-start;
+     margin: auto 0;
+}

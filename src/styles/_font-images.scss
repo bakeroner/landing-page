@@ -1,0 +1,36 @@
+.icon__image {
+	font-size: 80px; 
+}
+.image--purple {
+	color: #b388ff;
+}
+.image--blue {
+	color: #80d8ff;
+}
+.image--dark-blue {
+	color: #82b1ff;
+}
+.image--pink {
+	color: #ea80fc;
+}
+.image--white {
+	color: $white;
+}
+.link--gray {
+	color: #90a4ae;
+}
+.link--dark-gray {
+	color: #384b5f;
+}
+.social__link--hover-deep-blue {
+    @include transform(0.4s);
+}
+.social__link--hover-deep-blue:hover {
+	color: $dark-blue;
+}
+.link--footer-social {
+    @include transform(0.4s);
+}
+.link--footer-social:hover {
+	color: #000;
+}

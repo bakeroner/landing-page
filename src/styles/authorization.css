@@ -1,0 +1,137 @@
+@import url("font.css");
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #061e37;
+   /* background-color: #fff;*/
+}
+.container__sign-up {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    border-bottom: 2px solid #061e37;
+    margin-bottom: 3rem;
+    border-radius: 2px;
+    margin-top: 10vh;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sign-up {
+    padding-left: 3rem;
+    padding-right: 5px;
+    margin: 5px;
+    margin-top: 40px;
+    border-left:2px solid #fff;
+}
+.sign-up__button {
+    color: #061e37;
+	padding: 8px 20px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #fff;
+    /*border: 2px solid #061e37;*/
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 3rem;
+    margin-left: 0;
+    font-family: "RobotoRegular";
+    font-size: 18px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.sign-up__button:hover {
+    color: #fff;
+    background-color: #061e37;
+}
+.container__registration {
+    display: flex;
+    justify-content: space-around;
+}
+.sign-up__registration-link {
+    color: #fff;
+    /*color: #061e37;*/
+    text-decoration: none;
+    margin-top: 10px;
+}
+.sign-up__registration-link:hover {
+    text-decoration: underline;
+}
+.sign-up__buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.sign-up__text-field {
+    color: #fafafa;
+    background-color: transparent;
+    font-family: "RalewaySemiBold";
+    width: 100%;
+    border-top: 2px solid #061e37;
+    border-left: 2px solid #061e37; 
+    border-right: 2px solid #061e37;
+    
+    padding-left: 5px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    border-radius: 2px;  
+    margin: 1rem 0;
+}
+.sign-up__text-field:focus {
+    outline: none;
+}
+.sign-up__text-field::placeholder {
+    font-style: italic;
+    color: #58606a;
+}
+.text-field__border {
+    border-bottom: 2px solid #fff;
+}
+.text-field__validate-error-border {
+    border-bottom: 2px solid #b12525;
+}
+.field__label {
+    color: #fff;
+   /* color: #061e37;*/
+}
+.field__label--check {
+    font-size: 14px;
+}
+.sign-up__checkbox {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.checkbox {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+.font--regular {
+    font-family: "RalewayRegular";
+}
+.font--button {
+    /*font-family: "RalewayBold";*/
+    font-family: "RobotoRegular";
+    font-size: 18px;
+}
+.navigation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.logo-part__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 3rem;
+    margin-right: 3rem;
+}
+.link__logo {
+    margin-top: 1rem;
+}
+.sign-up__logo-part {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

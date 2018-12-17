@@ -1,0 +1,141 @@
+@import url("font.css");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+body {
+    position: relative;
+    margin: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;	
+}
+header{
+	width: 100%;
+	margin: 0;
+}
+section {
+
+	width: 100%;
+	margin: 0;
+    margin-bottom: 100px;
+    margin-left: 5vw;
+}
+.navigation-header,
+.user-block,
+.footer-part__footer-content {
+	max-width: 1080px;
+	margin: 0 auto;
+	width: 100%;
+}
+.home-link__font-image {
+	color: #061e37;
+	font-size: 45px;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.home-link__font-image:hover {
+	color: #fff;
+	background-color: #061e37;
+	border-radius: 5px;
+}
+.navigation-header__header-content {
+	display: flex;
+	justify-content: space-between;
+    align-items: center;
+	align-content: center;
+	padding: 3rem 0;
+	padding-top: 4rem;
+}
+.login__out-button {
+    color: #061e37;
+    border: 2px solid #061e37;
+	padding: 12px 16px;
+    text-align: center;
+    font-family: "RobotoRegular";
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin-top: 0;
+    margin-left: 0;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.login__out-button:hover {
+    color: #fff;
+    background-color: #061e37;
+}
+.login__name {
+	color: #061e37;
+	font-family: "RalewayRegular";
+	margin-right: 20px;
+}
+.header-content__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-content__home-link {
+	font-family: "RalewayRegular";
+	text-align: center;
+	text-decoration: none;
+	color: #061e37;
+}
+.header-content__home-link:hover {
+	text-decoration: underline;
+}
+.footer-part {
+	position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #061e37;
+    color: #fff;
+    padding: 1rem;
+    padding-left: 0;
+}
+.listItem {
+  /*border-top: 2px solid #000;*/
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.listItem__text {
+    font-family: "RalewayRegular";
+    color: #061e37;
+    line-height: 1.5;
+}
+.delete {
+}
+.degrade {
+}
+.control-button {
+    color: #061e37;
+    border: 2px solid #061e37;
+	padding: 8px 16px;
+    text-align: center;
+    font-family: "RobotoRegular";
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 10px 0;
+    margin-right: 5px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.control-button:hover {
+    color: #fff;
+    background-color: #061e37;
+}
+.user-block__user-list {
+    padding-left: 0;
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.user-block__back-link {
+    font-family: "RalewayRegular";
+    text-decoration: none;
+    color: #061e37;
+   /* margin-left: 5vw;*/
+}
+.user-block__back-link:hover {
+    text-decoration: underline;
+}

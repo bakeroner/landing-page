@@ -1,0 +1,51 @@
+.link,
+.social__link {
+	color: $white;
+	font-family: "RalewaySemiBold";
+	text-decoration: none;
+	@include transform(0.4s);
+}
+.link__footer {
+	color: #fff;
+	text-decoration: none;
+	@include transform(0.4s);
+}
+.link {
+	margin: 5% 3%;
+}
+.social__link {
+	padding-top: 0;
+    padding-bottom: 0;
+    @include transform(0.4s);
+}
+.social__link--footer {
+	margin: 5% 0;
+	margin-left: 0.6rem;
+}
+.social__link--team {
+	margin: 0;
+	margin-right: 0.9rem;
+	margin-left: 0.6rem;
+}
+.link--footer-top {
+	padding-left: 2.4rem;
+}
+.link__footer-bottom {
+	padding-right: 2.5rem;
+}
+.link__footer-bottom:hover {
+	color: #f44842;
+}
+.link--footer-top:hover {
+	color: #f44842;
+}
+.link--footer-social {
+	margin-left: 0.4rem;
+	@include transform(0.4s);
+}
+.link--hover-deep-blue:hover {
+	color: $dark-blue;
+}
+.link--hover-black:hover {
+	color: #f44842;
+}

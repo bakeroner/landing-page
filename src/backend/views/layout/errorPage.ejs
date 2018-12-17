@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <%-blocks.header%>
+    </header>
+    <section>
+      <%-body -%>
+      <div class="error">
+        <h1 class="error__title">404</h1>
+        <p class="error__text">Page Not Found</p>
+        <a href="/" class="error__link">Long Routing Home</a>
+      </div>
+    </section>
+    <footer>
+      <%-blocks.footer%>
+    </footer>
+    <%-scripts%>
+  </body>
+</html>

@@ -50,11 +50,6 @@ module.exports = {
     devServer: {
       host: 'localhost',
       port: 3000,
-  /*    proxy: [{
-        path: /.backend/,
-        target: 'http://localhost:3000'
-      }],*/
-      //contentBase: './src/backend',
       hot: true,
       open: true
     },

@@ -9,7 +9,8 @@ mongoose.set('debug', true)
 
 app.route('/')
 	.get((req, res, next) => {
-	   	fs.readFile(__dirname + './../../html/index.html', (error, data) => {
+		fs.readFile(__dirname + './../../build/index.html', (error, data) => {
+	   	/*fs.readFile(__dirname + './../../html/index.html', (error, data) => {*/
 	   		if(error) return next(error);
 	   		res.writeHead(200, { 'Content-Type': 'text/html' });
 	    	res.end(data);

@@ -46,7 +46,7 @@ module.exports = {
   	watchOptions: {
   		aggregateTimeout: 100
   	},
-  	devtool: NODE_ENV == 'development' ? "source-map" : null,//map show
+  	devtool: NODE_ENV == 'development' ? "source-map" : false,//map show
     devServer: {
       host: 'localhost',
       port: 3000,
